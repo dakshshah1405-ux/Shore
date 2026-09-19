@@ -1,7 +1,8 @@
 // Thin client for api.weather.gov. The NWS API rejects requests without a
 // User-Agent, and asks that it carry contact info — set NWS_USER_AGENT.
 
-const UA = process.env.NWS_USER_AGENT || 'Shore/0.1 (SteelHacks XIII hackathon project)';
+// Read at call time, not import time, so scripts that load .env.local after imports still see it.
+const userAgent = () => process.env.NWS_USER_AGENT || 'Shore/0.1 (SteelHacks XIII hackathon project)';
 
 export const EAST_COAST_WFOS = [
   'GYX', 'CAR', 'BOX', 'OKX', 'PHI', 'AKQ', 'MHX', 'ILM', 'CHS', 'JAX', 'MLB', 'MFL',
@@ -11,7 +12,7 @@ export const EAST_COAST_WFOS = [
 // JSON-LD representation NWS returns geometry as a WKT string, not coordinates.
 export async function nwsGet<T>(url: string, accept = 'application/ld+json'): Promise<T> {
   const res = await fetch(url, {
-    headers: { 'User-Agent': UA, Accept: accept },
+    headers: { 'User-Agent': userAgent(), Accept: accept },
     cache: 'no-store',
   });
   if (!res.ok) throw new Error(`NWS ${res.status} for ${url}`);
