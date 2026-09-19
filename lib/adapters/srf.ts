@@ -65,6 +65,22 @@ const RE_FIELD = /^([A-Z][A-Za-z ]*?)\**\.{2,}(.*)$/;
 const RE_SUBAREA = /^\s{2,7}(\S.*?)\.{2,}(.*)$/;
 const RE_CONTINUATION = /^\s{8,}(\S.*)$/;
 
+// SRF is fixed-width: values start at column 28 ("Rip Current Risk*..........." is 28 chars).
+// A long sub-area name can shrink its dot leader to a single dot ("   East of Ocean Isle Beach.Low."),
+// which a dot-counting regex misses; reading the value column by position does not. It also
+// keeps names containing periods intact ("St. Augustine").
+const VALUE_COLUMN = 28;
+
+function parseSubArea(t: string): { name: string; value: string } | null {
+  if (/^\s{2,7}\S/.test(t) && t.length > VALUE_COLUMN && t[VALUE_COLUMN - 1] === '.') {
+    const name = t.slice(0, VALUE_COLUMN).replace(/\.+$/, '').trim();
+    const value = t.slice(VALUE_COLUMN).trim();
+    if (name && value) return { name, value };
+  }
+  const m = t.match(RE_SUBAREA);   // fallback for offices that don't align to the column
+  return m ? { name: m[1].trim(), value: m[2] } : null;
+}
+
 function splitBeaches(s: string): string[] {
   return s
     .replace(/^Including the beaches of\s*/i, '')
@@ -170,8 +186,9 @@ export function parseSrf(text: string): SrfSegment[] {
         continue;
       }
 
-      if (subParent && (m = t.match(RE_SUBAREA))) {
-        last = { label: subParent, field: canonicalField(subParent), subArea: m[1].trim(), value: cleanValue(m[2]),
+      const sub = subParent ? parseSubArea(t) : null;
+      if (subParent && sub) {
+        last = { label: subParent, field: canonicalField(subParent), subArea: sub.name, value: cleanValue(sub.value),
                  rawSpan: text.slice(l.start, l.start + t.trimEnd().length), charStart: l.start, charEnd: l.start + t.trimEnd().length };
         period.fields.push(last);
         continue;

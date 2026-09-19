@@ -23,6 +23,42 @@ Same prompt, a prose forecast line (`.MONDAY...Surf height around 2 feet. Mostly
 
 **Decision:** `nemotron-3-super-120b-a12b` with `chat_template_kwargs.enable_thinking = false`, temperature 0.
 
+## 4. Nemotron caught a bug in our deterministic parser
+
+Running both extractors on every forecast surfaced 4 disagreements, all in one zone (ILM `NCZ110`,
+Coastal Brunswick). Every one was the **parser** being wrong:
+
+```
+Rip Current Risk*...
+   East of Ocean Isle Beach.Low.        ← one dot: the name is long enough to eat the leader
+   Ocean Isle Beach West....Low.
+```
+
+The parser required a run of two or more dots, so it silently skipped the East values — rip risk
+and surf, both days. Nemotron read them, and the judge verified each quote against the source.
+Reconciliation refused to store Nemotron's answer (the parser wins ties) and flagged the conflict
+instead of guessing, which is how we found it.
+
+Fix: SRF is fixed-width, so sub-area values are now read from column 28 rather than by counting
+dots. Result: Wilmington 116 → 120 values, disagreements 4 → 0, provenance span errors still 0.
+A scan of all 12 offices found no other single-dot lines.
+
+**This is the role we want for Nemotron: not replacing the deterministic parser, but auditing it.**
+
+## 5. Nemotron 3.5 Lightning ignored the requested output shape
+
+As the automatic backup (it answered one Miami-Dade call when Super didn't), 3.5 Lightning returned
+correct values in the wrong envelope — an object keyed by day name instead of the requested list:
+
+```
+{"REST OF TODAY": {"label": "REST OF TODAY", "fields": [...]}, "SUNDAY": {...}}
+```
+
+The judge rejected the whole response, so the zone fell back to parser-only values: a safe failure,
+with no bad data admitted, but the backup's correct answer was wasted (after 47 s). The judge now
+accepts either envelope while keeping every per-value check unchanged; the same cached response
+yields 7 accepted and 1 rejected value.
+
 ## 3. It declines to invent absent fields — when asked the right way
 
 The prose line states surf but no rip current risk. With "use an empty string for anything the text

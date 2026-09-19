@@ -93,9 +93,23 @@ function supportReason(f: LlmField): string | null {
 }
 
 // The judge. Pure and deterministic — this is what decides whether Nemotron's output is used.
+// Accepts the requested {"periods": [...]} list, and the shape Nemotron 3.5 Lightning sometimes
+// returns instead: an object keyed by day name ({"SUNDAY": {"fields": [...]}}). Only the envelope
+// is tolerated — every value below still faces the same checks.
+function periodList(raw: unknown): unknown[] | null {
+  const top = raw as Record<string, unknown> | null;
+  if (Array.isArray(top?.periods)) return top!.periods as unknown[];
+  const keyed = top?.periods && typeof top.periods === 'object' ? top.periods : top;
+  if (!keyed || typeof keyed !== 'object') return null;
+  const list = Object.entries(keyed as Record<string, unknown>)
+    .filter(([, v]) => v && typeof v === 'object' && Array.isArray((v as { fields?: unknown }).fields))
+    .map(([k, v]) => ({ label: (v as { label?: unknown }).label ?? k, fields: (v as { fields: unknown[] }).fields }));
+  return list.length ? list : null;
+}
+
 export function judge(text: string, seg: SrfSegment, raw: unknown): { parsed: boolean; fields: CheckedField[] } {
-  const periods = (raw as { periods?: unknown })?.periods;
-  if (!Array.isArray(periods)) return { parsed: false, fields: [] };
+  const periods = periodList(raw);
+  if (!periods) return { parsed: false, fields: [] };
   const out: CheckedField[] = [];
 
   for (const p of periods as { label?: unknown; fields?: unknown }[]) {

@@ -16,7 +16,10 @@ async function main() {
     failed++;
     console.error(`alerts: FAILED ${(e as Error).message}`);
   }
+  // --only=ILM,MFL limits a run to specific offices.
+  const only = process.argv.find((a) => a.startsWith('--only='))?.slice(7).toUpperCase().split(',') ?? null;
   for (const wfo of EAST_COAST_WFOS) {
+    if (only && !only.includes(wfo)) continue;
     try {
       const prod = await latestProduct('SRF', wfo);
       if (!prod) { console.log(`${wfo}: no SRF`); continue; }
