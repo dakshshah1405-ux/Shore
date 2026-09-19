@@ -5,9 +5,17 @@ process.loadEnvFile?.('.env.local');
 
 import { EAST_COAST_WFOS, latestProduct, sleep } from '../lib/nws';
 import { ingestSrf } from '../lib/ingest/srf';
+import { ingestAlerts } from '../lib/ingest/alerts';
 
 async function main() {
   let stored = 0, skipped = 0, failed = 0, obs = 0;
+  try {
+    const { active } = await ingestAlerts();
+    console.log(`alerts: ${active} active across East Coast states`);
+  } catch (e) {
+    failed++;
+    console.error(`alerts: FAILED ${(e as Error).message}`);
+  }
   for (const wfo of EAST_COAST_WFOS) {
     try {
       const prod = await latestProduct('SRF', wfo);

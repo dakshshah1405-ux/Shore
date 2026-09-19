@@ -16,7 +16,7 @@ export default function ZonePanel({ zone, onClose }: { zone: ZoneCondition; onCl
       aria-label={`Conditions for ${zone.zoneName}`}
     >
       {zone.alerts.map((a) => (
-        <div key={a.id} className="bg-[#4A1D75] px-5 py-3 text-white">
+        <div key={a.id} className={`px-5 py-3 text-white ${/warning/i.test(a.event) ? 'bg-[#4A1D75]' : 'bg-[#7A4300]'}`}>
           <p className="text-[11px] font-bold tracking-[0.12em] uppercase">Official NWS {a.event}</p>
           <p className="mt-1 text-sm leading-snug">{a.headline}</p>
           {a.expires && <p className="mt-1 text-xs text-white/80">Until {formatEastern(a.expires)}</p>}

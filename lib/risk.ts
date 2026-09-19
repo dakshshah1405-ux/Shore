@@ -35,6 +35,10 @@ export function assessRisk(obs: Obs, alerts: Alert[]): { risk: RiskLevel; firedR
   if (high.length) return { risk: 'high', firedRule: high.join('; ') };
 
   const elevated: string[] = [];
+  // An active official watch, advisory, or statement floors the zone at Elevated, so the
+  // derived assessment can never show green while NWS has a hazard product in effect.
+  for (const event of new Set(alerts.map((a) => a.event)))
+    if (/watch|advisory|statement/i.test(event)) elevated.push(`NWS ${event} in effect`);
   if (rip === 2) elevated.push('Moderate rip current risk');
   if (thunder === 2) elevated.push('Moderate thunderstorm potential');
   if (surf !== null && surf >= 5) elevated.push(`Surf up to ${surf} ft`);
