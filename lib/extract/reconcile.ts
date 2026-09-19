@@ -25,11 +25,15 @@ export interface ReconciledValue {
   extractor: Extractor;
   confidence: Confidence;
   model: string | null;         // Nemotron model involved; null for parser-only values
+  adjudicationReason: string | null;
 }
 
 export interface Disagreement {
   periodLabel: string; field: FieldName; subArea: string | null;
   regex: string | null; nemotron: string; nemotronQuote: string;
+  regexSpan: string | null;   // the parser's source span, for the deterministic pre-check
+  // Nemotron's verified span, carried so an adjudicated value keeps real provenance.
+  nemotronSpan: string | null; nemotronCharStart: number | null; nemotronCharEnd: number | null;
 }
 
 const norm = (s: string) => s.replace(/[.\s]+/g, ' ').trim().toUpperCase();
@@ -70,12 +74,14 @@ export function reconcile(
       const n = accepted.get(k);
       const base = { periodLabel: p.label, periodIndex: indexOf(p.label), field: f.field, subArea: f.subArea,
                      value: f.value, rawSpan: f.rawSpan, charStart: f.charStart, charEnd: f.charEnd };
-      if (!n) { values.push({ ...base, extractor: 'regex', confidence: 'medium', model: null }); continue; }
+      if (!n) { values.push({ ...base, extractor: 'regex', confidence: 'medium', model: null, adjudicationReason: null }); continue; }
       used.add(k);
-      if (valuesAgree(f.field, f.value, n.value)) values.push({ ...base, extractor: 'reconciled', confidence: 'high', model });
+      if (valuesAgree(f.field, f.value, n.value)) values.push({ ...base, extractor: 'reconciled', confidence: 'high', model, adjudicationReason: null });
       else {
-        values.push({ ...base, extractor: 'regex', confidence: 'low', model });
-        disagreements.push({ periodLabel: p.label, field: f.field, subArea: f.subArea, regex: f.value, nemotron: n.value, nemotronQuote: n.quote });
+        values.push({ ...base, extractor: 'regex', confidence: 'low', model, adjudicationReason: null });
+        disagreements.push({ periodLabel: p.label, field: f.field, subArea: f.subArea, regex: f.value, regexSpan: f.rawSpan,
+          nemotron: n.value, nemotronQuote: n.quote,
+          nemotronSpan: n.rawSpan, nemotronCharStart: n.charStart, nemotronCharEnd: n.charEnd });
       }
     }
   }
@@ -83,13 +89,15 @@ export function reconcile(
   for (const [k, n] of accepted) {
     if (used.has(k)) continue;
     if (regexCovers.has(`${norm(n.periodLabel)}|${n.field}`)) {
-      disagreements.push({ periodLabel: n.periodLabel, field: n.field, subArea: n.subArea, regex: null, nemotron: n.value, nemotronQuote: n.quote });
+      disagreements.push({ periodLabel: n.periodLabel, field: n.field, subArea: n.subArea, regex: null, regexSpan: null,
+        nemotron: n.value, nemotronQuote: n.quote,
+        nemotronSpan: n.rawSpan, nemotronCharStart: n.charStart, nemotronCharEnd: n.charEnd });
       continue;
     }
     values.push({
       periodLabel: n.periodLabel, periodIndex: indexOf(n.periodLabel), field: n.field, subArea: n.subArea,
       value: n.value, rawSpan: n.rawSpan!, charStart: n.charStart!, charEnd: n.charEnd!,
-      extractor: 'nemotron', confidence: 'medium', model,
+      extractor: 'nemotron', confidence: 'medium', model, adjudicationReason: null,
     });
   }
   return { values, disagreements };

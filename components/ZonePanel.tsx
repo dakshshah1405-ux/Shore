@@ -162,6 +162,11 @@ function Provenance({ obs }: { obs: Observation }) {
         characters {obs.charStart}–{obs.charEnd} · {describeExtraction(obs.extractor, obs.model)} · {obs.confidence} confidence
         {obs.numeric?.approximate && ' · number approximated from the wording'}
       </p>
+      {obs.adjudicationReason && (
+        <p className="mt-1 text-[11px] leading-relaxed text-amber-200">
+          Conflict resolved by Nemotron: {obs.adjudicationReason}
+        </p>
+      )}
       <a href={obs.sourceUrl} target="_blank" rel="noreferrer"
          className="mt-1 inline-block text-[11px] font-semibold text-sky-300 underline underline-offset-2">
         Open source product ↗

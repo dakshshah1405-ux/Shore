@@ -23,7 +23,12 @@ async function main() {
     try {
       const prod = await latestProduct('SRF', wfo);
       if (!prod) { console.log(`${wfo}: no SRF`); continue; }
-      const r = await ingestSrf(prod, { force: process.argv.includes('--force'), llm: !process.argv.includes('--no-llm') });
+      const r = await ingestSrf(prod, {
+        force: process.argv.includes('--force'),
+        llm: !process.argv.includes('--no-llm'),
+        adjudicate: !process.argv.includes('--no-adjudicate'),
+      });
+      for (const a of r.adjudications) console.log(`    adjudicated ${a.id}: ${a.outcome} — ${a.reason}`);
       if (r.skipped) { skipped++; console.log(`${wfo}: already stored (${prod.issuanceTime})`); }
       else {
         stored++; obs += r.observations;

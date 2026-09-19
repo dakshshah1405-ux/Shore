@@ -6,7 +6,7 @@
 
 export type RiskLevel = 'official' | 'high' | 'elevated' | 'lower' | 'unknown';
 export type Confidence = 'high' | 'medium' | 'low';
-export type Extractor = 'regex' | 'nemotron' | 'reconciled';
+export type Extractor = 'regex' | 'nemotron' | 'reconciled' | 'adjudicated';
 export type Period = 'today' | 'tomorrow';
 
 export type FieldName =
@@ -49,6 +49,7 @@ export interface Observation {
   extractor: Extractor;
   confidence: Confidence;
   model: string | null;           // Nemotron model that read or confirmed it; null for parser-only
+  adjudicationReason: string | null;  // why the conflict was resolved this way, when it was adjudicated
 }
 
 export interface Alert {

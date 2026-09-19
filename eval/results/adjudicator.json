@@ -1,0 +1,1048 @@
+{
+  "generatedAt": "2026-09-19T23:44:53.097Z",
+  "note": "INJECTED flaws, not field data",
+  "rows": [
+    {
+      "id": "srf-AKQ.txt:MDZ025:REST OF TODAY:ripCurrentRisk:none",
+      "flaw": "none",
+      "expected": "Moderate",
+      "regex": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "nemotron": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "naive": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-BOX.txt:MAZ023:TODAY:ripCurrentRisk:none",
+      "flaw": "none",
+      "expected": "High",
+      "regex": {
+        "value": "High",
+        "correct": true
+      },
+      "nemotron": {
+        "value": "High",
+        "correct": true
+      },
+      "naive": {
+        "value": "High",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "High",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CAR.txt:MEZ029:TODAY:ripCurrentRisk:none",
+      "flaw": "none",
+      "expected": "Low",
+      "regex": {
+        "value": "Low",
+        "correct": true
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CHS.txt:SCZ150:SATURDAY:ripCurrentRisk:none",
+      "flaw": "none",
+      "expected": "Low",
+      "regex": {
+        "value": "Low",
+        "correct": true
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-AKQ.txt:MDZ025:REST OF TODAY:ripCurrentRisk:single_dot",
+      "flaw": "single_dot",
+      "expected": "Moderate",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "naive": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-BOX.txt:MAZ023:TODAY:ripCurrentRisk:single_dot",
+      "flaw": "single_dot",
+      "expected": "High",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "High",
+        "correct": true
+      },
+      "naive": {
+        "value": "High",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "High",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CAR.txt:MEZ029:TODAY:ripCurrentRisk:single_dot",
+      "flaw": "single_dot",
+      "expected": "Low",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CHS.txt:SCZ150:SATURDAY:ripCurrentRisk:single_dot",
+      "flaw": "single_dot",
+      "expected": "Low",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-AKQ.txt:MDZ025:REST OF TODAY:ripCurrentRisk:label_typo",
+      "flaw": "label_typo",
+      "expected": "Moderate",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "naive": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-BOX.txt:MAZ023:TODAY:ripCurrentRisk:label_typo",
+      "flaw": "label_typo",
+      "expected": "High",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "High",
+        "correct": true
+      },
+      "naive": {
+        "value": "High",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "High",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CAR.txt:MEZ029:TODAY:ripCurrentRisk:label_typo",
+      "flaw": "label_typo",
+      "expected": "Low",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CHS.txt:SCZ150:SATURDAY:ripCurrentRisk:label_typo",
+      "flaw": "label_typo",
+      "expected": "Low",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-AKQ.txt:MDZ025:REST OF TODAY:ripCurrentRisk:extra_indent",
+      "flaw": "extra_indent",
+      "expected": "Moderate",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "naive": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-BOX.txt:MAZ023:TODAY:ripCurrentRisk:extra_indent",
+      "flaw": "extra_indent",
+      "expected": "High",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "High",
+        "correct": true
+      },
+      "naive": {
+        "value": "High",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "High",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CAR.txt:MEZ029:TODAY:ripCurrentRisk:extra_indent",
+      "flaw": "extra_indent",
+      "expected": "Low",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CHS.txt:SCZ150:SATURDAY:ripCurrentRisk:extra_indent",
+      "flaw": "extra_indent",
+      "expected": "Low",
+      "regex": {
+        "value": null,
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low",
+        "correct": true
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-AKQ.txt:MDZ025:REST OF TODAY:ripCurrentRisk:continuation_swallow",
+      "flaw": "continuation_swallow",
+      "expected": "Moderate",
+      "regex": {
+        "value": "Moderate Expect hazardous conditions near inlets",
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "naive": {
+        "value": "Moderate Expect hazardous conditions near inlets",
+        "correct": false
+      },
+      "adjudicated": {
+        "value": "Moderate",
+        "correct": true
+      },
+      "disagreements": 1,
+      "note": "pre-check → nemotron: parser value \"Moderate Expect hazardous conditions near inlets\" is not a valid category for ripCurrentRisk"
+    },
+    {
+      "id": "srf-BOX.txt:MAZ023:TODAY:ripCurrentRisk:continuation_swallow",
+      "flaw": "continuation_swallow",
+      "expected": "High",
+      "regex": {
+        "value": "High Expect hazardous conditions near inlets",
+        "correct": false
+      },
+      "nemotron": {
+        "value": "High",
+        "correct": true
+      },
+      "naive": {
+        "value": "High Expect hazardous conditions near inlets",
+        "correct": false
+      },
+      "adjudicated": {
+        "value": "High",
+        "correct": true
+      },
+      "disagreements": 1,
+      "note": "pre-check → nemotron: parser value \"High Expect hazardous conditions near inlets\" is not a valid category for ripCurrentRisk"
+    },
+    {
+      "id": "srf-CAR.txt:MEZ029:TODAY:ripCurrentRisk:continuation_swallow",
+      "flaw": "continuation_swallow",
+      "expected": "Low",
+      "regex": {
+        "value": "Low Expect hazardous conditions near inlets",
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low Expect hazardous conditions near inlets",
+        "correct": false
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 1,
+      "note": "pre-check → nemotron: parser value \"Low Expect hazardous conditions near inlets\" is not a valid category for ripCurrentRisk"
+    },
+    {
+      "id": "srf-CHS.txt:SCZ150:SATURDAY:ripCurrentRisk:continuation_swallow",
+      "flaw": "continuation_swallow",
+      "expected": "Low",
+      "regex": {
+        "value": "Low Expect hazardous conditions near inlets",
+        "correct": false
+      },
+      "nemotron": {
+        "value": "Low",
+        "correct": true
+      },
+      "naive": {
+        "value": "Low Expect hazardous conditions near inlets",
+        "correct": false
+      },
+      "adjudicated": {
+        "value": "Low",
+        "correct": true
+      },
+      "disagreements": 1,
+      "note": "pre-check → nemotron: parser value \"Low Expect hazardous conditions near inlets\" is not a valid category for ripCurrentRisk"
+    },
+    {
+      "id": "srf-AKQ.txt:MDZ025:REST OF TODAY:ripCurrentRisk:field_deleted",
+      "flaw": "field_deleted",
+      "expected": null,
+      "regex": {
+        "value": null,
+        "correct": true
+      },
+      "nemotron": {
+        "value": null,
+        "correct": true
+      },
+      "naive": {
+        "value": null,
+        "correct": true
+      },
+      "adjudicated": {
+        "value": null,
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-BOX.txt:MAZ023:TODAY:ripCurrentRisk:field_deleted",
+      "flaw": "field_deleted",
+      "expected": null,
+      "regex": {
+        "value": null,
+        "correct": true
+      },
+      "nemotron": {
+        "value": null,
+        "correct": true
+      },
+      "naive": {
+        "value": null,
+        "correct": true
+      },
+      "adjudicated": {
+        "value": null,
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CAR.txt:MEZ029:TODAY:ripCurrentRisk:field_deleted",
+      "flaw": "field_deleted",
+      "expected": null,
+      "regex": {
+        "value": null,
+        "correct": true
+      },
+      "nemotron": {
+        "value": null,
+        "correct": true
+      },
+      "naive": {
+        "value": null,
+        "correct": true
+      },
+      "adjudicated": {
+        "value": null,
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    },
+    {
+      "id": "srf-CHS.txt:SCZ150:SATURDAY:ripCurrentRisk:field_deleted",
+      "flaw": "field_deleted",
+      "expected": null,
+      "regex": {
+        "value": null,
+        "correct": true
+      },
+      "nemotron": {
+        "value": null,
+        "correct": true
+      },
+      "naive": {
+        "value": null,
+        "correct": true
+      },
+      "adjudicated": {
+        "value": null,
+        "correct": true
+      },
+      "disagreements": 0,
+      "note": ""
+    }
+  ],
+  "tally": {
+    "regex only": [
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      }
+    ],
+    "nemotron only": [
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      }
+    ],
+    "naive reconcile": [
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": false,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      }
+    ],
+    "adjudicated": [
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": true,
+        "correct": true,
+        "expectAbsent": false
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      },
+      {
+        "produced": false,
+        "correct": true,
+        "expectAbsent": true
+      }
+    ]
+  }
+}

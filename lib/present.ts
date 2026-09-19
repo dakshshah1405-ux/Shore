@@ -50,6 +50,7 @@ const MODEL_NAME: Record<string, string> = {
 
 export function describeExtraction(extractor: string, model: string | null): string {
   const name = model ? (MODEL_NAME[model] ?? model) : 'Nemotron';
+  if (extractor === 'adjudicated') return `parser and ${name} disagreed; ${name} adjudicated against the source text`;
   if (extractor === 'reconciled') return `parser and ${name} agree`;
   if (extractor === 'nemotron') return `read by ${name} from forecast text; quote verified`;
   return EXTRACTOR_LABEL[extractor] ?? extractor;

@@ -14,6 +14,7 @@ interface Row {
   sub_area: string | null; source_id: string; source_url: string; raw_span: string | null;
   char_start: number | null; char_end: number | null; issued_at: string; retrieved_at: string;
   extractor: Observation['extractor']; confidence: Observation['confidence']; model: string | null;
+  adjudication_reason: string | null;
 }
 
 function toObservation(r: Row): Observation {
@@ -23,7 +24,7 @@ function toObservation(r: Row): Observation {
       : { min: r.numeric_min, max: r.numeric_max ?? r.numeric_min, unit: r.numeric_unit, approximate: !!r.approximate },
     subArea: r.sub_area, sourceId: r.source_id, sourceUrl: r.source_url, rawSpan: r.raw_span,
     charStart: r.char_start, charEnd: r.char_end, issuedAt: iso(r.issued_at)!, retrievedAt: iso(r.retrieved_at)!,
-    extractor: r.extractor, confidence: r.confidence, model: r.model,
+    extractor: r.extractor, confidence: r.confidence, model: r.model, adjudicationReason: r.adjudication_reason,
   };
 }
 
@@ -40,7 +41,7 @@ export async function getZoneConditions(): Promise<ZoneCondition[]> {
     select l.zone_id, l.zone_name, l.beaches, l.headlines, l.doc_issued,
            o.period, o.period_label, o.field, o.value, o.numeric_min, o.numeric_max, o.numeric_unit,
            o.approximate, o.sub_area, o.source_id, o.source_url, o.raw_span, o.char_start, o.char_end,
-           o.issued_at, o.retrieved_at, o.extractor, o.confidence, o.model
+           o.issued_at, o.retrieved_at, o.extractor, o.confidence, o.model, o.adjudication_reason
     from latest l
     left join observations o on o.document_id = l.document_id and o.zone_id = l.zone_id
     order by l.zone_id, o.id`)) as Row[];

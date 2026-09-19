@@ -40,6 +40,8 @@ create table if not exists observations (
 create index if not exists obs_zone_idx on observations(zone_id, period);
 -- Which Nemotron model read the value (null for parser-only values). Added after launch; additive.
 alter table observations add column if not exists model text;
+-- Why a parser/model disagreement was resolved the way it was, when Nemotron adjudicated it.
+alter table observations add column if not exists adjudication_reason text;
 create index if not exists obs_doc_idx on observations(document_id);
 
 -- Per-zone segment facts that aren't field values: name, beaches, official headlines.

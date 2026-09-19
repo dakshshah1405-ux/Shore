@@ -8,6 +8,7 @@ import { parseSrf } from '../adapters/srf';
 import { numericFor } from '../normalize';
 import { extractSegment, type SegmentExtraction } from '../extract/srf-llm';
 import { reconcile } from '../extract/reconcile';
+import { adjudicate, applyAdjudications, buildCases, preCheck, type AppliedAdjudication } from '../extract/adjudicate';
 import { FALLBACK_MODEL } from '../nemotron';
 import type { NwsProduct } from '../nws';
 
@@ -16,11 +17,13 @@ export const SRF_SOURCE_ID = 'nws-srf';
 export interface IngestResult {
   documentId: string; skipped: boolean; zones: number; observations: number;
   llm: { calls: number; failed: number; fallback: number; accepted: number; rejected: number; disagreements: number };
+  adjudications: AppliedAdjudication[];
 }
 
 export interface IngestOptions {
-  force?: boolean;   // re-extract a document that's already stored (replaces its observations)
-  llm?: boolean;     // run Nemotron (default true)
+  force?: boolean;       // re-extract a document that's already stored (replaces its observations)
+  llm?: boolean;         // run Nemotron (default true)
+  adjudicate?: boolean;  // let Nemotron resolve parser/model disagreements (default true)
 }
 
 async function mapLimit<T, R>(items: T[], limit: number, fn: (t: T) => Promise<R>): Promise<R[]> {
@@ -36,7 +39,8 @@ export async function ingestSrf(prod: NwsProduct, opts: IngestOptions = {}): Pro
   const sql = db();
   const exists = (await sql.query('select 1 from documents where id = $1', [prod.id])).length > 0;
   const llmStats = { calls: 0, failed: 0, fallback: 0, accepted: 0, rejected: 0, disagreements: 0 };
-  if (exists && !opts.force) return { documentId: prod.id, skipped: true, zones: 0, observations: 0, llm: llmStats };
+  const adjudications: AppliedAdjudication[] = [];
+  if (exists && !opts.force) return { documentId: prod.id, skipped: true, zones: 0, observations: 0, llm: llmStats, adjudications };
 
   const text = prod.productText;
   const retrievedAt = new Date().toISOString();
@@ -61,11 +65,29 @@ export async function ingestSrf(prod: NwsProduct, opts: IngestOptions = {}): Pro
   const segRows: unknown[][] = [];
   const obsRows: unknown[][] = [];
 
-  segments.forEach((seg, si) => {
+  for (const [si, seg] of segments.entries()) {
     const ex = llm[si];
     for (const f of ex?.fields ?? []) f.status === 'accepted' ? llmStats.accepted++ : llmStats.rejected++;
-    const { values, disagreements } = reconcile(seg, ex?.fields ?? null, ex?.model ?? null);
+    const reconciled = reconcile(seg, ex?.fields ?? null, ex?.model ?? null);
+    let values = reconciled.values;
+    const { disagreements } = reconciled;
     llmStats.disagreements += disagreements.length;
+
+    // Nemotron adjudicates disagreements over what the text says. It can add a missed value or
+    // confirm the parser, but applyAdjudications refuses any change that lowers a hazard.
+    if (opts.adjudicate !== false && disagreements.length) {
+      try {
+        const cases = buildCases(text, seg, disagreements);
+        // Some parser values are provably wrong from the format alone; those never reach the model.
+        const pre = preCheck(cases);
+        const { decisions, model } = await adjudicate(pre.remaining);
+        const applied = applyAdjudications(values, cases, [...pre.decisions, ...decisions], model ?? ex?.model ?? null);
+        values = applied.values;
+        adjudications.push(...applied.applied);
+      } catch (e) {
+        console.warn(`  adjudication failed for ${seg.zones[0]}: ${(e as Error).message}`);
+      }
+    }
 
     for (const zoneId of seg.zones) {
       segRows.push([prod.id, zoneId, seg.zoneName, seg.beaches, seg.headlines]);
@@ -76,11 +98,11 @@ export async function ingestSrf(prod: NwsProduct, opts: IngestOptions = {}): Pro
           prod.id, zoneId, period, v.periodLabel, v.field, v.value || null,
           n?.min ?? null, n?.max ?? null, n?.unit ?? null, n?.approximate ?? null,
           v.subArea, SRF_SOURCE_ID, prod['@id'], v.rawSpan, v.charStart, v.charEnd,
-          prod.issuanceTime, retrievedAt, v.extractor, v.confidence, v.model,
+          prod.issuanceTime, retrievedAt, v.extractor, v.confidence, v.model, v.adjudicationReason,
         ]);
       }
     }
-  });
+  }
 
   const queries = exists
     ? [sql.query('delete from observations where document_id = $1', [prod.id]),
@@ -99,10 +121,10 @@ export async function ingestSrf(prod: NwsProduct, opts: IngestOptions = {}): Pro
     queries.push(sql.query(
       `insert into observations (document_id, zone_id, period, period_label, field, value,
          numeric_min, numeric_max, numeric_unit, approximate, sub_area, source_id, source_url,
-         raw_span, char_start, char_end, issued_at, retrieved_at, extractor, confidence, model)
+         raw_span, char_start, char_end, issued_at, retrieved_at, extractor, confidence, model, adjudication_reason)
        values ${v.text}`, v.params));
   }
   await sql.transaction(queries);
 
-  return { documentId: prod.id, skipped: false, zones: segRows.length, observations: obsRows.length, llm: llmStats };
+  return { documentId: prod.id, skipped: false, zones: segRows.length, observations: obsRows.length, llm: llmStats, adjudications };
 }

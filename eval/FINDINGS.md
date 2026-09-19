@@ -59,6 +59,65 @@ with no bad data admitted, but the backup's correct answer was wasted (after 47 
 accepts either envelope while keeping every per-value check unchanged; the same cached response
 yields 7 accepted and 1 rejected value.
 
+## 6. Adjudication eval — and why "regex wins ties" wasn't enough
+
+Nemotron's fourth role: when the parser and the model disagree about a field, Nemotron is shown the
+source text and decides **which reading matches the document**. It never assesses danger — the rule
+ladder in `lib/risk.ts` remains the sole authority on risk, and `applyAdjudications` refuses any
+change that would lower a hazard (9 tests in `lib/extract/adjudicate.test.ts`).
+
+**Harness:** real forecasts, broken one line at a time in ways that defeat the parser's structural
+assumptions, with the correct answer read from the untouched document. **These are injected flaws,
+not field data** — after fixing the bug in §4, real disagreements across all 12 offices are zero.
+24 cases, 4 per flaw type, 6 offices. Run: `npx tsx scripts/eval-adjudicator.ts --per-flaw 4`.
+
+**A. Cases where the forecast states a value (20)**
+
+| Config | Coverage | Precision | Recall |
+|---|---|---|---|
+| regex only | 40% | 50% | 20% |
+| nemotron only | 100% | 100% | 100% |
+| naive reconcile (parser wins ties) | 100% | 80% | 80% |
+| **adjudicated (pre-check + Nemotron)** | **100%** | **100%** | **100%** |
+
+**B. Control — the field was deleted, so the correct answer is no value (4)**
+
+| Config | Values invented | Correctly silent |
+|---|---|---|
+| every config, including Nemotron | 0 / 4 | 100% |
+
+Overall accuracy: regex 33% · naive reconcile 83% · adjudicated 100% · nemotron-only 100%.
+
+**Read it honestly.** 16 of the 20 value cases are deliberately corrupted; on real data the parser
+is right essentially always (0 disagreements in 1,262 live values). The table measures behaviour on
+damaged input. Nemotron-only also scores 100% here — every case is one the parser fails, so any
+deference to the parser costs points. That is exactly why both distributions matter: a config that
+always trusted the model would ship the model's errors across the 1,262 real values.
+
+**Most of the gain is deterministic, not model-driven.** A parser value that isn't a valid category
+for its field, or whose source span crosses a line break (these fields are always stated on one
+line), is provably wrong from the format alone. `preCheck` resolves those without calling Nemotron.
+
+## 7. A reasoning model whose conclusion contradicted its own reasoning
+
+Before the pre-check existed, adjudication was wrong in 3 of 8 corruption cases — and the reasons
+are the interesting part. Verbatim, with `choice: "parser"`:
+
+> *"Source text shows 'Rip Current Risk*...........Low.' and 'Expect hazardous conditions near
+> inlets.' on separate lines; parser captured both, model only 'Low'."*
+
+It correctly diagnosed that the parser had swallowed text from another line, then sided with the
+parser anyway. Not a hallucination — a conclusion that doesn't follow from its own stated reasoning.
+Found by measuring against a baseline rather than trusting the output, and mitigated by deciding
+those cases deterministically instead of asking.
+
+## 8. A measurement artifact worth knowing about
+
+One corrupted surf case still stores the text `"Around 2 feet Expect hazardous conditions near
+inlets"` yet scores correct: agreement is tested on parsed numbers, and both strings parse to 2 ft,
+so it never became a disagreement. **Text corruption that preserves the number is invisible to a
+numeric agreement test.** Disclosed rather than tuned away.
+
 ## 3. It declines to invent absent fields — when asked the right way
 
 The prose line states surf but no rip current risk. With "use an empty string for anything the text
