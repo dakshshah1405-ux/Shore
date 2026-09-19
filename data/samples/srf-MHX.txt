@@ -1,0 +1,301 @@
+
+000
+FZUS52 KMHX 191511
+SRFMHX
+
+Surf Zone Forecast
+National Weather Service Newport/Morehead City NC
+1111 AM EDT Sat Sep 19 2026
+
+NCZ203-192100-
+Northern Outer Banks-
+Including the beaches of Duck, Southern Shores, Kitty Hawk, 
+Kill Devil Hills, and Nags Head
+1111 AM EDT Sat Sep 19 2026
+
+...MODERATE RIP CURRENT RISK IN EFFECT UNTIL 8 PM EDT THIS EVENING...
+
+.REST OF TODAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................Moderate. 
+Water Temperature...........In the upper 70s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds around 15 mph.
+Tides...
+   Duck Pier................High 3.4 feet (MLLW) 02:20 PM EDT.
+
+.SUNDAY...
+Rip Current Risk*...........High. 
+Surf Height.................Around 4 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................East winds 5 to 10 mph.
+Tides...
+   Duck Pier................Low 1.3 feet (MLLW) 08:46 AM EDT.
+                            High 3.4 feet (MLLW) 03:28 PM EDT.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mhx
+
+$$
+
+NCZ205-192100-
+Hatteras Island-
+Including the beaches of Rodanthe, Avon, Buxton, Frisco, 
+Hatteras Village, and Cape Hatteras National Seashore
+1111 AM EDT Sat Sep 19 2026
+
+...MODERATE RIP CURRENT RISK IN EFFECT UNTIL 8 PM EDT THIS EVENING
+NORTH OF CAPE HATTERAS...
+
+.REST OF TODAY...
+Rip Current Risk*...
+   North of Cape Hatteras...Moderate. 
+   South of Cape Hatteras...Low. 
+Surf Height...
+   North of Cape Hatteras...2 to 3 feet. 
+   South of Cape Hatteras...1 to 2 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................Moderate. 
+Water Temperature...........In the upper 70s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds around 15 mph.
+Tides...
+   Cape Hatteras............High 3.1 feet (MLLW) 02:36 PM EDT.
+
+.SUNDAY...
+Rip Current Risk*...
+   North of Cape Hatteras...Moderate. 
+   South of Cape Hatteras...Low. 
+Surf Height...
+   North of Cape Hatteras...Around 4 feet. 
+   South of Cape Hatteras...Around 2 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds 5 to 10 mph.
+Tides...
+   Cape Hatteras............Low 1.0 feet (MLLW) 08:46 AM EDT.
+                            High 3.2 feet (MLLW) 03:38 PM EDT.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mhx
+
+$$
+
+NCZ204-192100-
+Ocracoke Island-
+Including the beaches of Ocracoke
+1111 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 to 2 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................Moderate. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds around 20 mph.
+Tides...
+   Ocracoke Inlet...........High 2.0 feet (MLLW) 02:44 PM EDT.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................Around 2 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds 5 to 10 mph.
+Tides...
+   Ocracoke Inlet...........Low 0.8 feet (MLLW) 08:56 AM EDT.
+                            High 2.0 feet (MLLW) 03:46 PM EDT.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mhx
+
+$$
+
+NCZ196-192100-
+East Carteret-
+Including the beaches of Cape Lookout National Seashore and
+Shackleford Banks
+1111 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...
+   Core Banks...............Low. 
+   Shackleford Banks........Low. 
+Surf Height...
+   Core Banks...............1 to 2 feet. 
+   Shackleford Banks........1 to 2 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................Moderate. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds 15 to 20 mph.
+Tides...
+   Cape Lookout.............High 3.6 feet (MLLW) 02:13 PM EDT.
+
+.SUNDAY...
+Rip Current Risk*...
+   Core Banks...............Low. 
+   Shackleford Banks........Low. 
+Surf Height...
+   Core Banks...............Around 3 feet. 
+   Shackleford Banks........Around 1 foot. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds around 10 mph.
+Tides...
+   Cape Lookout.............Low 1.1 feet (MLLW) 08:23 AM EDT.
+                            High 3.6 feet (MLLW) 03:15 PM EDT.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mhx
+
+$$
+
+NCZ195-192100-
+West Carteret-
+Including the beaches of Fort Macon, Atlantic Beach, 
+Pine Knoll Shores, Salter Path, and Emerald Isle
+1111 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 to 2 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................Moderate. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Partly sunny. A slight chance of 
+                            showers. 
+High Temperature............In the lower 80s. 
+Winds.......................East winds 10 to 15 mph.
+Tides...
+   Atlantic Beach...........High 3.8 feet (MLLW) 02:06 PM EDT.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................Around 2 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly sunny. 
+High Temperature............In the mid 80s. 
+Winds.......................East winds around 10 mph.
+Tides...
+   Atlantic Beach...........Low 1.0 feet (MLLW) 08:56 AM EDT.
+                            High 3.8 feet (MLLW) 03:07 PM EDT.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mhx
+
+$$
+
+NCZ199-192100-
+Coastal Onslow-
+Including the beaches of Hammocks Beach and North Topsail Beach
+1111 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 to 2 feet. 
+Thunderstorm Potential**....Low. 
+UV Index**..................Moderate. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Partly sunny. A chance of showers and a 
+                            slight chance of thunderstorms. 
+High Temperature............In the mid 80s. 
+Winds.......................East winds 10 to 15 mph.
+Tides...
+   North Topsail Beach......High 4.4 feet (MLLW) 02:38 PM EDT.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................Around 2 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly sunny. 
+High Temperature............In the mid 80s. 
+Winds.......................Northeast winds around 5 mph, becoming 
+                            southeast in the afternoon.
+Tides...
+   North Topsail Beach......Low 1.2 feet (MLLW) 08:44 AM EDT.
+                            High 4.4 feet (MLLW) 03:40 PM EDT.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mhx
+
+
+$$

@@ -1,0 +1,234 @@
+
+000
+FZUS52 KMFL 190801
+SRFMFL
+
+Surf Zone Forecast
+National Weather Service Miami FL
+401 AM EDT Sat Sep 19 2026
+
+FLZ168-192200-
+Coastal Palm Beach-
+Including the beaches of Palm Beach
+401 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 to 2 feet. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........None. 
+UV Index**..................Very High. 
+Water Temperature...........In the mid 80s. 
+Weather.....................Partly sunny. A chance of showers and 
+                            thunderstorms. 
+High Temperature............In the upper 80s. 
+Winds.......................Light and variable winds, becoming east 
+                            around 5 mph in the afternoon.
+Tides...
+   Lake Worth Pier..........Low at 08:43 AM EDT.
+                            High at 03:17 PM EDT. 
+Sunrise.....................7:07 AM. 
+Sunset......................7:22 PM.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................Around 1 foot. 
+Thunderstorm Potential**....High. 
+Waterspout Risk**...........None. 
+Weather.....................Mostly cloudy. Showers with 
+                            thunderstorms likely. 
+High Temperature............In the upper 80s. 
+Winds.......................Light and variable winds, becoming east 
+                            around 5 mph in the afternoon.
+Tides...
+   Lake Worth Pier..........Low at 09:40 AM EDT.
+                            High at 04:17 PM EDT. 
+Sunrise.....................7:08 AM. 
+Sunset......................7:20 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mfl
+
+$$
+
+FLZ172-192200-
+Coastal Broward-
+Including the beaches of Fort Lauderdale
+401 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 foot or less. 
+Thunderstorm Potential**....High. 
+Waterspout Risk**...........None. 
+UV Index**..................Very High. 
+Water Temperature...........In the mid 80s. 
+Weather.....................Mostly cloudy. Showers and 
+                            thunderstorms likely. 
+High Temperature............In the upper 80s. 
+Max Heat Index..............Up to 101. 
+Winds.......................North winds around 5 mph, becoming east 
+                            in the afternoon.
+Tides...
+   Miami Harbor Entrance....Low at 09:05 AM EDT.
+                            High at 03:39 PM EDT. 
+Sunrise.....................7:08 AM. 
+Sunset......................7:22 PM.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 foot or less. 
+Thunderstorm Potential**....High. 
+Waterspout Risk**...........None. 
+Weather.....................Partly sunny. Showers and thunderstorms 
+                            likely. 
+High Temperature............In the upper 80s. 
+Max Heat Index..............Up to 101. 
+Winds.......................Light and variable winds, becoming east 
+                            around 5 mph in the afternoon.
+Tides...
+   Miami Harbor Entrance....Low at 10:08 AM EDT.
+                            High at 04:42 PM EDT. 
+Sunrise.....................7:08 AM. 
+Sunset......................7:21 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mfl
+
+$$
+
+FLZ173-192200-
+Coastal Miami-Dade-
+Including the beaches of Miami
+401 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 foot or less. 
+Thunderstorm Potential**....High. 
+Waterspout Risk**...........None. 
+UV Index**..................Very High. 
+Water Temperature...........In the mid 80s. 
+Weather.....................Mostly cloudy. Showers and 
+                            thunderstorms likely. 
+High Temperature............In the upper 80s. 
+Max Heat Index..............Up to 101. 
+Winds.......................North winds around 5 mph, becoming east 
+                            in the afternoon.
+Tides...
+   Miami Harbor Entrance....Low at 09:05 AM EDT.
+                            High at 03:39 PM EDT. 
+Sunrise.....................7:08 AM. 
+Sunset......................7:22 PM.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 foot or less. 
+Thunderstorm Potential**....High. 
+Waterspout Risk**...........None. 
+Weather.....................Partly sunny. Showers and thunderstorms 
+                            likely. 
+High Temperature............In the upper 80s. 
+Max Heat Index..............Up to 101. 
+Winds.......................Light and variable winds, becoming east 
+                            around 5 mph in the afternoon.
+Tides...
+   Miami Harbor Entrance....Low at 10:08 AM EDT.
+                            High at 04:42 PM EDT. 
+Sunrise.....................7:08 AM. 
+Sunset......................7:21 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mfl
+
+$$
+
+FLZ069-192200-
+Coastal Collier-
+Including the beaches of Naples and Marco Island
+401 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 foot or less. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........None. 
+UV Index**..................Very High. 
+Weather.....................Partly sunny. A chance of showers and 
+                            thunderstorms. 
+High Temperature............In the upper 80s. 
+Max Heat Index..............Up to 101. 
+Winds.......................East winds around 5 mph, becoming 
+                            southwest in the afternoon.
+Tides...
+   North End of Naples Bay..High at 06:42 AM EDT.
+                            Low at 02:43 PM EDT. 
+Sunrise.....................7:14 AM. 
+Sunset......................7:28 PM.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 foot or less. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........None. 
+Weather.....................Partly sunny. A chance of showers and 
+                            thunderstorms. 
+High Temperature............In the upper 80s. 
+Winds.......................East winds around 5 mph, becoming 
+                            southwest in the afternoon.
+Tides...
+   North End of Naples Bay..High at 08:36 AM EDT.
+                            Low at 03:43 PM EDT. 
+Sunrise.....................7:14 AM. 
+Sunset......................7:27 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/mfl
+
+
+$$
+

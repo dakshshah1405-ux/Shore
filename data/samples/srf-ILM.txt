@@ -1,0 +1,342 @@
+
+000
+FZUS52 KILM 191505
+SRFILM
+
+Surf Zone Forecast
+National Weather Service Wilmington NC
+1105 AM EDT Sat Sep 19 2026
+
+NCZ106-200430-
+Coastal Pender-
+Including the beaches of Surf City and Topsail Beach
+1105 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 to 2 feet. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........Moderate. 
+UV Index**..................Very High. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Mostly sunny through early afternoon, 
+                            then partly sunny with showers likely and 
+                            a chance of thunderstorms. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds 5 to 10 mph, becoming east
+                            15 to 20 mph in the afternoon. 
+Tides...
+   Topsail Inlet............High at 02:38 PM EDT. 
+Remarks.....................Moderate north to south longshore current.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 to 3 feet. 
+Thunderstorm Potential**....None. 
+Waterspout Risk**...........Low. 
+Weather.....................Mostly sunny. 
+High Temperature............In the mid 80s. 
+Winds.......................Northeast winds around 5 mph.
+Tides...
+   Topsail Inlet............Low at 08:44 AM EDT.
+                            High at 03:40 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Low rip current risk*. Surf height around 1 foot. Mostly
+sunny. A slight chance of showers and thunderstorms. Highs in the mid
+80s. East winds around 5 mph. 
+.TUESDAY...Low rip current risk*. Surf height 1 to 3 feet. Partly
+sunny. Showers likely and a chance of thunderstorms. Highs in the
+lower 80s. Northeast winds around 10 mph. 
+.WEDNESDAY...Low rip current risk*. Surf height 1 to 3 feet. Partly
+sunny. A chance of showers and thunderstorms. Highs around 80.
+Northeast winds around 15 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/ilm
+
+$$
+
+NCZ108-200430-
+Coastal New Hanover-
+Including the beaches of Wrightsville Beach, Masonboro Island, 
+Carolina Beach, Kure Beach, and Fort Fisher
+1105 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 to 2 feet. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........Moderate. 
+UV Index**..................Very High. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Mostly sunny through early afternoon, 
+                            then partly sunny with showers likely and 
+                            a chance of thunderstorms. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds around 10 mph, becoming east
+                            15 to 20 mph in the afternoon. 
+Tides...
+   Mercer Pier..............High at 02:25 PM EDT. 
+Remarks.....................Moderate north to south longshore current.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................Around 2 feet. 
+Thunderstorm Potential**....None. 
+Waterspout Risk**...........Moderate. 
+Weather.....................Mostly sunny. 
+High Temperature............In the mid 80s. 
+Winds.......................Northeast winds 5 to 10 mph.
+Tides...
+   Mercer Pier..............Low at 09:07 AM EDT.
+                            High at 03:20 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Low rip current risk*. Surf height around 1 foot. Mostly
+sunny. A slight chance of showers and thunderstorms. Highs in the mid
+80s. East winds around 5 mph. 
+.TUESDAY...Low rip current risk*. Surf height 1 to 2 feet. Mostly
+cloudy. Showers likely and a chance of thunderstorms. Highs in the
+lower 80s. Northeast winds around 10 mph. 
+.WEDNESDAY...Low rip current risk*. Surf height 2 to 4 feet. Partly
+sunny. A chance of showers and thunderstorms. Highs around 80.
+Northeast winds around 20 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/ilm
+
+$$
+
+NCZ110-200430-
+Coastal Brunswick-
+Including the beaches of Bald Head Island, Oak Island, Holden Beach, 
+Ocean Isle Beach, and Sunset Beach
+1105 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...
+   East of Ocean Isle Beach.Low. 
+   Ocean Isle Beach West....Low. 
+Surf Height...
+   East of Ocean Isle Beach.Around 2 feet. 
+   Ocean Isle Beach West....1 to 3 feet. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........Moderate. 
+UV Index**..................Very High. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Mostly sunny through early afternoon, 
+                            then partly sunny with showers likely and 
+                            a chance of thunderstorms.
+High Temperature............In the mid 80s. 
+Winds.......................Northeast winds 5 to 10 mph, becoming east
+                            10 to 15 mph in the afternoon. 
+Tides...
+   Oak Island...............High at 02:37 PM EDT. 
+Remarks.....................Moderate east to west longshore current.
+
+.SUNDAY...
+Rip Current Risk*...
+   East of Ocean Isle Beach.Low. 
+   Ocean Isle Beach West....Low. 
+Surf Height...
+   East of Ocean Isle Beach.1 to 2 feet. 
+   Ocean Isle Beach West....1 to 2 feet. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........Moderate. 
+Weather.....................Mostly sunny. A chance of thunderstorms 
+                            and a slight chance of showers. 
+High Temperature............In the mid 80s. 
+Winds.......................Northeast winds around 5 mph.
+Tides...
+   Oak Island...............Low at 09:04 AM EDT.
+                            High at 03:32 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Low rip current risk*. Surf height around 1 foot. Mostly
+sunny. A slight chance of showers and thunderstorms. Highs in the mid
+80s. East winds around 5 mph. 
+.TUESDAY...Low rip current risk*. Surf height around 1 foot. Mostly
+cloudy. Showers likely and a chance of thunderstorms. Highs in the
+lower 80s. Northeast winds around 10 mph. 
+.WEDNESDAY...Low rip current risk*. Surf height 1 to 3 feet. Partly
+sunny. A chance of showers and thunderstorms. Highs around 80.
+Northeast winds around 20 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/ilm
+
+$$
+
+SCZ054-200430-
+Coastal Horry-
+Including the beaches of Cherry Grove, North Myrtle Beach, 
+Atlantic Beach, Windy Hill, Myrtle Beach, Surfside Beach, 
+and Garden City
+1105 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...
+   North of Myrtle Beach....Low. 
+   Myrtle Beach South.......Low. 
+Surf Height...
+   North of Myrtle Beach....1 to 3 feet. 
+   Myrtle Beach South.......Around 2 feet. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........Moderate. 
+UV Index**..................Very High. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Mostly sunny through early afternoon, 
+                            then partly sunny with a chance of showers
+                            and thunderstorms. 
+High Temperature............In the mid 80s. 
+Winds.......................Northeast winds around 5 mph, becoming 
+                            east 10 to 15 mph in the afternoon. 
+Tides...
+   Springmaid Pier..........High at 02:38 PM EDT. 
+Remarks.....................Moderate north to south longshore current
+                            north of Myrtle Beach late.
+
+.SUNDAY...
+Rip Current Risk*...
+   North of Myrtle Beach....Low. 
+   Myrtle Beach South.......Low. 
+Surf Height...
+   North of Myrtle Beach....1 to 2 feet. 
+   Myrtle Beach South.......1 foot. 
+Thunderstorm Potential**....Low. 
+Waterspout Risk**...........Moderate. 
+Weather.....................Mostly sunny. A slight chance of 
+                            showers and thunderstorms. 
+High Temperature............In the mid 80s. 
+Winds.......................Northeast winds around 5 mph.
+Tides...
+   Springmaid Pier..........Low at 08:54 AM EDT.
+                            High at 03:31 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Low rip current risk*. Surf height around 1 foot. Mostly
+sunny. Highs in the mid 80s. East winds around 5 mph. 
+.TUESDAY...Low rip current risk*. Surf height around 1 foot. Mostly
+cloudy. Showers likely and a chance of thunderstorms. Highs in the
+lower 80s. Northeast winds around 10 mph. 
+.WEDNESDAY...Low rip current risk*. Surf height 1 to 3 feet. Partly
+sunny. A chance of showers and thunderstorms. Highs around 80.
+Northeast winds around 15 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/ilm
+
+$$
+
+SCZ056-200430-
+Coastal Georgetown-
+Including the beaches of Murrells Inlet, Litchfield Beach, 
+Pawleys Island, and Debordieu Beach
+1105 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 to 2 feet. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........Moderate. 
+UV Index**..................Very High. 
+Water Temperature...........In the lower 80s. 
+Weather.....................Mostly sunny through early afternoon, 
+                            becoming partly sunny with a chance of 
+                            showers and thunderstorms. 
+High Temperature............In the mid 80s. 
+Winds.......................Northeast winds around 5 mph, becoming 
+                            east 5 to 10 mph in the afternoon. 
+Tides...
+   Winyah Bay Entrance......High at 02:44 PM EDT. 
+Remarks.....................None.
+
+.SUNDAY...
+Rip Current Risk*...........Low. 
+Surf Height.................1 foot. 
+Thunderstorm Potential**....Moderate. 
+Waterspout Risk**...........Moderate. 
+Weather.....................Mostly sunny. A chance of showers and 
+                            thunderstorms. 
+High Temperature............In the lower 80s. 
+Winds.......................Northeast winds around 5 mph.
+Tides...
+   Winyah Bay Entrance......Low at 08:51 AM EDT.
+                            High at 03:39 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Low rip current risk*. Surf height around 1 foot. Mostly
+sunny. Highs in the lower 80s. Northeast winds around 5 mph. 
+.TUESDAY...Low rip current risk*. Surf height 1 to 2 feet. Mostly
+cloudy. Showers likely and a chance of thunderstorms. Highs in the
+lower 80s. Northeast winds around 10 mph. 
+.WEDNESDAY...Low rip current risk*. Surf height 1 to 3 feet. Partly
+sunny. A chance of showers and thunderstorms. Highs around 80.
+Northeast winds around 15 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/ilm
+
+
+$$

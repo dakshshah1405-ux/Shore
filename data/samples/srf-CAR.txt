@@ -1,0 +1,127 @@
+
+000
+FZUS51 KCAR 190646
+SRFCAR
+
+Surf Zone Forecast
+National Weather Service Caribou ME
+246 AM EDT Sat Sep 19 2026
+
+MEZ029-192000-
+Coastal Hancock-
+Including the beaches of Sand Beach
+246 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk............Low. 
+Surf........................Around 2 feet, subsiding to around 1 
+                            foot in the afternoon. 
+Thunderstorm Potential**....None. 
+UV Index**..................Moderate. 
+Water Temperature...........54 degrees. According to the USCG, when 
+                            the water temperature is below 60 
+                            degrees, the average submerged person 
+                            could lose dexterity within minutes and 
+                            be unable to accomplish simple tasks 
+                            like buckling a life jacket or 
+                            operating a radio. 
+Weather.....................Sunny. 
+High Temperature............In the upper 50s. 
+Winds.......................Northwest winds 5 to 10 mph.
+Tides...
+   Sand Beach...............Low 2.6 feet (MLLW) 11:31 AM EDT.
+                            High 9.7 feet (MLLW) 05:44 PM EDT.
+
+.SUNDAY...
+Rip Current Risk............Low. 
+Surf........................Around 1 foot. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly cloudy. A chance of showers. 
+High Temperature............In the upper 50s. 
+Winds.......................Southeast winds 5 to 10 mph.
+Tides...
+   Sand Beach...............High 8.7 feet (MLLW) 06:30 AM EDT.
+                            Low 2.6 feet (MLLW) 12:31 PM EDT.
+
+.MONDAY...Surf height around 2 feet. Mostly sunny. Highs around 60.
+North winds around 10 mph. 
+.TUESDAY...Surf height around 2 feet. Mostly sunny. Highs in the
+upper 50s. Northeast winds around 5 mph. 
+.WEDNESDAY...Surf height around 2 feet. Sunny. Highs in the upper
+50s. Northeast winds around 5 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/car
+
+$$
+
+MEZ030-192000-
+Coastal Washington-
+Including the beaches of Roque Bluffs
+246 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk............Low. 
+Surf........................Around 1 foot. 
+Thunderstorm Potential**....None. 
+UV Index**..................Moderate. 
+Water Temperature...........54 degrees. According to the USCG, when 
+                            the water temperature is below 60 
+                            degrees, the average submerged person 
+                            could lose dexterity within minutes and 
+                            be unable to accomplish simple tasks 
+                            like buckling a life jacket or 
+                            operating a radio. 
+Weather.....................Sunny. 
+High Temperature............In the upper 50s. 
+Winds.......................Northwest winds 5 to 10 mph.
+Tides...
+   Roque Bluffs.............Low 2.6 feet (MLLW) 11:28 AM EDT.
+                            High 10.9 feet (MLLW) 05:46 PM EDT.
+
+.SUNDAY...
+Rip Current Risk............Low. 
+Surf........................Around 1 foot. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly cloudy. 
+High Temperature............In the mid 50s. 
+Winds.......................Southeast winds 5 to 10 mph.
+Tides...
+   Roque Bluffs.............High 10.1 feet (MLLW) 06:23 AM EDT.
+                            Low 2.6 feet (MLLW) 12:26 PM EDT.
+
+.MONDAY...Surf height around 1 foot. Mostly sunny. Patchy fog. Highs
+in the upper 50s. North winds around 10 mph. 
+.TUESDAY...Surf height around 1 foot. Mostly sunny. Highs in the mid
+50s. Northeast winds around 5 mph. 
+.WEDNESDAY...Surf height around 1 foot. Sunny. Highs in the mid 50s.
+Northeast winds around 5 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/car
+
+
+$$
+

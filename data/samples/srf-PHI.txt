@@ -1,0 +1,255 @@
+
+000
+FZUS51 KPHI 190817
+SRFPHI
+
+Surf Zone Forecast for New Jersey and Delaware
+National Weather Service Mount Holly NJ
+417 AM EDT Sat Sep 19 2026
+
+NJZ014-192215-
+Eastern Monmouth-
+Including the beaches of Sandy Hook
+417 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk............Moderate. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................High. 
+Water Temperature...........In the lower 70s. 
+Weather.....................Partly sunny. 
+High Temperature............Around 70. 
+Winds.......................East winds 10 to 15 mph.
+Tides...
+   Belmar...................Low at 07:31 AM EDT.
+                            High at 02:08 PM EDT. 
+Sunrise.....................6:40 AM. 
+Sunset......................7:00 PM.
+
+.SUNDAY...
+Rip Current Risk............Moderate. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly cloudy. A chance of showers. 
+High Temperature............In the mid 70s. 
+Winds.......................South winds 10 to 15 mph.
+Tides...
+   Belmar...................Low at 08:43 AM EDT.
+                            High at 03:03 PM EDT. 
+Sunrise.....................6:41 AM. 
+Sunset......................6:59 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/phi
+
+$$
+
+NJZ026-192215-
+Coastal Ocean-
+Including the beaches of Long Beach Island
+417 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk............Moderate. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................High. 
+Water Temperature...........In the upper 60s. 
+Weather.....................Partly sunny. 
+High Temperature............In the lower 70s. 
+Winds.......................Northeast winds 15 to 20 mph.
+Tides...
+   Barnegat Inlet...........Low at 08:22 AM EDT.
+                            High at 02:38 PM EDT. 
+Sunrise.....................6:40 AM. 
+Sunset......................7:01 PM.
+
+.SUNDAY...
+Rip Current Risk............Moderate. 
+Surf Height.................1 to 2 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Partly sunny. A slight chance of 
+                            showers. 
+High Temperature............In the mid 70s. 
+Winds.......................South winds 15 to 20 mph.
+Tides...
+   Barnegat Inlet...........Low at 09:22 AM EDT.
+                            High at 03:36 PM EDT. 
+Sunrise.....................6:41 AM. 
+Sunset......................6:59 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/phi
+
+$$
+
+NJZ025-192215-
+Coastal Atlantic-
+Including the beaches of Atlantic City
+417 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk............Low. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................High. 
+Water Temperature...........In the mid 60s. 
+Weather.....................Partly sunny. 
+High Temperature............In the lower 70s. 
+Winds.......................Northeast winds 15 to 20 mph.
+Tides...
+   Atlantic City............Low at 07:45 AM EDT.
+                            High at 02:24 PM EDT. 
+Sunrise.....................6:42 AM. 
+Sunset......................7:02 PM.
+
+.SUNDAY...
+Rip Current Risk............Moderate. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly sunny. 
+High Temperature............In the mid 70s. 
+Winds.......................South winds 10 to 15 mph.
+Tides...
+   Atlantic City............Low at 08:48 AM EDT.
+                            High at 03:29 PM EDT. 
+Sunrise.....................6:43 AM. 
+Sunset......................7:00 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/phi
+
+$$
+
+NJZ024-192215-
+Atlantic Coastal Cape May-
+Including the beaches of Ocean City
+417 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk............Low. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................High. 
+Water Temperature...........In the lower 70s. 
+Weather.....................Partly sunny. 
+High Temperature............In the mid 70s. 
+Winds.......................Northeast winds around 15 mph.
+Tides...
+   Cape May.................Low at 08:06 AM EDT.
+                            High at 02:58 PM EDT. 
+Sunrise.....................6:43 AM. 
+Sunset......................7:03 PM.
+
+.SUNDAY...
+Rip Current Risk............Moderate. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly sunny. 
+High Temperature............In the upper 70s. 
+Winds.......................South winds 10 to 15 mph.
+Tides...
+   Cape May.................Low at 09:09 AM EDT.
+                            High at 04:03 PM EDT. 
+Sunrise.....................6:44 AM. 
+Sunset......................7:02 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/phi
+
+$$
+
+DEZ004-192215-
+Delaware Beaches-
+Including the beaches of Rehoboth Beach
+417 AM EDT Sat Sep 19 2026
+
+.TODAY...
+Rip Current Risk............Low. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+UV Index**..................High. 
+Water Temperature...........In the mid 70s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the mid 70s. 
+Winds.......................Northeast winds around 15 mph.
+Tides...
+   Rehoboth Beach...........Low at 08:04 AM EDT.
+                            High at 02:48 PM EDT. 
+Sunrise.....................6:45 AM. 
+Sunset......................7:04 PM.
+
+.SUNDAY...
+Rip Current Risk............Moderate. 
+Surf Height.................2 to 3 feet. 
+Thunderstorm Potential**....None. 
+Weather.....................Mostly sunny. 
+High Temperature............In the upper 70s. 
+Winds.......................South winds 10 to 15 mph.
+Tides...
+   Rehoboth Beach...........Low at 09:02 AM EDT.
+                            High at 03:51 PM EDT. 
+Sunrise.....................6:46 AM. 
+Sunset......................7:03 PM.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** For thunderstorm, waterspout, and UV definitions see:
+https://www.weather.gov/beach/phi
+
+
+$$

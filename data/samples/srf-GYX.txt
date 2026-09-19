@@ -1,0 +1,434 @@
+
+000
+FZUS51 KGYX 191541
+SRFGYX
+
+Surf Zone Forecast for Maine
+National Weather Service Gray ME
+1141 AM EDT Sat Sep 19 2026
+
+.For the ocean beaches of Maine and New Hampshire...
+
+NHZ014-192000-
+Coastal Rockingham-
+Including the beaches of Portsmouth and Hampton
+1141 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Weather.....................Sunny. 
+UV Index....................High. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................Northeast winds around 5 mph, becoming 
+                            east in the afternoon. 
+Surf Height.................Around 2 feet. 
+Water Temperature...........62 degrees. 
+Rip Current Risk*...........Low.
+Tides...
+   Hampton Beach............Low 2.1 feet (MLLW) 12:16 PM EDT.
+
+.SUNDAY...
+Weather.....................Partly sunny until 2 PM, then cloudy. 
+                            Rain. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................South winds 5 to 10 mph. 
+Surf Height.................Around 2 feet. 
+Rip Current Risk*...........Low.
+Tides...
+   Hampton Beach............High 6.8 feet (MLLW) 07:10 AM EDT.
+                            Low 2.1 feet (MLLW) 01:16 PM EDT.
+
+.MONDAY...Surf height around 2 feet. Mostly sunny. Highs in the lower
+60s. Northeast winds around 10 mph. 
+.TUESDAY...Surf height around 3 feet. Partly sunny. Highs in the
+upper 50s. Northeast winds around 10 mph. 
+.WEDNESDAY...Surf height around 5 feet. Mostly sunny. Highs in the
+upper 50s. Northeast winds around 15 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - A low risk of rip currents implies that wind and wave
+  conditions are not expected to support the development of enhanced
+  rip currents. However, rip currents are always possible, especially
+  near jetties and other structures. Always have a flotation device
+  with you in the water.
+* Moderate Risk - A moderate risk of rip currents implies
+  that individuals planning to enter the surf should  check with
+  local beach patrols first. Be sure to swim within sight of a life
+  guard, and never alone or at night. Always have a flotation device
+  with you in the water.
+* High Risk - A high risk of rip currents means dangerous and
+  potentially life threatening conditions exist for all people
+  entering the surf. People visiting the beaches should stay out of
+  the high surf.
+
+$$
+
+MEZ023-192000-
+Coastal York-
+Including the beaches of Old Orchard, Fortunes Rock, Wells, Ogunquit, 
+and York
+1141 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Weather.....................Sunny. 
+UV Index....................Moderate. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................Northeast winds around 5 mph, becoming 
+                            southeast in the afternoon. 
+Surf Height.................Around 2 feet. 
+Water Temperature...........62 degrees. 
+Rip Current Risk*...........Low.
+Tides...
+   Old Orchard Beach........Low 2.2 feet (MLLW) 11:38 AM EDT.
+   Wells Beach..............Low 2.3 feet (MLLW) 11:49 AM EDT.
+
+.SUNDAY...
+Weather.....................Mostly cloudy. Rain. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................South winds 5 to 10 mph. 
+Surf Height.................Around 2 feet. 
+Rip Current Risk*...........Low.
+Tides...
+   Old Orchard Beach........High 7.3 feet (MLLW) 06:56 AM EDT.
+                            Low 2.3 feet (MLLW) 12:38 PM EDT.
+   Wells Beach..............High 7.3 feet (MLLW) 06:56 AM EDT.
+                            Low 2.3 feet (MLLW) 12:49 PM EDT.
+
+.MONDAY...Surf height around 2 feet. Mostly sunny. Highs in the lower
+60s. North winds around 10 mph. 
+.TUESDAY...Surf height around 3 feet. Partly sunny. Highs in the
+upper 50s. Northeast winds around 10 mph. 
+.WEDNESDAY...Surf height around 4 feet. Mostly sunny. Highs in the
+upper 50s. Northeast winds around 10 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - A low risk of rip currents implies that wind and wave
+  conditions are not expected to support the development of enhanced
+  rip currents. However, rip currents are always possible, especially
+  near jetties and other structures. Always have a flotation device
+  with you in the water.
+* Moderate Risk - A moderate risk of rip currents implies
+  that individuals planning to enter the surf should  check with
+  local beach patrols first. Be sure to swim within sight of a life
+  guard, and never alone or at night. Always have a flotation device
+  with you in the water.
+* High Risk - A high risk of rip currents means dangerous and
+  potentially life threatening conditions exist for all people
+  entering the surf. People visiting the beaches should stay out of
+  the high surf.
+
+$$
+
+MEZ024-192000-
+Coastal Cumberland-
+Including the beaches of Scarborough, Higgins, and Crescent
+1141 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Weather.....................Sunny. 
+UV Index....................Moderate. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................North winds around 5 mph, becoming 
+                            south in the afternoon. 
+Surf Height.................Around 2 feet. 
+Water Temperature...........60 degrees. 
+Rip Current Risk*...........Low.
+Tides...
+   Higgins Beach............Low 2.2 feet (MLLW) 11:38 AM EDT.
+
+.SUNDAY...
+Weather.....................Mostly cloudy. Rain. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................South winds 5 to 10 mph. 
+Surf Height.................Around 2 feet. 
+Rip Current Risk*...........Low.
+Tides...
+   Higgins Beach............High 7.3 feet (MLLW) 06:56 AM EDT.
+                            Low 2.3 feet (MLLW) 12:38 PM EDT.
+
+.MONDAY...Surf height around 1 foot. Mostly sunny. Highs in the lower
+60s. North winds around 10 mph. 
+.TUESDAY...Surf height around 1 foot. Partly sunny. Highs around 60.
+Northeast winds around 10 mph. 
+.WEDNESDAY...Surf height around 1 foot. Mostly sunny. Highs around
+60. Northeast winds around 10 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - A low risk of rip currents implies that wind and wave
+  conditions are not expected to support the development of enhanced
+  rip currents. However, rip currents are always possible, especially
+  near jetties and other structures. Always have a flotation device
+  with you in the water.
+* Moderate Risk - A moderate risk of rip currents implies
+  that individuals planning to enter the surf should  check with
+  local beach patrols first. Be sure to swim within sight of a life
+  guard, and never alone or at night. Always have a flotation device
+  with you in the water.
+* High Risk - A high risk of rip currents means dangerous and
+  potentially life threatening conditions exist for all people
+  entering the surf. People visiting the beaches should stay out of
+  the high surf.
+
+$$
+
+MEZ025-192000-
+Sagadahoc-
+Including the beaches of Reid State Park and Popham
+1141 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Weather.....................Sunny. 
+UV Index....................Moderate. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................North winds around 5 mph, becoming west 
+                            in the afternoon. 
+Surf Height.................Around 2 feet. 
+Water Temperature...........59 degrees. According to the USCG, when 
+                            the water temperature is below 60 
+                            degrees, the average submerged person 
+                            could lose dexterity within minutes and 
+                            be unable to accomplish simple tasks 
+                            like buckling a life jacket or 
+                            operating a radio. 
+Rip Current Risk*...........Low.
+Tides...
+   Popham Beach.............Low 2.0 feet (MLLW) 12:12 PM EDT.
+
+.SUNDAY...
+Weather.....................Mostly cloudy. Rain likely. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................South winds around 10 mph. 
+Surf Height.................Around 2 feet. 
+Rip Current Risk*...........Low.
+Tides...
+   Popham Beach.............High 6.6 feet (MLLW) 07:22 AM EDT.
+                            Low 2.1 feet (MLLW) 01:12 PM EDT.
+
+.MONDAY...Surf height around 2 feet. Mostly sunny. Highs in the lower
+60s. North winds around 10 mph. 
+.TUESDAY...Surf height around 2 feet. Partly sunny. Highs around 60.
+Northeast winds around 10 mph. 
+.WEDNESDAY...Surf height around 3 feet. Mostly sunny. Highs around
+60. Northeast winds around 10 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - A low risk of rip currents implies that wind and wave
+  conditions are not expected to support the development of enhanced
+  rip currents. However, rip currents are always possible, especially
+  near jetties and other structures. Always have a flotation device
+  with you in the water.
+* Moderate Risk - A moderate risk of rip currents implies
+  that individuals planning to enter the surf should  check with
+  local beach patrols first. Be sure to swim within sight of a life
+  guard, and never alone or at night. Always have a flotation device
+  with you in the water.
+* High Risk - A high risk of rip currents means dangerous and
+  potentially life threatening conditions exist for all people
+  entering the surf. People visiting the beaches should stay out of
+  the high surf.
+
+$$
+
+MEZ026-192000-
+Lincoln-
+Including the beaches of Pemaquid
+1141 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Weather.....................Sunny. 
+UV Index....................Moderate. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................North winds around 5 mph, becoming west 
+                            in the afternoon. 
+Surf Height.................Around 2 feet. 
+Water Temperature...........59 degrees. According to the USCG, when 
+                            the water temperature is below 60 
+                            degrees, the average submerged person 
+                            could lose dexterity within minutes and 
+                            be unable to accomplish simple tasks 
+                            like buckling a life jacket or 
+                            operating a radio. 
+Rip Current Risk*...........Low.
+Tides...
+   Pemaquid Beach...........Low 2.2 feet (MLLW) 11:40 AM EDT.
+
+.SUNDAY...
+Weather.....................Mostly cloudy. A chance of showers. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................South winds 5 to 10 mph. 
+Surf Height.................Around 2 feet. 
+Rip Current Risk*...........Low.
+Tides...
+   Pemaquid Beach...........High 7.3 feet (MLLW) 06:51 AM EDT.
+                            Low 2.3 feet (MLLW) 12:40 PM EDT.
+
+.MONDAY...Surf height around 2 feet. Mostly sunny. Highs in the lower
+60s. North winds around 10 mph. 
+.TUESDAY...Surf height around 2 feet. Mostly sunny. Highs in the
+lower 60s. Northeast winds around 10 mph. 
+.WEDNESDAY...Surf height around 3 feet. Mostly sunny. Highs in the
+lower 60s. Northeast winds around 10 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - A low risk of rip currents implies that wind and wave
+  conditions are not expected to support the development of enhanced
+  rip currents. However, rip currents are always possible, especially
+  near jetties and other structures. Always have a flotation device
+  with you in the water.
+* Moderate Risk - A moderate risk of rip currents implies
+  that individuals planning to enter the surf should  check with
+  local beach patrols first. Be sure to swim within sight of a life
+  guard, and never alone or at night. Always have a flotation device
+  with you in the water.
+* High Risk - A high risk of rip currents means dangerous and
+  potentially life threatening conditions exist for all people
+  entering the surf. People visiting the beaches should stay out of
+  the high surf.
+
+$$
+
+MEZ027-192000-
+Knox-
+Including the beaches of Birch Point
+1141 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Weather.....................Sunny. 
+UV Index....................Moderate. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................North winds around 10 mph, becoming 
+                            west in the afternoon. 
+Surf Height.................Around 2 feet. 
+Water Temperature...........57 degrees. According to the USCG, when 
+                            the water temperature is below 60 
+                            degrees, the average submerged person 
+                            could lose dexterity within minutes and 
+                            be unable to accomplish simple tasks 
+                            like buckling a life jacket or 
+                            operating a radio. 
+Rip Current Risk*...........Low.
+Tides...
+   Birch Point Beach........Low 2.4 feet (MLLW) 11:37 AM EDT.
+                            High 9.1 feet (MLLW) 05:58 PM EDT.
+
+.SUNDAY...
+Weather.....................Mostly cloudy. A chance of showers. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................South winds 5 to 10 mph. 
+Surf Height.................Around 2 feet. 
+Rip Current Risk*...........Low.
+Tides...
+   Birch Point Beach........High 8.1 feet (MLLW) 06:52 AM EDT.
+                            Low 2.5 feet (MLLW) 12:37 PM EDT.
+
+.MONDAY...Surf height around 2 feet. Mostly sunny. Highs in the lower
+60s. North winds around 10 mph. 
+.TUESDAY...Surf height around 2 feet. Mostly sunny. Highs around 60.
+Northeast winds around 10 mph. 
+.WEDNESDAY...Surf height around 3 feet. Mostly sunny. Highs in the
+upper 50s. Northeast winds around 10 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - A low risk of rip currents implies that wind and wave
+  conditions are not expected to support the development of enhanced
+  rip currents. However, rip currents are always possible, especially
+  near jetties and other structures. Always have a flotation device
+  with you in the water.
+* Moderate Risk - A moderate risk of rip currents implies
+  that individuals planning to enter the surf should  check with
+  local beach patrols first. Be sure to swim within sight of a life
+  guard, and never alone or at night. Always have a flotation device
+  with you in the water.
+* High Risk - A high risk of rip currents means dangerous and
+  potentially life threatening conditions exist for all people
+  entering the surf. People visiting the beaches should stay out of
+  the high surf.
+
+$$
+
+MEZ028-192000-
+Coastal Waldo-
+Including the beaches of Moose Point State Park
+1141 AM EDT Sat Sep 19 2026
+
+.REST OF TODAY...
+Weather.....................Sunny. 
+UV Index....................Moderate. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................Northwest winds around 5 mph. 
+Surf Height.................Around 1 foot. 
+Water Temperature...........57 degrees. According to the USCG, when 
+                            the water temperature is below 60 
+                            degrees, the average submerged person 
+                            could lose dexterity within minutes and 
+                            be unable to accomplish simple tasks 
+                            like buckling a life jacket or 
+                            operating a radio. 
+Rip Current Risk*...........Low.
+Tides...
+   Moose Point State Park...Low 2.6 feet (MLLW) 11:35 AM EDT.
+                            High 9.4 feet (MLLW) 05:53 PM EDT.
+
+.SUNDAY...
+Weather.....................Mostly cloudy. A chance of showers. 
+Thunderstorm Potential......None. 
+High Temperature............In the lower 60s. 
+Winds.......................South winds 5 to 10 mph. 
+Surf Height.................Around 1 foot. 
+Rip Current Risk*...........Low.
+Tides...
+   Moose Point State Park...High 8.4 feet (MLLW) 06:39 AM EDT.
+                            Low 2.6 feet (MLLW) 12:35 PM EDT.
+
+.MONDAY...Surf height around 2 feet. Mostly sunny. Highs in the lower
+60s. North winds around 10 mph. 
+.TUESDAY...Surf height around 2 feet. Mostly sunny. Highs around 60.
+North winds around 5 mph. 
+.WEDNESDAY...Surf height around 3 feet. Sunny. Highs in the lower
+60s. East winds around 5 mph.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - A low risk of rip currents implies that wind and wave
+  conditions are not expected to support the development of enhanced
+  rip currents. However, rip currents are always possible, especially
+  near jetties and other structures. Always have a flotation device
+  with you in the water.
+* Moderate Risk - A moderate risk of rip currents implies
+  that individuals planning to enter the surf should  check with
+  local beach patrols first. Be sure to swim within sight of a life
+  guard, and never alone or at night. Always have a flotation device
+  with you in the water.
+* High Risk - A high risk of rip currents means dangerous and
+  potentially life threatening conditions exist for all people
+  entering the surf. People visiting the beaches should stay out of
+  the high surf.
+
+
+$$
+

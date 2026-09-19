@@ -1,0 +1,241 @@
+
+000
+FZUS51 KAKQ 191429
+SRFAKQ
+
+Surf Zone Forecast for Virginia
+National Weather Service Wakefield VA
+1029 AM EDT Sat Sep 19 2026
+
+MDZ025-200415-
+Maryland Beaches-
+Including the beaches of Ocean City Beaches and Assateague
+1029 AM EDT Sat Sep 19 2026
+
+...MODERATE RIP CURRENT RISK IN EFFECT UNTIL 8 PM EDT THIS EVENING...
+
+.REST OF TODAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 4 feet. 
+UV Index**..................High. 
+Water Temperature...........Upper 70s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the mid 70s. 
+Winds.......................Northeast winds around 15 mph. 
+Tides...
+   Ocean City Fishing Pier..High at 02:33 PM EDT. 
+Remarks.....................None.
+
+.SUNDAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 3 feet. 
+Weather.....................Mostly sunny. 
+High Temperature............In the upper 70s. 
+Winds.......................Southeast winds around 15 mph.
+Tides...
+   Ocean City Fishing Pier..Low at 08:54 AM EDT.
+                            High at 03:36 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Surf height 2 to 4 feet. Mostly cloudy. A chance of
+showers. Highs in the mid 70s. North winds around 15 mph. 
+.TUESDAY...Surf height 4 to 7 feet. Mostly cloudy. A chance of
+showers. Highs in the lower 70s. Breezy. Northeast winds around
+25 mph. 
+.WEDNESDAY...Surf height 6 to 10 feet. Mostly cloudy. A chance of
+showers. Highs in the lower 70s. Windy. Northeast winds around
+30 mph. 
+.REMARKS FOR EXTENDED...Surf Heights greater than 4 feet typically
+result in dangerous breaking waves in the surf zone and potentially
+a Moderate to High Rip Risk.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** The beach forecast graphic can be found at weather.gov/beach/akq.
+
+$$
+
+VAZ099-100-200415-
+Accomack-Northampton-
+Including the beaches of Chincoteague, Wallops Island, 
+and Barrier Islands Between Cape Charles and Parramore
+1029 AM EDT Sat Sep 19 2026
+
+...MODERATE RIP CURRENT RISK IN EFFECT UNTIL 8 PM EDT THIS EVENING...
+
+.REST OF TODAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 4 feet. 
+UV Index**..................Very High. 
+Water Temperature...........Upper 70s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the mid 70s. 
+Winds.......................Northeast winds around 15 mph. 
+Tides...
+   Wachapreague.............High at 03:21 PM EDT. 
+Remarks.....................None.
+
+.SUNDAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 4 feet. 
+Weather.....................Mostly sunny. 
+High Temperature............In the upper 70s. 
+Winds.......................Southeast winds 10 to 15 mph.
+Tides...
+   Wachapreague.............Low at 09:38 AM EDT.
+                            High at 04:22 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Surf height 2 to 3 feet. Mostly cloudy. A chance of
+showers. Highs in the mid 70s. North winds around 15 mph. 
+.TUESDAY...Surf height 3 to 6 feet. Mostly cloudy. A chance of
+showers. Highs in the mid 70s. Windy. Northeast winds around 30 mph. 
+.WEDNESDAY...Surf height 5 to 9 feet. Mostly cloudy. A chance of
+showers. Highs in the lower 70s. Windy. Northeast winds around
+35 mph. 
+.REMARKS FOR EXTENDED...Surf Heights greater than 4 feet typically
+result in dangerous breaking waves in the surf zone and potentially
+a Moderate to High Rip Risk.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** The beach forecast graphic can be found at weather.gov/beach/akq.
+
+$$
+
+VAZ098-200415-
+Virginia Beach-
+Including the beaches of Virginia Beach and Sandbridge
+1029 AM EDT Sat Sep 19 2026
+
+...MODERATE RIP CURRENT RISK IN EFFECT UNTIL 8 PM EDT THIS EVENING...
+
+.REST OF TODAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 4 feet. 
+UV Index**..................Very High. 
+Water Temperature...........Upper 70s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the upper 70s. 
+Winds.......................Northeast winds around 15 mph. 
+Tides...
+   Virginia Beach...........High at 02:35 PM EDT. 
+Remarks.....................None.
+
+.SUNDAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 4 feet. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................Southeast winds around 10 mph.
+Tides...
+   Virginia Beach...........Low at 09:02 AM EDT.
+                            High at 03:43 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Surf height 2 to 3 feet. Partly sunny. A chance of showers
+and a slight chance of thunderstorms. Highs around 80. North winds
+around 10 mph. 
+.TUESDAY...Surf height 3 to 6 feet. Mostly cloudy. A chance of
+showers and a slight chance of thunderstorms. Highs in the upper 70s.
+Northeast winds around 20 mph. 
+.WEDNESDAY...Surf height 5 to 9 feet. Mostly cloudy. Showers likely.
+Highs in the mid 70s. Windy. Northeast winds around 30 mph. 
+.REMARKS FOR EXTENDED...Surf Heights greater than 4 feet typically
+result in dangerous breaking waves in the surf zone and potentially
+a Moderate to High Rip Risk.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** The beach forecast graphic can be found at weather.gov/beach/akq.
+
+$$
+
+NCZ102-200415-
+Outer Banks Currituck-
+Including the beaches of Currituck County Beaches
+1029 AM EDT Sat Sep 19 2026
+
+...MODERATE RIP CURRENT RISK IN EFFECT UNTIL 8 PM EDT THIS EVENING...
+
+.REST OF TODAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 4 feet. 
+UV Index**..................Very High. 
+Water Temperature...........Upper 70s. 
+Weather.....................Mostly sunny. 
+High Temperature............In the upper 70s. 
+Winds.......................Northeast winds around 15 mph. 
+Tides...
+   Duck.....................High at 02:20 PM EDT. 
+Remarks.....................None.
+
+.SUNDAY...
+Rip Current Risk*...........Moderate. 
+Surf Height.................2 to 4 feet. 
+Weather.....................Mostly sunny. 
+High Temperature............In the lower 80s. 
+Winds.......................East winds around 10 mph.
+Tides...
+   Duck.....................Low at 08:46 AM EDT.
+                            High at 03:28 PM EDT. 
+Remarks.....................None.
+
+.EXTENDED...
+.MONDAY...Surf height 2 to 3 feet. Partly sunny. A chance of showers
+and a slight chance of thunderstorms. Highs in the lower 80s. North
+winds around 5 mph. 
+.TUESDAY...Surf height 3 to 6 feet. Mostly cloudy. A chance of
+showers and thunderstorms. Highs in the upper 70s. Northeast winds
+around 20 mph. 
+.WEDNESDAY...Surf height 5 to 9 feet. Mostly cloudy. Showers likely.
+Highs in the upper 70s. Windy. Northeast winds around 30 mph. 
+.REMARKS FOR EXTENDED...Surf Heights greater than 4 feet typically
+result in dangerous breaking waves in the surf zone and potentially
+a Moderate to High Rip Risk.
+
+&&
+
+Rip Current Risk Category
+* Low Risk - The risk for rip currents is low, however,
+life-threatening rip currents often occur in the vicinity of groins,
+jetties, reefs, and piers.
+* Moderate Risk - Life-threatening rip currents are possible in the
+surf zone.
+* High Risk - Life-threatening rip currents are likely in the surf
+zone.
+
+** The beach forecast graphic can be found at weather.gov/beach/akq.
+
+
+$$
