@@ -37,6 +37,9 @@ yarn-error.log*
 # Nemotron response cache (eval results are committed separately under eval/)
 .cache/
 
+# MapLibre worker files, copied from node_modules before dev/build (scripts/copy-maplibre-worker.mjs)
+/public/maplibre/
+
 # vercel
 .vercel
 

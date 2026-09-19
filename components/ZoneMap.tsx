@@ -41,8 +41,10 @@ export default function ZoneMap({ zones, labels, selected, onSelect }: Props) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { Map, NavigationControl, AttributionControl } = await import('maplibre-gl');
+      const { Map, NavigationControl, AttributionControl, setWorkerUrl } = await import('maplibre-gl');
       if (cancelled || !container.current) return;
+      // MapLibre can't find its worker inside Next's bundle; serve it from public/ instead.
+      setWorkerUrl('/maplibre/maplibre-gl-worker.mjs');
       const map = new Map({
         container: container.current,
         style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
@@ -111,5 +113,12 @@ export default function ZoneMap({ zones, labels, selected, onSelect }: Props) {
     map.setFilter('zones-selected', ['==', ['get', 'zoneId'], selected ?? '']);
   }, [selected]);
 
-  return <div ref={container} className="absolute inset-0" aria-label="Map of East Coast surf zones" />;
+  // MapLibre's stylesheet sets `position: relative` on the map element, and unlayered CSS beats
+  // Tailwind's layered utilities — so the Tailwind sizing lives on a wrapper MapLibre never touches,
+  // and the map element is sized with an inline style.
+  return (
+    <div className="absolute inset-0">
+      <div ref={container} style={{ width: '100%', height: '100%' }} aria-label="Map of East Coast surf zones" />
+    </div>
+  );
 }
