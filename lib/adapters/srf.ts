@@ -39,6 +39,8 @@ export interface SrfSegment {
   beaches: string[];
   headlines: string[];
   periods: SrfPeriod[];
+  charStart: number;           // the zone's section of the product, up to the "&&" boilerplate
+  charEnd: number;
 }
 
 interface Line { text: string; start: number; end: number }
@@ -89,12 +91,14 @@ export function parseSrf(text: string): SrfSegment[] {
     if (i >= b) continue;   // product header or trailing boilerplate: no zones
 
     // UGC block may wrap across lines; it ends at the DDHHMM expiry.
+    const segStart = lines[i].start;
     let ugc = '';
     while (i < b) {
       ugc += lines[i].text;
       if (RE_UGC_END.test(lines[i++].text)) break;
     }
-    const seg: SrfSegment = { zones: parseUgc(ugc), zoneName: null, beaches: [], headlines: [], periods: [] };
+    const seg: SrfSegment = { zones: parseUgc(ugc), zoneName: null, beaches: [], headlines: [], periods: [],
+                              charStart: segStart, charEnd: segStart };
 
     // Zone name: the next line ending in "-".
     while (i < b && !lines[i].text.trim()) i++;
@@ -180,6 +184,7 @@ export function parseSrf(text: string): SrfSegment[] {
       }
     }
     if (period) period.charEnd = Math.max(period.charEnd, period.fields.at(-1)?.charEnd ?? 0);
+    seg.charEnd = lines[Math.max(i - 1, 0)].end;   // i stops at "&&" or the segment end
     segments.push(seg);
   }
   return segments;

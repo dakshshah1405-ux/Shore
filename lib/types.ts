@@ -21,6 +21,7 @@ export type FieldName =
   | 'waterspoutRisk'
   | 'maxHeatIndex'
   | 'remarks'          // free text; ILM uses it for longshore-current warnings
+  | 'longshoreCurrent' // extracted by Nemotron from free text; never from a fixed field
   | 'sunrise'
   | 'sunset';
 

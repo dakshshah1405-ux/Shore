@@ -34,6 +34,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# Nemotron response cache (eval results are committed separately under eval/)
+.cache/
+
 # vercel
 .vercel
 

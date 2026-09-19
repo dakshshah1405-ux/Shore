@@ -26,6 +26,7 @@ export const FIELD_LABEL: Record<FieldName, string> = {
   maxHeatIndex: 'Heat index',
   waterspoutRisk: 'Waterspouts',
   remarks: 'Remarks',
+  longshoreCurrent: 'Longshore current',
   sunrise: 'Sunrise',
   sunset: 'Sunset',
 };
