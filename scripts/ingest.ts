@@ -29,7 +29,8 @@ async function main() {
         adjudicate: !process.argv.includes('--no-adjudicate'),
       });
       for (const a of r.adjudications) console.log(`    adjudicated ${a.id}: ${a.outcome} — ${a.reason}`);
-      if (r.skipped) { skipped++; console.log(`${wfo}: already stored (${prod.issuanceTime})`); }
+      if (r.routed && !r.routed.accepted) { skipped++; console.log(`${wfo}: REJECTED by router (${r.routed.by}: ${r.routed.reason})`); }
+      else if (r.skipped) { skipped++; console.log(`${wfo}: already stored (${prod.issuanceTime})`); }
       else {
         stored++; obs += r.observations;
         const l = r.llm;

@@ -1,0 +1,594 @@
+
+000
+FZUS52 KMHX 192257
+CWFMHX
+
+Coastal Waters Forecast for North Carolina
+National Weather Service Newport/Morehead City NC
+657 PM EDT Sat Sep 19 2026
+
+From S of Currituck Beach Light to N of Surf City NC out 60 NM,
+including the Albemarle and Pamlico Sounds and the Monitor
+National Marine Sanctuary
+
+AMZ100-201200-
+657 PM EDT Sat Sep 19 2026
+
+.Synopsis for Eastern North Carolina coastal waters...
+NE winds remain elevated, but below SCA thresholds behind a cold 
+front. Building winds and seas mid- next week with possible gales 
+by Wednesday and long duration of dangerously high seas.
+
+$$
+
+AMZ230-201200-
+Albemarle Sound-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...E winds 10 to 15 kt, diminishing to 5 to 10 kt late.
+Waves around 2 ft this evening, then 1 ft. 
+.SUN...E winds 5 to 10 kt. Waves 1 ft or less. 
+.SUN NIGHT...SE winds 5 to 10 kt, becoming SW after midnight.
+Waves 1 ft or less. 
+.MON...W winds around 5 kt, becoming NE in the afternoon. Waves
+1 ft or less. A chance of showers with a slight chance of tstms
+in the afternoon. 
+.MON NIGHT...E winds 10 to 15 kt. Waves around 2 ft. A chance of
+showers with a slight chance of tstms in the evening, then a
+slight chance of showers after midnight. 
+.TUE...NE winds 10 to 15 kt, increasing to 20 to 25 kt in the
+afternoon. Waves around 2 ft. A chance of showers in the morning,
+then showers likely in the afternoon. 
+.TUE NIGHT...NE winds 25 to 30 kt with gusts up to 35 kt. Waves
+2 to 3 ft. Showers likely, mainly in the evening. 
+.WED...NE winds 25 to 30 kt. Waves 2 to 3 ft. A chance of showers
+in the morning, then showers likely in the afternoon. 
+.WED NIGHT...NE winds 25 to 30 kt. Waves 2 to 4 ft. Showers
+likely, mainly in the evening. 
+.THU...N winds 25 to 30 kt. Waves around 2 ft. A chance of
+showers in the morning, then showers likely in the afternoon. 
+.THU NIGHT...N winds 25 to 30 kt. Waves 2 to 3 ft. Showers
+likely, mainly in the evening.  
+
+Winds and waves higher in and near tstms.
+
+$$
+
+AMZ131-201200-
+Alligator River-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt, becoming E 5 to 10 kt late this
+evening and overnight. Waves a moderate chop, diminishing to
+light chop late this evening and overnight. 
+.SUN...E winds around 5 kt. Waves flat. 
+.SUN NIGHT...S winds around 5 kt. Waves flat. 
+.MON...W winds around 5 kt, becoming E in the afternoon. Waves
+flat, increasing to light chop in the afternoon. A chance of
+showers with a slight chance of tstms in the afternoon. 
+.MON NIGHT...E winds 5 to 10 kt. Waves light chop. A chance of
+showers with a slight chance of tstms in the evening, then a
+slight chance of showers after midnight. 
+.TUE...NE winds 10 to 15 kt, increasing to 15 to 20 kt with gusts
+up to 25 kt in the afternoon. Waves a moderate chop, increasing
+to choppy in the afternoon. A chance of showers in the morning,
+then showers likely in the afternoon. 
+.TUE NIGHT...NE winds 20 to 25 kt with gusts up to 30 kt. Waves
+rough. Showers likely, mainly in the evening. 
+.WED...NE winds 20 to 25 kt. Waves rough. A chance of showers in
+the morning, then showers likely in the afternoon. 
+.WED NIGHT...NE winds 25 to 30 kt. Waves very rough. Showers
+likely, mainly in the evening. 
+.THU...N winds 25 to 30 kt. Waves very rough. A chance of showers
+in the morning, then showers likely in the afternoon. 
+.THU NIGHT...N winds 25 to 30 kt. Waves very rough. Showers
+likely, mainly in the evening.  
+
+Winds and waves higher in and near tstms.
+
+$$
+
+AMZ231-201200-
+Croatan and Roanoke Sounds-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt, becoming E 5 to 10 kt late.
+Waves a moderate chop, diminishing to light chop late. 
+.SUN...E winds 5 to 10 kt. Waves light chop. 
+.SUN NIGHT...S winds around 5 kt. Waves flat. 
+.MON...W winds around 5 kt, becoming NE in the afternoon. Waves
+flat, increasing to light chop in the afternoon. A slight chance
+of showers and tstms in the afternoon. 
+.MON NIGHT...NE winds 10 to 15 kt. Waves a moderate chop. A
+slight chance of tstms in the evening. A slight chance of
+showers. 
+.TUE...NE winds 10 to 15 kt, increasing to 20 to 25 kt with gusts
+up to 30 kt in the afternoon. Waves a moderate chop, increasing
+to rough in the afternoon. A chance of showers in the morning,
+then showers likely in the afternoon. 
+.TUE NIGHT...NE winds 25 to 30 kt with gusts up to 35 kt. Waves
+very rough. Showers likely, mainly in the evening. 
+.WED...NE winds 25 to 30 kt. Waves very rough. Showers likely. 
+.WED NIGHT...NE winds 25 to 30 kt. Waves very rough. Showers
+likely, mainly in the evening. 
+.THU...N winds 25 to 30 kt. Waves very rough. A chance of showers
+in the morning, then showers likely in the afternoon. 
+.THU NIGHT...N winds 25 to 30 kt. Waves very rough. Showers
+likely, mainly in the evening.  
+
+Winds and waves higher in and near tstms.
+
+$$
+
+AMZ135-201200-
+Pamlico Sound-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt. Waves around 2 ft. 
+.SUN...NE winds around 10 kt, becoming E in the afternoon. Waves
+1 ft or less. 
+.SUN NIGHT...SE winds around 5 kt, becoming SW after midnight.
+Waves 1 ft or less. 
+.MON...W winds around 5 kt, becoming SE in the afternoon. Waves
+1 ft or less. A slight chance of showers and tstms in the
+afternoon. 
+.MON NIGHT...E winds 5 to 10 kt. Waves 1 ft or less, then around
+2 ft after midnight. A slight chance of tstms in the evening. A
+chance of showers. 
+.TUE...NE winds 10 to 15 kt, increasing to 15 to 20 kt in the
+afternoon. Waves around 2 ft. A chance of showers in the morning,
+then showers likely with a chance of tstms in the afternoon. 
+.TUE NIGHT...NE winds 20 to 25 kt. Waves 2 to 3 ft. A chance of
+tstms in the evening. Showers likely.
+.WED...NE winds 20 to 25 kt. Waves 2 to 3 ft. Showers likely. 
+.WED NIGHT...NE winds 25 to 30 kt. Waves 3 to 4 ft. Showers
+likely. 
+.THU...N winds 25 to 30 kt. Waves around 3 ft. A chance of
+showers. 
+.THU NIGHT...N winds 25 to 30 kt. Waves 2 to 3 ft. A chance of
+showers.  
+
+Winds and waves higher in and near tstms.
+
+$$
+
+AMZ136-201200-
+Pamlico and Pungo Rivers-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 5 to 10 kt. Waves light chop. 
+.SUN...NE winds around 5 kt, becoming SE in the afternoon. Waves
+flat. 
+.SUN NIGHT...S winds around 5 kt. Waves flat. 
+.MON...W winds around 5 kt, becoming SE in the afternoon. Waves
+flat. A chance of showers and tstms in the afternoon. 
+.MON NIGHT...E winds 5 to 10 kt. Waves light chop. A slight
+chance of tstms in the evening. A chance of showers. 
+.TUE...NE winds 5 to 10 kt. Waves light chop. A chance of showers
+in the morning, then showers likely with a chance of tstms in the
+afternoon. 
+.TUE NIGHT...NE winds 10 to 15 kt. Waves a moderate chop. Showers
+likely with a chance of tstms in the evening, then a chance of
+showers after midnight. 
+.WED...N winds 10 to 15 kt. Waves a moderate chop. A chance of
+showers. 
+.WED NIGHT...N winds 15 to 20 kt. Waves choppy. A chance of
+showers. 
+.THU...N winds 15 to 20 kt, diminishing to 10 to 15 kt in the
+afternoon. Waves choppy, diminishing to a moderate chop in the
+afternoon. A chance of showers. 
+.THU NIGHT...N winds 15 to 20 kt. Waves choppy. A chance of
+showers in the evening.  
+
+Winds and waves higher in and near tstms.
+
+$$
+
+AMZ137-201200-
+Neuse and Bay Rivers-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt, diminishing to 5 to 10 kt after
+midnight. Waves a moderate chop, diminishing to light chop after
+midnight. 
+.SUN...E winds 5 to 10 kt. Waves light chop. 
+.SUN NIGHT...SE winds around 5 kt, becoming SW after midnight.
+Waves flat. 
+.MON...NW winds around 5 kt, becoming E in the afternoon. Waves
+flat, increasing to light chop in the afternoon. A chance of
+showers and tstms in the afternoon. 
+.MON NIGHT...E winds 5 to 10 kt. Waves light chop. A slight
+chance of tstms in the evening. A chance of showers. 
+.TUE...NE winds 5 to 10 kt, increasing to 10 to 15 kt in the
+afternoon. Waves light chop, increasing to a moderate chop in the
+afternoon. A chance of showers in the morning, then showers
+likely with a chance of tstms in the afternoon. 
+.TUE NIGHT...NE winds 15 to 20 kt, increasing to 20 to 25 kt
+after midnight. Waves choppy, increasing to rough after midnight.
+Showers likely with a chance of tstms in the evening, then a
+chance of showers after midnight. 
+.WED...NE winds 20 to 25 kt, becoming N 15 to 20 kt in the
+afternoon. Waves rough, diminishing to choppy in the afternoon. A
+chance of showers in the morning, then showers likely with a
+chance of tstms in the afternoon. 
+.WED NIGHT...N winds 25 to 30 kt. Waves very rough. Showers
+likely with a chance of tstms in the evening, then a chance of
+showers after midnight. 
+.THU...N winds 20 to 25 kt, diminishing to 15 to 20 kt in the
+afternoon. Waves rough, diminishing to choppy in the afternoon. A
+chance of showers. 
+.THU NIGHT...N winds 25 to 30 kt. Waves very rough. A chance of
+showers in the evening.  
+
+Winds and waves higher in and near tstms.
+
+$$
+
+AMZ150-201200-
+S of Currituck Beach Light to Oregon Inlet NC out 20 nm-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds around 15 kt, becoming E after midnight. Seas
+3 to 4 ft. Wave Detail: NE 4 ft at 6 seconds and NE 1 ft at
+3 seconds. 
+.SUN...NE winds 5 to 10 kt. Seas 3 to 4 ft. Wave Detail: E 4 ft
+at 8 seconds and NE 1 ft at 2 seconds.
+.SUN NIGHT...SE winds around 5 kt, becoming SW after midnight.
+Seas 3 to 4 ft. Wave Detail: E 4 ft at 8 seconds and SE 1 ft at
+10 seconds. 
+.MON...W winds around 5 kt, becoming NE in the afternoon. Seas
+around 3 ft. Wave Detail: E 3 ft at 7 seconds and SE 1 ft at
+9 seconds. 
+.MON NIGHT...NE winds around 10 kt. Seas 2 to 4 ft. Wave Detail:
+E 3 ft at 7 seconds and NE 2 ft at 4 seconds. A slight chance of
+showers after midnight. 
+.TUE...NE winds 10 to 15 kt, increasing to 15 to 20 kt with gusts
+up to 30 kt in the afternoon. Seas 3 to 5 ft. Wave Detail: E 4 ft
+at 6 seconds and S 1 ft at 3 seconds. A chance of showers. 
+.TUE NIGHT...NE winds 20 to 25 kt with gusts up to 35 kt. Seas
+5 to 7 ft. A chance of showers. 
+.WED...NE winds 25 to 30 kt. Seas 6 to 9 ft. Showers likely. 
+.WED NIGHT...NE winds 25 to 30 kt. Seas 9 to 12 ft. Showers
+likely, mainly in the evening. 
+.THU...N winds 25 to 30 kt. Seas 10 to 12 ft. A chance of
+showers. 
+.THU NIGHT...N winds 25 to 30 kt. Seas 9 to 12 ft. A chance of
+showers.  
+
+$$
+
+AMZ180-201200-
+Waters from Currituck Beach Light to Oregon Inlet NC from 20 to
+60 NM-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt. Seas 4 to 5 ft. 
+.SUN...NE winds 5 to 10 kt. Seas 4 to 5 ft. 
+.SUN NIGHT...SE winds around 5 kt, becoming SW after midnight.
+Seas 3 to 5 ft. 
+.MON...W winds around 5 kt, becoming NE in the afternoon. Seas
+3 to 4 ft. 
+.MON NIGHT...NE winds around 10 kt. Seas 3 to 4 ft. A chance of
+showers after midnight. 
+.TUE...NE winds 10 to 15 kt, increasing to 15 to 20 kt with gusts
+up to 30 kt in the afternoon. Seas 3 to 5 ft. A chance of
+showers. 
+.TUE NIGHT...NE winds around 20 kt with gusts up to 35 kt. Seas
+5 to 6 ft, building to 5 to 8 ft after midnight. Showers likely. 
+.WED...NE winds 20 to 25 kt. Seas 7 to 9 ft, building to 9 to
+12 ft in the afternoon. Showers likely. 
+.WED NIGHT...NE winds 20 to 25 kt. Seas 11 to 15 ft. Showers
+likely. 
+.THU...N winds 25 to 30 kt. Seas 12 to 16 ft. Showers likely. 
+.THU NIGHT...N winds 25 to 30 kt, diminishing to 20 to 25 kt
+after midnight. Seas 12 to 15 ft. Showers likely, mainly in the
+evening.  
+
+$$
+
+AMZ152-201200-
+S of Oregon Inlet to Cape Hatteras NC out 20 nm-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds around 15 kt, diminishing to around 10 kt
+after midnight. Seas 3 to 4 ft. Wave Detail: NE 4 ft at 6 seconds
+and S 1 ft at 3 seconds. 
+.SUN...NE winds around 10 kt, diminishing to around 5 kt in the
+afternoon. Seas 3 to 5 ft. Wave Detail: NE 5 ft at 8 seconds and
+S 1 ft at 3 seconds. 
+.SUN NIGHT...SE winds around 5 kt, becoming SW after midnight.
+Seas 3 to 4 ft. Wave Detail: NE 4 ft at 8 seconds and SE 2 ft at
+10 seconds.
+.MON...W winds around 5 kt, becoming NE in the afternoon. Seas
+3 to 4 ft. Wave Detail: E 4 ft at 8 seconds and SE 2 ft at
+9 seconds. 
+.MON NIGHT...E winds 5 to 10 kt. Seas 3 to 4 ft. Wave Detail: E
+3 ft at 8 seconds and SE 2 ft at 9 seconds. A slight chance of
+tstms in the evening. A chance of showers. 
+.TUE...NE winds 10 to 15 kt, increasing to 15 to 20 kt with gusts
+up to 25 kt in the afternoon. Seas 3 to 5 ft. Wave Detail: NE
+3 ft at 5 seconds and E 3 ft at 8 seconds. A chance of showers. A
+chance of tstms in the afternoon. 
+.TUE NIGHT...NE winds 20 to 25 kt with gusts up to 30 kt. Seas
+4 to 6 ft. A chance of tstms in the evening. Showers likely. 
+.WED...NE winds 20 to 25 kt. Seas 5 to 8 ft. Showers likely. 
+.WED NIGHT...NE winds 25 to 30 kt. Seas 8 to 11 ft. Showers
+likely, mainly in the evening. 
+.THU...N winds 25 to 30 kt. Seas 9 to 12 ft. A chance of showers.
+.THU NIGHT...N winds 25 to 30 kt. Seas 9 to 12 ft. A chance of
+showers.  
+
+Winds and seas higher in and near tstms.
+
+$$
+
+AMZ182-201200-
+Waters from Oregon Inlet to Cape Hatteras NC from 20 to 60 NM-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt. Seas 4 to 6 ft. A chance of
+showers early this evening, then a slight chance of showers late
+this evening and overnight. 
+.SUN...NE winds 5 to 10 kt. Seas 4 to 6 ft. A slight chance of
+showers in the morning. 
+.SUN NIGHT...E winds around 5 kt, becoming SW after midnight.
+Seas 3 to 5 ft. 
+.MON...W winds around 5 kt, becoming NE in the afternoon. Seas
+3 to 4 ft. A slight chance of tstms. A slight chance of showers
+in the morning, then a chance of showers in the afternoon. 
+.MON NIGHT...E winds 5 to 10 kt. Seas 3 to 4 ft. A chance of
+showers with a slight chance of tstms in the evening, then
+showers likely after midnight. 
+.TUE...NE winds 10 to 15 kt, increasing to 15 to 20 kt in the
+afternoon. Seas 3 to 5 ft. Showers likely in the morning, then
+showers likely with a chance of tstms in the afternoon. 
+.TUE NIGHT...NE winds 15 to 20 kt with gusts up to 25 kt. Seas
+5 to 7 ft. Showers likely with a chance of tstms. 
+.WED...NE winds 20 to 25 kt. Seas 6 to 9 ft, building to 8 to
+11 ft in the afternoon. Showers with a chance of tstms. 
+.WED NIGHT...NE winds 25 to 30 kt, diminishing to 20 to 25 kt
+after midnight. Seas 9 to 13 ft, building to 11 to 15 ft after
+midnight. A chance of tstms. Showers.
+.THU...N winds 25 to 30 kt. Seas 12 to 16 ft. Showers likely with
+a chance of tstms. 
+.THU NIGHT...N winds 25 to 30 kt, diminishing to 20 to 25 kt
+after midnight. Seas 12 to 16 ft. Showers likely with a chance of
+tstms in the evening, then a chance of showers after midnight.  
+
+Winds and seas higher in and near tstms.
+
+$$
+
+AMZ154-201200-
+S of Cape Hatteras to Ocracoke Inlet NC out 20 nm
+including the Monitor National Marine Sanctuary-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt. Seas 3 to 5 ft. Wave Detail: NE
+5 ft at 6 seconds and SE 2 ft at 11 seconds. A slight chance of
+showers after midnight. 
+.SUN...NE winds 5 to 10 kt. Seas 3 to 5 ft. Wave Detail: E 5 ft
+at 8 seconds and SE 2 ft at 11 seconds. 
+.SUN NIGHT...SE winds around 5 kt, becoming SW after midnight.
+Seas 3 to 5 ft. Wave Detail: E 5 ft at 8 seconds and SE 2 ft at
+10 seconds. 
+.MON...W winds around 5 kt, becoming SE in the afternoon. Seas
+2 to 4 ft. Wave Detail: E 4 ft at 8 seconds and S 1 ft at
+4 seconds. A slight chance of showers and tstms in the afternoon.
+.MON NIGHT...E winds 5 to 10 kt. Seas 2 to 3 ft. Wave Detail: SE
+3 ft at 9 seconds and E 1 ft at 2 seconds. A slight chance of
+tstms in the evening. A chance of showers. 
+.TUE...NE winds 10 to 15 kt. Seas 2 to 4 ft. Wave Detail: NE 3 ft
+at 5 seconds and E 3 ft at 8 seconds. Showers likely in the
+morning, then showers likely with a chance of tstms in the
+afternoon. 
+.TUE NIGHT...NE winds around 15 kt. Gusts up to 25 kt in the
+evening. Seas 3 to 5 ft. Showers likely with a chance of tstms. 
+.WED...NE winds 15 to 20 kt. Seas 5 to 7 ft. Showers likely with
+a chance of tstms. 
+.WED NIGHT...NE winds 20 to 25 kt. Seas 6 to 9 ft. Showers likely
+with a chance of tstms. 
+.THU...N winds 20 to 25 kt. Seas 7 to 10 ft. Showers likely with
+a chance of tstms in the morning, then a chance of showers in the
+afternoon. 
+.THU NIGHT...N winds 20 to 25 kt. Seas 7 to 10 ft. A chance of
+showers.  
+
+Winds and seas higher in and near tstms.
+
+$$
+
+AMZ184-201200-
+Waters from Cape Hatteras to Ocracoke Inlet NC from 20 to 60 NM-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt. Seas 4 to 6 ft. A chance of
+showers with a slight chance of tstms. 
+.SUN...NE winds 5 to 10 kt. Seas 4 to 6 ft. A chance of showers
+with a slight chance of tstms in the morning, then a slight
+chance of showers in the afternoon. 
+.SUN NIGHT...E winds around 5 kt, becoming S after midnight. Seas
+4 to 5 ft. A chance of showers with a slight chance of tstms
+after midnight. 
+.MON...NW winds around 5 kt, becoming SE in the afternoon. Seas
+3 to 4 ft. A chance of showers with a slight chance of tstms. 
+.MON NIGHT...E winds 5 to 10 kt. Seas around 3 ft. A slight
+chance of tstms in the evening. Showers likely. 
+.TUE...NE winds 5 to 10 kt, increasing to 10 to 15 kt in the
+afternoon. Seas 3 to 4 ft. A chance of tstms. Showers.
+.TUE NIGHT...NE winds 10 to 15 kt, increasing to 15 to 20 kt
+after midnight. Seas 4 to 6 ft. Showers with a chance of tstms. 
+.WED...NE winds 20 to 25 kt. Seas 6 to 9 ft. Showers with a
+chance of tstms. 
+.WED NIGHT...NE winds 25 to 30 kt. Seas 10 to 14 ft. Showers with
+a chance of tstms. 
+.THU...N winds 25 to 30 kt. Seas 12 to 16 ft. A chance of tstms.
+Showers.
+.THU NIGHT...N winds 25 to 30 kt. Seas 12 to 16 ft. Showers
+likely with a chance of tstms.  
+
+Winds and seas higher in and near tstms.
+
+$$
+
+AMZ156-201200-
+S of Ocracoke Inlet to Cape Lookout NC out 20 nm-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt. Seas 2 to 4 ft. Wave Detail: NE
+4 ft at 6 seconds and SW 1 ft at 3 seconds. Adjacent sounds and
+rivers a moderate chop. 
+.SUN...NE winds 5 to 10 kt. Seas 2 to 4 ft. Wave Detail: E 4 ft
+at 9 seconds and S 1 ft at 3 seconds. Adjacent sounds and rivers
+light chop. 
+.SUN NIGHT...SE winds around 5 kt, becoming S after midnight.
+Seas 2 to 4 ft. Wave Detail: E 4 ft at 9 seconds and NE 1 ft at
+3 seconds. Adjacent sounds and rivers flat. 
+.MON...NW winds around 5 kt, becoming SE in the afternoon. Seas
+2 to 3 ft. Wave Detail: E 3 ft at 8 seconds and S 1 ft at
+4 seconds. Adjacent sounds and rivers flat, increasing to light
+chop in the afternoon. 
+.MON NIGHT...E winds 5 to 10 kt. Seas 2 to 3 ft. Wave Detail: E
+3 ft at 8 seconds and SE 2 ft at 9 seconds. Adjacent sounds and
+rivers light chop. A slight chance of tstms in the evening. A
+chance of showers. 
+.TUE...NE winds 10 to 15 kt. Seas 2 to 4 ft. Wave Detail: E 3 ft
+at 8 seconds and NE 2 ft at 3 seconds. Adjacent sounds and rivers
+a moderate chop. Showers likely. A chance of tstms in the
+afternoon. 
+.TUE NIGHT...NE winds 15 to 20 kt. Seas 2 to 4 ft. Adjacent
+sounds and rivers choppy. Showers likely with a chance of tstms. 
+.WED...NE winds 20 to 25 kt, increasing to 25 to 30 kt in the
+afternoon. Seas 3 to 5 ft. Adjacent sounds and rivers rough,
+increasing to very rough in the afternoon. Showers likely with a
+chance of tstms. 
+.WED NIGHT...NE winds 25 to 30 kt, becoming N 20 to 25 kt after
+midnight. Seas 3 to 5 ft. Adjacent sounds and rivers very rough,
+diminishing to rough after midnight. Showers likely with a chance
+of tstms. 
+.THU...N winds around 25 kt. Seas 4 to 6 ft. Adjacent sounds and
+rivers rough. A chance of showers and tstms. 
+.THU NIGHT...N winds 25 to 30 kt, diminishing to 20 to 25 kt
+after midnight. Seas 4 to 6 ft. Adjacent sounds and rivers very
+rough, diminishing to rough after midnight. A chance of showers. 
+
+Winds and seas higher in and near tstms.
+
+$$
+
+AMZ186-201200-
+Waters from Ocracoke Inlet to Cape Lookout NC from 20 to 60 NM-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 10 to 15 kt. Seas 4 to 6 ft. A chance of
+showers with a slight chance of tstms. 
+.SUN...NE winds 5 to 10 kt. Seas 3 to 5 ft. A chance of showers
+with a slight chance of tstms. 
+.SUN NIGHT...E winds around 5 kt, becoming S after midnight. Seas
+3 to 5 ft. A chance of showers and tstms after midnight. 
+.MON...N winds around 5 kt, becoming SE in the afternoon. Seas
+3 to 4 ft. A chance of showers with a slight chance of tstms. 
+.MON NIGHT...E winds 5 to 10 kt. Seas 3 to 4 ft. A slight chance
+of tstms. A chance of showers in the evening, then showers likely
+after midnight. 
+.TUE...NE winds 10 to 15 kt. Seas 3 to 4 ft. A chance of tstms.
+Showers.
+.TUE NIGHT...NE winds 10 to 15 kt. Seas 3 to 5 ft. Showers with a
+chance of tstms. 
+.WED...NE winds 20 to 25 kt. Seas 5 to 8 ft. Showers with a
+chance of tstms. 
+.WED NIGHT...NE winds 25 to 30 kt, becoming N 20 to 25 kt after
+midnight. Seas 6 to 9 ft, building to 8 to 11 ft after midnight.
+A chance of tstms. Showers.
+.THU...N winds 25 to 30 kt. Seas 9 to 13 ft. Showers likely with
+a chance of tstms. 
+.THU NIGHT...N winds 25 to 30 kt, diminishing to 20 to 25 kt
+after midnight. Seas 10 to 14 ft. A chance of tstms. Showers
+likely, mainly in the evening.  
+
+Winds and seas higher in and near tstms.
+
+$$
+
+AMZ158-201200-
+S of Cape Lookout to N of Surf City NC out 20 nm-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 15 to 20 kt, diminishing to 10 to 15 kt after
+midnight. Seas 2 to 4 ft. Wave Detail: E 4 ft at 6 seconds and SE
+1 ft at 12 seconds. Adjacent sounds and rivers choppy,
+diminishing to a moderate chop after midnight. A slight chance of
+showers after midnight. 
+.SUN...E winds 5 to 10 kt. Seas 2 to 3 ft. Wave Detail: E 3 ft at
+7 seconds and SE 2 ft at 11 seconds. Adjacent sounds and rivers
+light chop. 
+.SUN NIGHT...SE winds 5 to 10 kt, becoming S after midnight. Seas
+2 to 3 ft. Wave Detail: E 3 ft at 8 seconds and SE 2 ft at
+11 seconds. Adjacent sounds and rivers light chop, diminishing to
+flat after midnight. 
+.MON...N winds around 5 kt, becoming SE in the afternoon. Seas
+2 to 3 ft. Wave Detail: E 3 ft at 8 seconds and SE 2 ft at
+9 seconds. Adjacent sounds and rivers flat. A slight chance of
+showers and tstms in the morning. 
+.MON NIGHT...E winds around 5 kt. Seas 2 to 3 ft. Wave Detail: E
+2 ft at 8 seconds and SE 2 ft at 9 seconds. Adjacent sounds and
+rivers flat. A slight chance of tstms in the evening. A chance of
+showers. 
+.TUE...NE winds 5 to 10 kt, increasing to 10 to 15 kt in the
+afternoon. Seas 2 to 3 ft. Wave Detail: SE 2 ft at 4 seconds and
+E 2 ft at 7 seconds. Adjacent sounds and rivers light chop,
+increasing to a moderate chop in the afternoon. Showers likely. A
+chance of tstms in the afternoon. 
+.TUE NIGHT...NE winds 10 to 15 kt. Seas 2 to 4 ft. Adjacent
+sounds and rivers a moderate chop. A chance of tstms in the
+evening. Showers likely. 
+.WED...NE winds 15 to 20 kt, increasing to 20 to 25 kt in the
+afternoon. Seas 3 to 5 ft. Adjacent sounds and rivers choppy,
+increasing to rough in the afternoon. A chance of showers in the
+morning, then showers likely with a chance of tstms in the
+afternoon. 
+.WED NIGHT...N winds 20 to 25 kt. Seas 4 to 6 ft. Adjacent sounds
+and rivers rough. A chance of tstms. Showers likely, mainly in
+the evening. 
+.THU...N winds 20 to 25 kt. Seas 4 to 6 ft. Adjacent sounds and
+rivers rough. A chance of showers and tstms. 
+.THU NIGHT...N winds 20 to 25 kt. Seas 5 to 7 ft. Adjacent sounds
+and rivers rough. A chance of showers in the evening.  
+
+Winds and seas higher in and near tstms.
+
+$$
+
+AMZ188-201200-
+Waters from Cape Lookout to Surf City NC from 20 to 60 NM-
+657 PM EDT Sat Sep 19 2026
+
+.TONIGHT...NE winds 15 to 20 kt, becoming E 10 to 15 kt after
+midnight. Seas 3 to 5 ft. A chance of tstms. 
+.SUN...NE winds 5 to 10 kt. Seas 3 to 5 ft. A chance of showers
+with a slight chance of tstms. 
+.SUN NIGHT...E winds 5 to 10 kt, becoming S after midnight. Seas
+3 to 5 ft. A chance of showers and tstms after midnight. 
+.MON...NW winds around 5 kt, becoming E in the afternoon. Seas
+3 to 4 ft. A chance of showers. A chance of tstms, mainly in the
+morning. 
+.MON NIGHT...E winds 5 to 10 kt. Seas 2 to 4 ft. A slight chance
+of tstms. A chance of showers in the evening, then showers likely
+after midnight. 
+.TUE...NE winds 10 to 15 kt. Seas 3 to 4 ft. A chance of tstms.
+Showers.
+.TUE NIGHT...NE winds 10 to 15 kt. Seas 3 to 5 ft. Showers with a
+chance of tstms. 
+.WED...NE winds 20 to 25 kt. Seas 5 to 7 ft. Showers with a
+chance of tstms. 
+.WED NIGHT...NE winds 25 to 30 kt, becoming N 20 to 25 kt after
+midnight. Seas 6 to 9 ft. Showers likely with a chance of tstms. 
+.THU...N winds around 25 kt. Seas 8 to 11 ft. Showers likely with
+a chance of tstms. 
+.THU NIGHT...N winds 25 to 30 kt, diminishing to 20 to 25 kt
+after midnight. Seas 8 to 11 ft. A chance of tstms. Showers
+likely, mainly in the evening.  
+
+Winds and seas higher in and near tstms.
+
+$$

@@ -1,0 +1,81 @@
+
+000
+FLUS42 KMHX 190821 CCA
+HWOMHX
+
+Hazardous Weather Outlook
+National Weather Service Newport/Morehead City NC
+420 AM EDT Sat Sep 19 2026
+
+NCZ029-044>047-079>081-090>092-094-193>196-198-199-200830-
+Martin-Pitt-Washington-Tyrrell-Mainland Dare-Greene-Beaufort-
+Mainland Hyde-Duplin-Lenoir-Jones-Pamlico-Northern Craven-
+Southern Craven-West Carteret-East Carteret-Inland Onslow-
+Coastal Onslow-
+420 AM EDT Sat Sep 19 2026
+
+This Hazardous Weather Outlook is for eastern North Carolina.
+
+.DAY ONE...Today and tonight.
+
+No hazardous weather is expected at this time.
+
+.DAYS TWO THROUGH SEVEN...Sunday through Friday.
+
+No hazardous weather is expected at this time.
+
+.SPOTTER INFORMATION STATEMENT...
+
+Spotter activation is not expected at this time.
+
+$$
+
+NCZ203-205-200830-
+Northern Outer Banks-Hatteras Island-
+420 AM EDT Sat Sep 19 2026
+
+...MODERATE RIP CURRENT RISK IN EFFECT THROUGH THIS EVENING north 
+of Cape Hatteras...
+
+This Hazardous Weather Outlook is for eastern North Carolina.
+
+.DAY ONE...Today and tonight.
+
+Please listen to NOAA Weather Radio or go to weather.gov on the
+Internet for more information about the following hazards.
+
+   Moderate Rip Current Risk.
+
+.DAYS TWO THROUGH SEVEN...Sunday through Friday.
+
+While it is too early for specifics, there is potential for minor 
+ocean overwash and rough surf to develop for vulnerable areas along 
+the Outer Banks mid next week.
+
+.SPOTTER INFORMATION STATEMENT...
+
+Spotter activation is not expected at this time.
+
+$$
+
+NCZ204-200830-
+Ocracoke Island-
+420 AM EDT Sat Sep 19 2026
+
+This Hazardous Weather Outlook is for eastern North Carolina.
+
+.DAY ONE...Today and tonight.
+
+Hazardous weather is not expected at this time.
+
+.DAYS TWO THROUGH SEVEN...Sunday through Friday.
+
+While it is too early for specifics, there is potential for minor 
+ocean overwash and rough surf to develop for vulnerable areas along 
+the Outer Banks mid next week.
+
+.SPOTTER INFORMATION STATEMENT...
+
+Spotter activation is not expected at this time.
+
+$$

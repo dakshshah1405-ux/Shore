@@ -1,0 +1,37 @@
+
+000
+WHUS42 KMHX 161330
+CFWMHX
+
+Coastal Hazard Message
+National Weather Service Newport/Morehead City NC
+930 AM EDT Wed Sep 16 2026
+
+NCZ203-205-170000-
+/O.NEW.KMHX.BH.S.0061.260916T1330Z-260917T0000Z/
+Northern Outer Banks-Hatteras Island-
+930 AM EDT Wed Sep 16 2026
+
+...BEACH HAZARDS STATEMENT IN EFFECT UNTIL 8 PM EDT THIS
+EVENING...
+
+* WHAT...Dangerous rip currents.
+
+* WHERE...The beaches north of Cape Hatteras.
+
+* WHEN...Until 8 PM EDT this evening.
+
+* IMPACTS...Rip currents can sweep even the best swimmers away 
+  from shore into deeper water.
+
+* ADDITIONAL DETAILS...The most likely time for strong rip
+  currents to occur is a couple hours either side of low tide,
+  which will occur around 6 PM today.
+
+PRECAUTIONARY/PREPAREDNESS ACTIONS...
+
+Remain out of the water to avoid hazardous swimming conditions.
+
+&&
+
+$$

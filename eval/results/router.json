@@ -1,0 +1,242 @@
+{
+  "generatedAt": "2026-09-19T23:55:56.055Z",
+  "rows": [
+    {
+      "id": "srf-AKQ.txt",
+      "variant": "full",
+      "expect": "srf",
+      "header baseline": "srf",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-AKQ.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "srf",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-BOX.txt",
+      "variant": "full",
+      "expect": "srf",
+      "header baseline": "srf",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-BOX.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "srf",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-CAR.txt",
+      "variant": "full",
+      "expect": "srf",
+      "header baseline": "srf",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-CAR.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "srf",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-CHS.txt",
+      "variant": "full",
+      "expect": "srf",
+      "header baseline": "srf",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-CHS.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "srf",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-GYX.txt",
+      "variant": "full",
+      "expect": "srf",
+      "header baseline": "srf",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-GYX.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "srf",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-ILM.txt",
+      "variant": "full",
+      "expect": "srf",
+      "header baseline": "srf",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "srf-ILM.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "srf",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "srf"
+    },
+    {
+      "id": "AFD-MHX.txt",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "CFW-MHX.txt",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "none"
+    },
+    {
+      "id": "CFW-MHX.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "none"
+    },
+    {
+      "id": "CWF-MHX.txt",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "CWF-MHX.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "HWO-MHX.txt",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "none"
+    },
+    {
+      "id": "HWO-MHX.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "srf",
+      "nemotron": "none"
+    },
+    {
+      "id": "MWS-MHX.txt",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "MWS-MHX.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "SPS-MHX.txt",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "SPS-MHX.txt+stripped",
+      "variant": "header-stripped",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "junk-prose",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "junk-json",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    },
+    {
+      "id": "junk-empty",
+      "variant": "full",
+      "expect": "none",
+      "header baseline": "none",
+      "keyword baseline": "none",
+      "nemotron": "none"
+    }
+  ],
+  "results": {
+    "header baseline": {
+      "correct": 20,
+      "total": 26,
+      "misses": [
+        "srf-AKQ.txt+stripped → none (want srf)",
+        "srf-BOX.txt+stripped → none (want srf)",
+        "srf-CAR.txt+stripped → none (want srf)",
+        "srf-CHS.txt+stripped → none (want srf)",
+        "srf-GYX.txt+stripped → none (want srf)",
+        "srf-ILM.txt+stripped → none (want srf)"
+      ]
+    },
+    "keyword baseline": {
+      "correct": 22,
+      "total": 26,
+      "misses": [
+        "CFW-MHX.txt → srf (want none)",
+        "CFW-MHX.txt+stripped → srf (want none)",
+        "HWO-MHX.txt → srf (want none)",
+        "HWO-MHX.txt+stripped → srf (want none)"
+      ]
+    },
+    "nemotron": {
+      "correct": 26,
+      "total": 26,
+      "misses": []
+    }
+  }
+}

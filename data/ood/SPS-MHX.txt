@@ -1,0 +1,47 @@
+
+000
+WWUS82 KMHX 182315
+SPSMHX
+
+Special Weather Statement
+National Weather Service Newport/Morehead City NC
+715 PM EDT Fri Sep 18 2026
+ 
+NCZ090-182345-
+Duplin NC-
+715 PM EDT Fri Sep 18 2026
+
+...A STRONG THUNDERSTORM WILL IMPACT SOUTHWESTERN DUPLIN COUNTY
+THROUGH 745 PM EDT...
+
+At 715 PM EDT, Doppler radar was tracking a strong thunderstorm near
+Wallace, moving south at 25 mph.
+
+HAZARD...Wind gusts up to 50 mph and pea size hail.
+
+SOURCE...Radar indicated.
+
+IMPACT...Gusty winds could knock down tree limbs and blow around 
+         unsecured objects. Minor hail damage to vegetation is 
+         possible.
+
+Locations impacted include...
+Wallace and Teachey.
+
+PRECAUTIONARY/PREPAREDNESS ACTIONS...
+
+If outdoors, consider seeking shelter inside a building. 
+
+&&
+
+LAT...LON 3481 7813 3477 7791 3472 7792 3472 7796
+      3471 7798 3473 7802 3473 7803 3472 7811
+      3471 7813 3472 7816
+TIME...MOT...LOC 2315Z 012DEG 49KT 3472 7804 
+
+MAX HAIL SIZE...0.25 IN
+MAX WIND GUST...50 MPH
+
+$$
+
+27

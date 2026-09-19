@@ -9,6 +9,7 @@ import { numericFor } from '../normalize';
 import { extractSegment, type SegmentExtraction } from '../extract/srf-llm';
 import { reconcile } from '../extract/reconcile';
 import { adjudicate, applyAdjudications, buildCases, preCheck, type AppliedAdjudication } from '../extract/adjudicate';
+import { routeGate } from '../extract/router';
 import { FALLBACK_MODEL } from '../nemotron';
 import type { NwsProduct } from '../nws';
 
@@ -18,6 +19,7 @@ export interface IngestResult {
   documentId: string; skipped: boolean; zones: number; observations: number;
   llm: { calls: number; failed: number; fallback: number; accepted: number; rejected: number; disagreements: number };
   adjudications: AppliedAdjudication[];
+  routed?: { accepted: boolean; by: 'header' | 'nemotron'; reason: string };
 }
 
 export interface IngestOptions {
@@ -43,6 +45,14 @@ export async function ingestSrf(prod: NwsProduct, opts: IngestOptions = {}): Pro
   if (exists && !opts.force) return { documentId: prod.id, skipped: true, zones: 0, observations: 0, llm: llmStats, adjudications };
 
   const text = prod.productText;
+
+  // Classify before extracting. The deterministic header check decides when it can; Nemotron is
+  // consulted only when it can't, and a document is dropped only when both say it isn't extractable.
+  const gate = await routeGate(text);
+  const routed = { accepted: gate.accepted, by: (gate.model ? 'nemotron' : 'header') as 'header' | 'nemotron',
+                   reason: (gate.model ?? gate.header).reason };
+  if (!gate.accepted) return { documentId: prod.id, skipped: true, zones: 0, observations: 0, llm: llmStats, adjudications, routed };
+
   const retrievedAt = new Date().toISOString();
   const segments = parseSrf(text);
 
@@ -126,5 +136,5 @@ export async function ingestSrf(prod: NwsProduct, opts: IngestOptions = {}): Pro
   }
   await sql.transaction(queries);
 
-  return { documentId: prod.id, skipped: false, zones: segRows.length, observations: obsRows.length, llm: llmStats, adjudications };
+  return { documentId: prod.id, skipped: false, zones: segRows.length, observations: obsRows.length, llm: llmStats, adjudications, routed };
 }

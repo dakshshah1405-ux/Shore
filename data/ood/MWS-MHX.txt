@@ -1,0 +1,30 @@
+
+000
+FZUS72 KMHX 142313
+MWSMHX
+
+Marine Weather Statement
+National Weather Service Newport/Morehead City NC
+713 PM EDT Mon Sep 14 2026
+
+AMZ188-142323-
+/O.CAN.KMHX.MA.W.0400.000000T0000Z-260914T2345Z/
+713 PM EDT Mon Sep 14 2026
+
+...THE SPECIAL MARINE WARNING IS CANCELLED...
+
+The affected areas were... 
+Waters from Cape Lookout  to Surf City NC from 20 to 60 NM...
+
+The thunderstorm has weakened and no longer poses a significant
+threat to boaters.
+
+&&
+
+LAT...LON 3364 7659 3367 7663 3369 7664 3415 7666
+      3417 7621 3367 7608 3361 7624
+TIME...MOT...LOC 2311Z 359DEG 23KT 3385 7650 
+
+$$
+
+RCF
