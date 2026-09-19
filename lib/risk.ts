@@ -42,6 +42,10 @@ export function assessRisk(obs: Obs, alerts: Alert[]): { risk: RiskLevel; firedR
   if (rip === 2) elevated.push('Moderate rip current risk');
   if (thunder === 2) elevated.push('Moderate thunderstorm potential');
   if (surf !== null && surf >= 5) elevated.push(`Surf up to ${surf} ft`);
+  // AI-extracted values may raise the assessment, never lower it. A longshore current comes
+  // only from Nemotron reading free-text remarks, with its quote verified against the source.
+  if ((obs.longshoreCurrent ?? []).some((o) => /moderate|strong/i.test(o.value ?? '')))
+    elevated.push('NWS notes a longshore current');
   if (elevated.length) return { risk: 'elevated', firedRule: elevated.join('; ') };
 
   if (rip !== null && rip >= 1)

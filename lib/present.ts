@@ -34,7 +34,26 @@ export const FIELD_LABEL: Record<FieldName, string> = {
 // Always shown, with "Data unavailable" when missing — the safety-relevant core.
 export const PRIMARY_FIELDS: FieldName[] = ['ripCurrentRisk', 'surfHeight', 'thunderstormPotential', 'waterTemperature', 'winds'];
 // Shown only when the forecast includes them.
-export const SECONDARY_FIELDS: FieldName[] = ['uvIndex', 'maxHeatIndex', 'waterspoutRisk', 'weather', 'highTemperature', 'remarks'];
+export const SECONDARY_FIELDS: FieldName[] = ['longshoreCurrent', 'uvIndex', 'maxHeatIndex', 'waterspoutRisk', 'weather', 'highTemperature', 'remarks'];
+
+// How a value was read, in words a beachgoer can follow.
+export const EXTRACTOR_LABEL: Record<string, string> = {
+  reconciled: 'parser and Nemotron agree',
+  regex: 'read by the forecast parser',
+  nemotron: 'read by Nemotron from forecast text; quote verified',
+};
+
+const MODEL_NAME: Record<string, string> = {
+  'nvidia/nemotron-3-super-120b-a12b': 'Nemotron 3 Super',
+  'nvidia/nemotron-3.5-lightning-30b-a3b': 'Nemotron 3.5 Lightning',
+};
+
+export function describeExtraction(extractor: string, model: string | null): string {
+  const name = model ? (MODEL_NAME[model] ?? model) : 'Nemotron';
+  if (extractor === 'reconciled') return `parser and ${name} agree`;
+  if (extractor === 'nemotron') return `read by ${name} from forecast text; quote verified`;
+  return EXTRACTOR_LABEL[extractor] ?? extractor;
+}
 
 export const SOURCE_NAME: Record<string, string> = {
   'nws-srf': 'NWS Surf Zone Forecast',

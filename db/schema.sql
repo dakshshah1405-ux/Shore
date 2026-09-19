@@ -38,6 +38,8 @@ create table if not exists observations (
   confidence   text not null              -- 'high' | 'medium' | 'low'
 );
 create index if not exists obs_zone_idx on observations(zone_id, period);
+-- Which Nemotron model read the value (null for parser-only values). Added after launch; additive.
+alter table observations add column if not exists model text;
 create index if not exists obs_doc_idx on observations(document_id);
 
 -- Per-zone segment facts that aren't field values: name, beaches, official headlines.

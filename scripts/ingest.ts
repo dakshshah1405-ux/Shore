@@ -20,9 +20,15 @@ async function main() {
     try {
       const prod = await latestProduct('SRF', wfo);
       if (!prod) { console.log(`${wfo}: no SRF`); continue; }
-      const r = await ingestSrf(prod);
+      const r = await ingestSrf(prod, { force: process.argv.includes('--force'), llm: !process.argv.includes('--no-llm') });
       if (r.skipped) { skipped++; console.log(`${wfo}: already stored (${prod.issuanceTime})`); }
-      else { stored++; obs += r.observations; console.log(`${wfo}: ${r.zones} zones, ${r.observations} values (${prod.issuanceTime})`); }
+      else {
+        stored++; obs += r.observations;
+        const l = r.llm;
+        console.log(`${wfo}: ${r.zones} zones, ${r.observations} values (${prod.issuanceTime}) · nemotron ${l.calls} calls` +
+          `${l.fallback ? `, ${l.fallback} via 3.5 backup` : ''}${l.failed ? `, ${l.failed} FAILED (parser only)` : ''}` +
+          `, ${l.accepted} accepted, ${l.rejected} rejected, ${l.disagreements} disagreements`);
+      }
     } catch (e) {
       failed++;
       console.error(`${wfo}: FAILED ${(e as Error).message}`);

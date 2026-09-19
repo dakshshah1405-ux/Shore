@@ -8,7 +8,7 @@
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { extractJSON, NEMOTRON_MODEL } from '../nemotron';
+import { extractJSON, PRIMARY_MODEL } from '../nemotron';
 import { cleanValue, numericFor } from '../normalize';
 import type { SrfSegment } from '../adapters/srf';
 
@@ -50,7 +50,7 @@ export interface CheckedField extends LlmField {
 }
 
 export interface SegmentExtraction {
-  model: string;
+  model: string | null;        // the model that answered; null if every attempt failed
   think: boolean;
   promptVersion: string;
   latencyMs: number;
@@ -137,23 +137,33 @@ export function judge(text: string, seg: SrfSegment, raw: unknown): { parsed: bo
 
 const CACHE_DIR = path.join('.cache', 'nemotron');
 
-export async function extractSegment(text: string, seg: SrfSegment, opts: { think?: boolean } = {}): Promise<SegmentExtraction> {
+export async function extractSegment(
+  text: string, seg: SrfSegment, opts: { think?: boolean; model?: string } = {},
+): Promise<SegmentExtraction> {
   const think = !!opts.think;
   const section = text.slice(seg.charStart, seg.charEnd);
-  const key = createHash('sha256').update([NEMOTRON_MODEL, think, PROMPT_VERSION, section].join('\u0000')).digest('hex');
+  // Keyed by the requested model (the primary, for the default chain); the answering model is stored.
+  const keyModel = opts.model ?? PRIMARY_MODEL;
+  const key = createHash('sha256').update([keyModel, think, PROMPT_VERSION, section].join('\u0000')).digest('hex');
   const cacheFile = path.join(CACHE_DIR, `${key}.json`);
 
-  let raw: unknown = null, latencyMs = 0, cached = false;
+  let raw: unknown = null, latencyMs = 0, cached = false, model: string | null = null;
   if (fs.existsSync(cacheFile)) {
-    ({ raw, latencyMs } = JSON.parse(fs.readFileSync(cacheFile, 'utf8')));
+    const c = JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
+    ({ raw, latencyMs } = c);
+    model = c.model ?? keyModel;
     cached = true;
   } else {
     const t = Date.now();
-    raw = await extractJSON(SYSTEM, section, { think });
+    const res = await extractJSON(SYSTEM, section, { think, model: opts.model });
     latencyMs = Date.now() - t;
-    fs.mkdirSync(CACHE_DIR, { recursive: true });
-    fs.writeFileSync(cacheFile, JSON.stringify({ raw, latencyMs }));
+    raw = res.data;
+    model = res.model;
+    if (res.data !== null) {   // never cache a failure — the next run should try again
+      fs.mkdirSync(CACHE_DIR, { recursive: true });
+      fs.writeFileSync(cacheFile, JSON.stringify({ raw, latencyMs, model }));
+    }
   }
   const { parsed, fields } = judge(text, seg, raw);
-  return { model: NEMOTRON_MODEL, think, promptVersion: PROMPT_VERSION, latencyMs, cached, parsed, fields };
+  return { model, think, promptVersion: PROMPT_VERSION, latencyMs, cached, parsed, fields };
 }

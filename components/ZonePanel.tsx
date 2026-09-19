@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import type { FieldName, Observation, ZoneCondition } from '@/lib/types';
-import { FIELD_LABEL, PRIMARY_FIELDS, RISK, SECONDARY_FIELDS, SOURCE_NAME, formatEastern, hoursAgo } from '@/lib/present';
+import { EXTRACTOR_LABEL, FIELD_LABEL, PRIMARY_FIELDS, RISK, SECONDARY_FIELDS, SOURCE_NAME, describeExtraction, formatEastern, hoursAgo } from '@/lib/present';
+
+const OUTLOOK_FIELDS: FieldName[] = ['ripCurrentRisk', 'surfHeight', 'thunderstormPotential', 'waterTemperature'];
 
 export default function ZonePanel({ zone, onClose }: { zone: ZoneCondition; onClose: () => void }) {
   const risk = RISK[zone.risk];
@@ -69,6 +71,28 @@ export default function ZonePanel({ zone, onClose }: { zone: ZoneCondition; onCl
           </dl>
         </section>
 
+        {zone.outlook.some((o) => OUTLOOK_FIELDS.some((f) => o.observations[f]?.length)) && (
+          <section>
+            <h3 className="text-[11px] font-semibold tracking-[0.12em] text-slate-500 uppercase">Later this week</h3>
+            <p className="mt-1 text-xs leading-relaxed text-slate-500">
+              The forecast writes these days as sentences. Nemotron extracted the values, and each was checked against the quoted text.
+              Only what the forecast states is shown.
+            </p>
+            {zone.outlook.map((o) => {
+              const present = OUTLOOK_FIELDS.filter((f) => o.observations[f]?.length);
+              if (!present.length) return null;
+              return (
+                <div key={o.periodLabel} className="mt-2">
+                  <p className="text-xs font-semibold text-slate-700 capitalize">{o.periodLabel.toLowerCase()}</p>
+                  <dl className="divide-y divide-slate-100">
+                    {present.map((f) => <FieldRow key={f} field={f} obs={o.observations[f]} />)}
+                  </dl>
+                </div>
+              );
+            })}
+          </section>
+        )}
+
         {zone.beaches.length > 0 && (
           <section>
             <h3 className="text-[11px] font-semibold tracking-[0.12em] text-slate-500 uppercase">Beaches in this forecast zone</h3>
@@ -108,6 +132,7 @@ function FieldRow({ field, obs }: { field: FieldName; obs?: Observation[] }) {
             <span key={i} className="block">
               {o.subArea && <span className="font-normal text-slate-500">{o.subArea}: </span>}
               {o.value ?? 'Data unavailable'}
+              <Badge obs={o} />
             </span>
           ))}
         </dd>
@@ -117,13 +142,24 @@ function FieldRow({ field, obs }: { field: FieldName; obs?: Observation[] }) {
   );
 }
 
+// A small marker on each value: verified twice, AI-read, or a disagreement worth noticing.
+function Badge({ obs }: { obs: Observation }) {
+  if (obs.confidence === 'low')
+    return <span className="ml-1.5 rounded bg-amber-100 px-1 py-0.5 text-[10px] font-semibold text-amber-900" title="The parser and Nemotron read this differently; the parser's value is shown">⚠ check</span>;
+  if (obs.extractor === 'reconciled')
+    return <span className="ml-1.5 text-[10px] font-semibold text-emerald-700" title={EXTRACTOR_LABEL.reconciled}>✓✓</span>;
+  if (obs.extractor === 'nemotron')
+    return <span className="ml-1.5 rounded bg-[#E8F3DC] px-1 py-0.5 text-[10px] font-semibold text-[#3E6B12]" title={EXTRACTOR_LABEL.nemotron}>AI</span>;
+  return null;
+}
+
 function Provenance({ obs }: { obs: Observation }) {
   return (
     <div className="mt-2 rounded-lg bg-[#0E1A21] p-3">
       <pre className="overflow-x-auto font-mono text-[12px] leading-relaxed whitespace-pre text-[#BFE6D4]">{obs.rawSpan}</pre>
       <p className="mt-2 text-[11px] leading-relaxed text-slate-400">
         {SOURCE_NAME[obs.sourceId] ?? obs.sourceId} · issued {formatEastern(obs.issuedAt)} ·
-        characters {obs.charStart}–{obs.charEnd} · read by {obs.extractor} · {obs.confidence} confidence
+        characters {obs.charStart}–{obs.charEnd} · {describeExtraction(obs.extractor, obs.model)} · {obs.confidence} confidence
         {obs.numeric?.approximate && ' · number approximated from the wording'}
       </p>
       <a href={obs.sourceUrl} target="_blank" rel="noreferrer"

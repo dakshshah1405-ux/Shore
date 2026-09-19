@@ -48,6 +48,7 @@ export interface Observation {
   retrievedAt: string;            // ISO
   extractor: Extractor;
   confidence: Confidence;
+  model: string | null;           // Nemotron model that read or confirmed it; null for parser-only
 }
 
 export interface Alert {
@@ -60,6 +61,13 @@ export interface Alert {
   expires: string | null;
   sourceUrl: string;
   zones: string[];                // UGC codes
+}
+
+// Later days that the SRF gives only as prose (".MONDAY...Surf height around 2 feet...").
+// Values here come from Nemotron, each verified against its quoted source text.
+export interface OutlookPeriod {
+  periodLabel: string;            // 'MONDAY'
+  observations: Partial<Record<FieldName, Observation[]>>;
 }
 
 export interface ZoneCondition {
@@ -75,6 +83,7 @@ export interface ZoneCondition {
   observations: Partial<Record<FieldName, Observation[]>>;
   headlines: string[];            // official "...RIP CURRENT RISK IN EFFECT..." lines, verbatim
   alerts: Alert[];
+  outlook: OutlookPeriod[];       // days after tomorrow, in forecast order
   issuedAt: string;
   staleAfter: string;             // ISO; UI shows a staleness warning past this
 }
