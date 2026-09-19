@@ -19,6 +19,8 @@ export type FieldName =
   | 'highTemperature'
   | 'winds'
   | 'waterspoutRisk'
+  | 'maxHeatIndex'
+  | 'remarks'          // free text; ILM uses it for longshore-current warnings
   | 'sunrise'
   | 'sunset';
 

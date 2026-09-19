@@ -2,12 +2,18 @@ import type { FieldName, NumericRange } from './types';
 
 // Canonical field names for SRF labels. Labels arrive with or without the
 // "*" / "**" footnote markers depending on the office, so those are stripped first.
+// Offices also name the same field differently (CAR "Surf", OKX "Surf Temperature").
+// "Tides" is deliberately unmapped: tides are out of scope.
 const LABELS: Record<string, FieldName> = {
   'rip current risk': 'ripCurrentRisk',
   'surf height': 'surfHeight',
+  'surf': 'surfHeight',
   'thunderstorm potential': 'thunderstormPotential',
   'uv index': 'uvIndex',
   'water temperature': 'waterTemperature',
+  'surf temperature': 'waterTemperature',
+  'max heat index': 'maxHeatIndex',
+  'remarks': 'remarks',
   'weather': 'weather',
   'high temperature': 'highTemperature',
   'winds': 'winds',
