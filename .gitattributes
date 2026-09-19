@@ -1,0 +1,3 @@
+# Source documents must stay byte-exact on every machine: provenance character
+# offsets index into them, so line-ending conversion would silently shift every span.
+data/** -text
