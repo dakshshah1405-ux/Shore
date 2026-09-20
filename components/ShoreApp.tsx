@@ -132,19 +132,26 @@ export default function ShoreApp() {
 
   return (
     <main className="relative h-dvh w-full overflow-hidden bg-[#EEF3F5]">
-      <ZoneMap zones={zones} labels={labels} selected={selected} onSelect={setSelected} focus={focus} satellite={satellite} />
+      <ZoneMap zones={zones} labels={labels} selected={selected} focus={focus} satellite={satellite}
+               onSelect={(zoneId) => (zoneId ? focusZone(zoneId) : setSelected(null))} />
 
       {/* One left column so the controls and the legend can never overlap: the legend sits at the
           bottom when there's room, and the column scrolls when the filters are expanded on a short
           screen. pointer-events-none keeps the empty strip clickable on the map underneath. */}
-      <div className="pointer-events-none absolute inset-y-3 left-3 z-10 flex w-[min(360px,calc(100vw-24px))] flex-col gap-3 overflow-y-auto">
-      <section className="pointer-events-auto shrink-0 rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur">
-        <div className="flex items-baseline justify-between gap-2">
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">Shore</h1>
-          <div className="flex rounded-md bg-slate-100 p-0.5 text-[11px] font-semibold" role="group" aria-label="Base map">
+      <div className="pointer-events-none absolute inset-y-3 left-3 z-10 flex w-[min(360px,calc(100vw-24px))] flex-col gap-3">
+      {/* The card owns its own scrolling: a scrollbar on the pointer-events-none column above
+          could be scrolled with a wheel but never grabbed with the mouse. min-h-0 lets it shrink
+          inside the flex column so it scrolls instead of pushing the legend off screen. */}
+      <section className="panel-scroll pointer-events-auto min-h-0 cursor-default overflow-y-auto rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur">
+        <div className="flex items-center justify-between gap-2">
+          {/* A plain img on purpose: next/image threw at runtime here, and a 19 KB pre-scaled asset
+              needs no optimizer, no srcSet and no client component to go wrong. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-128.png" alt="Shore" width={44} height={44} className="h-11 w-11 shrink-0" />
+          <div className="flex rounded-md bg-[var(--brand-sand-soft)] p-0.5 text-[11px] font-semibold" role="group" aria-label="Base map">
             {([[false, 'Map'], [true, 'Satellite']] as [boolean, string][]).map(([on, label]) => (
               <button key={label} onClick={() => setSatellite(on)} aria-pressed={satellite === on}
-                      className={`rounded px-2 py-1 ${satellite === on ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}>
+                      className={`rounded px-2 py-1 ${satellite === on ? 'bg-white text-[var(--brand-blue-ink)] shadow-sm' : 'text-slate-500'}`}>
                 {label}
               </button>
             ))}
@@ -155,10 +162,10 @@ export default function ShoreApp() {
 
         {/* "Current" and "Next", not "Today" and "Tomorrow": offices issue at different times, so
             an evening product's first period is already tomorrow. Each zone shows its own label. */}
-        <div className="mt-3 grid grid-cols-2 rounded-lg bg-slate-100 p-1 text-sm font-semibold" role="tablist">
+        <div className="mt-3 grid grid-cols-2 rounded-lg bg-[var(--brand-sand-soft)] p-1 text-sm font-semibold" role="tablist">
           {([['today', 'Current'], ['tomorrow', 'Next']] as [Period, string][]).map(([p, label]) => (
             <button key={p} role="tab" aria-selected={period === p} onClick={() => setPeriod(p)}
-                    className={`rounded-md py-1.5 ${period === p ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}>
+                    className={`rounded-md py-1.5 ${period === p ? 'bg-white text-[var(--brand-blue-ink)] shadow-sm' : 'text-slate-500'}`}>
               {label}
             </button>
           ))}
@@ -182,7 +189,7 @@ export default function ShoreApp() {
                   onChange={(v) => setFilters({ ...filters, minWater: v })} />
 
           <button onClick={() => setShowMore(!showMore)} aria-expanded={showMore}
-                  className="text-xs font-semibold text-sky-700 underline underline-offset-2">
+                  className="text-xs font-semibold text-[var(--brand-blue-ink)] underline underline-offset-2">
             {showMore ? 'Fewer filters' : 'More filters'}
           </button>
 
@@ -210,7 +217,7 @@ export default function ShoreApp() {
           {filtering && (
             <p className="flex items-center justify-between text-xs text-slate-600">
               <span><b className="text-slate-900">{matchCount}</b> of {zones?.features.length ?? 0} zones match · zones without data never match</span>
-              <button onClick={() => setFilters(NO_FILTERS)} className="font-semibold text-sky-700 underline">Clear</button>
+              <button onClick={() => setFilters(NO_FILTERS)} className="font-semibold text-[var(--brand-blue-ink)] underline">Clear</button>
             </p>
           )}
         </fieldset>
@@ -243,7 +250,8 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
   return (
     <button onClick={onClick} aria-pressed={on}
             className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors focus-visible:outline-2 ${
-              on ? 'border-slate-900 bg-slate-900 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-slate-400'}`}>
+              on ? 'border-[var(--brand-blue-deep)] bg-[var(--brand-blue-deep)] text-white'
+                 : 'border-slate-300 bg-white text-slate-700 hover:border-[var(--brand-blue)]'}`}>
       {children}
     </button>
   );
@@ -257,12 +265,15 @@ function Slider({ label, unit, prefix, min, max, value, onChange }: {
   return (
     <div className="flex items-center gap-3">
       <label className="flex w-28 shrink-0 items-center gap-2 text-sm font-medium text-slate-700">
-        <input type="checkbox" checked={on} onChange={() => onChange(on ? null : Math.round((min + max) / 2))} className="h-4 w-4 accent-slate-900" />
+        <input type="checkbox" checked={on} onChange={() => onChange(on ? null : Math.round((min + max) / 2))}
+               className="h-4 w-4 accent-[var(--brand-blue-deep)]" />
         {label}
       </label>
-      <input type="range" min={min} max={max} value={value ?? Math.round((min + max) / 2)} disabled={!on}
+      {/* Never disabled: dragging is how people expect to switch a threshold on, so a drag both
+          enables the filter and sets the value. touch-none stops a drag scrolling the column instead. */}
+      <input type="range" min={min} max={max} value={value ?? Math.round((min + max) / 2)}
              onChange={(e) => onChange(Number(e.target.value))} aria-label={`${label} threshold`}
-             className="flex-1 accent-slate-900 disabled:opacity-30" />
+             className={`flex-1 cursor-pointer touch-none accent-[var(--brand-blue-deep)] ${on ? '' : 'opacity-50'}`} />
       <span className={`w-14 text-right text-sm tabular-nums ${on ? 'font-semibold text-slate-900' : 'text-slate-400'}`}>
         {prefix}{value ?? '—'}{unit}
       </span>

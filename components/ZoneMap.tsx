@@ -92,7 +92,7 @@ function paintPlaceLabels(map: MLMap, satellite: boolean) {
 
 // Risk fills have to stay legible over busy photography, so they get stronger over imagery.
 function setSatelliteStyling(map: MLMap, on: boolean) {
-  map.setPaintProperty('zones-fill', 'fill-opacity', ['case', ['get', 'dim'], on ? 0.12 : 0.07, on ? 0.55 : 0.42]);
+  map.setPaintProperty('zones-fill', 'fill-opacity', ['case', ['get', 'dim'], on ? 0.10 : 0.05, on ? 0.55 : 0.42]);
   map.setPaintProperty('zones-line', 'line-width', on ? 1.8 : 1.2);
   map.setPaintProperty('zones-label', 'text-halo-width', on ? 2.2 : 1.6);
   map.setPaintProperty('zones-label', 'text-color', on ? '#0B1B24' : byRisk('ink'));
@@ -166,7 +166,9 @@ export default function ZoneMap({ zones, labels, selected, onSelect, focus, sate
           'text-color': byRisk('ink'),
           'text-halo-color': '#ffffff',
           'text-halo-width': 1.6,
-          'text-opacity': ['case', ['get', 'dim'], 0.3, 1],
+          // Filtered-out zones drop their label entirely: keeping the risk word on a greyed zone
+          // made filtering hard to read at a glance.
+          'text-opacity': ['case', ['get', 'dim'], 0, 1],
         } });
 
         // Imagery sits above the basemap's own fills but below the risk zones, so place labels
@@ -214,15 +216,29 @@ export default function ZoneMap({ zones, labels, selected, onSelect, focus, sate
     setSatelliteStyling(map, satellite);
   }, [satellite]);
 
-  // Fly to a zone chosen from search. maxZoom keeps small zones from filling the screen.
+  // Fly to a zone, whether chosen from search or clicked on the map. Selecting always opens the
+  // detail panel, so the padding leaves room for it — on the right on desktop, at the bottom on
+  // phones — otherwise the zone lands behind the panel. maxZoom stops small zones filling the screen.
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !ready.current || !focus) return;
-    const feature = zones?.features.find((f) => f.properties?.zoneId === focus.zoneId);
+    // Read zones from the ref, not the dependency array: filtering rebuilds the zones object on
+    // every change, and depending on it here made adjusting a filter fly the camera.
+    const feature = latest.current.zones?.features.find((f) => f.properties?.zoneId === focus.zoneId);
     if (!feature) return;
     const [w, s, e, n] = bbox(feature as GeoJSON.Feature);
-    map.fitBounds([[w, s], [e, n]], { padding: 80, maxZoom: 9, duration: 900 });
-  }, [focus, zones]);
+    const wide = window.innerWidth >= 768;
+    map.fitBounds([[w, s], [e, n]], {
+      padding: {
+        top: 60,
+        right: wide ? 460 : 40,
+        bottom: wide ? 60 : Math.round(window.innerHeight * 0.5),
+        left: wide ? 400 : 40,   // clear of the controls column
+      },
+      maxZoom: 9,
+      duration: 900,
+    });
+  }, [focus]);
 
   // MapLibre's stylesheet sets `position: relative` on the map element, and unlayered CSS beats
   // Tailwind's layered utilities — so the Tailwind sizing lives on a wrapper MapLibre never touches,

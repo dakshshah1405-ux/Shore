@@ -50,7 +50,8 @@ export default function ZoneSearch({ geo, onSelect }: {
           else if (e.key === 'Escape') { setOpen(false); inputRef.current?.blur(); }
         }}
         className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900
-                   placeholder:text-slate-400 focus-visible:border-slate-900 focus-visible:outline-2"
+                   placeholder:text-slate-400 focus-visible:border-[var(--brand-blue-deep)]
+                   focus-visible:outline-2 focus-visible:outline-[var(--brand-blue)]"
       />
 
       {open && (results.length > 0 || noCoverage) && (
@@ -66,7 +67,7 @@ export default function ZoneSearch({ geo, onSelect }: {
                 onMouseDown={(ev) => ev.preventDefault()}
                 onClick={() => choose(e)}
                 onMouseEnter={() => setActive(i)}
-                className={`flex w-full items-baseline justify-between gap-3 px-3 py-2 text-left ${i === active ? 'bg-slate-100' : ''}`}
+                className={`flex w-full items-baseline justify-between gap-3 px-3 py-2 text-left ${i === active ? 'bg-[var(--brand-sand-soft)]' : ''}`}
               >
                 <span className="truncate text-sm font-medium text-slate-900">{e.label}</span>
                 <span className="shrink-0 text-[11px] text-slate-500">{e.isBeach ? e.sub : `zone · ${e.sub}`}</span>

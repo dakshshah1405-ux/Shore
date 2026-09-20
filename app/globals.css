@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Sampled from the logo artwork. The deep blue is for anything that carries white text —
+     the logo blue itself is too light for that. Risk colours are semantic and stay separate. */
+  --brand-blue: #60a7d3;
+  --brand-blue-deep: #2b7cab;
+  --brand-blue-ink: #1f5c80;
+  --brand-sand: #e9d3a1;
+  --brand-sand-soft: #f6ecd8;
 }
 
 @theme inline {
@@ -22,3 +30,20 @@ body {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* A scrollbar you can actually grab: the overlay scrollbar Windows draws by default is easy to
+   miss and hard to hit on a panel floating over a map. */
+.panel-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 transparent;
+  scrollbar-gutter: stable;
+}
+.panel-scroll::-webkit-scrollbar { width: 10px; }
+.panel-scroll::-webkit-scrollbar-track { background: transparent; }
+.panel-scroll::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+}
+.panel-scroll::-webkit-scrollbar-thumb:hover { background: #64748b; background-clip: content-box; }
