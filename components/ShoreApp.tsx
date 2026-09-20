@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { pointOnFeature } from '@turf/turf';
 import ZoneMap from './ZoneMap';
 import ZonePanel from './ZonePanel';
+import ZoneSearch from './ZoneSearch';
 import { RISK, RISK_ORDER } from '@/lib/present';
 import { maxNumeric, worstRank } from '@/lib/risk';
 import type { Period, ZoneCondition } from '@/lib/types';
@@ -48,6 +49,13 @@ export default function ShoreApp() {
   const [period, setPeriod] = useState<Period>('today');
   const [filters, setFilters] = useState<Filters>(NO_FILTERS);
   const [selected, setSelected] = useState<string | null>(null);
+  // The counter re-triggers the fly-to when the same zone is chosen twice.
+  const [focus, setFocus] = useState<{ zoneId: string; n: number } | null>(null);
+
+  const focusZone = (zoneId: string) => {
+    setSelected(zoneId);
+    setFocus((f) => ({ zoneId, n: (f?.n ?? 0) + 1 }));
+  };
 
   useEffect(() => {
     Promise.all([
@@ -99,13 +107,15 @@ export default function ShoreApp() {
 
   return (
     <main className="relative h-dvh w-full overflow-hidden bg-[#EEF3F5]">
-      <ZoneMap zones={zones} labels={labels} selected={selected} onSelect={setSelected} />
+      <ZoneMap zones={zones} labels={labels} selected={selected} onSelect={setSelected} focus={focus} />
 
       <section className="absolute top-3 left-3 z-10 w-[min(360px,calc(100vw-24px))] rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur">
         <div className="flex items-baseline justify-between">
           <h1 className="text-2xl font-bold tracking-tight text-slate-900">Shore</h1>
           <span className="text-[11px] font-medium text-slate-500">NWS surf zone forecasts</span>
         </div>
+
+        <ZoneSearch geo={geo} onSelect={focusZone} />
 
         {/* "Current" and "Next", not "Today" and "Tomorrow": offices issue at different times, so
             an evening product's first period is already tomorrow. Each zone shows its own label. */}

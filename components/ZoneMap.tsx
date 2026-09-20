@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { bbox } from '@turf/turf';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import type { Map as MLMap, GeoJSONSource, ExpressionSpecification } from 'maplibre-gl';
 import { RISK } from '@/lib/present';
@@ -13,6 +14,32 @@ const byRisk = (key: 'color' | 'ink'): ExpressionSpecification => [
   'official', RISK.official[key], 'high', RISK.high[key], 'elevated', RISK.elevated[key],
   'lower', RISK.lower[key], RISK.unknown[key],
 ];
+
+// Basemap palette: warm sand land against cool muted water. Deliberately no green, orange, red or
+// purple — those belong to the risk scale, and the basemap must never compete with it.
+const LAND = '#F4EEE3';
+const LAND_TINT = '#ECE4D6';   // parks, landuse
+const BUILDING = '#E4DBCB';
+const WATER = '#BCD6E4';
+const WATER_LINE = '#9FC2D6';
+
+function paintBasemap(map: MLMap) {
+  for (const layer of map.getStyle().layers ?? []) {
+    const id = layer.id;
+    const srcLayer = (layer as { 'source-layer'?: string })['source-layer'];
+    try {
+      if (layer.type === 'background') map.setPaintProperty(id, 'background-color', LAND);
+      else if (srcLayer === 'water')
+        map.setPaintProperty(id, layer.type === 'line' ? 'line-color' : 'fill-color',
+          layer.type === 'line' ? WATER_LINE : WATER);
+      else if (srcLayer === 'building') map.setPaintProperty(id, 'fill-color', BUILDING);
+      else if (srcLayer === 'park' || srcLayer === 'landcover' || srcLayer === 'landuse')
+        map.setPaintProperty(id, 'fill-color', LAND_TINT);
+    } catch {
+      // A basemap layer that doesn't take this paint property: leave it as the style had it.
+    }
+  }
+}
 
 // Diagonal hatch for zones without data, so "unknown" never reads as a flat color.
 function hatchImage() {
@@ -29,9 +56,10 @@ interface Props {
   labels: GeoJSON.FeatureCollection | null;
   selected: string | null;
   onSelect: (zoneId: string | null) => void;
+  focus: { zoneId: string; n: number } | null;   // search result to fly to
 }
 
-export default function ZoneMap({ zones, labels, selected, onSelect }: Props) {
+export default function ZoneMap({ zones, labels, selected, onSelect, focus }: Props) {
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MLMap | null>(null);
   const ready = useRef(false);
@@ -57,6 +85,7 @@ export default function ZoneMap({ zones, labels, selected, onSelect }: Props) {
       map.addControl(new AttributionControl({ compact: true }), 'bottom-right');
 
       map.on('load', () => {
+        paintBasemap(map);
         map.addImage('hatch', hatchImage());
         map.addSource('zones', { type: 'geojson', data: latest.current.zones ?? EMPTY });
         map.addSource('labels', { type: 'geojson', data: latest.current.labels ?? EMPTY });
@@ -112,6 +141,16 @@ export default function ZoneMap({ zones, labels, selected, onSelect }: Props) {
     if (!map || !ready.current) return;
     map.setFilter('zones-selected', ['==', ['get', 'zoneId'], selected ?? '']);
   }, [selected]);
+
+  // Fly to a zone chosen from search. maxZoom keeps small zones from filling the screen.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready.current || !focus) return;
+    const feature = zones?.features.find((f) => f.properties?.zoneId === focus.zoneId);
+    if (!feature) return;
+    const [w, s, e, n] = bbox(feature as GeoJSON.Feature);
+    map.fitBounds([[w, s], [e, n]], { padding: 80, maxZoom: 9, duration: 900 });
+  }, [focus, zones]);
 
   // MapLibre's stylesheet sets `position: relative` on the map element, and unlayered CSS beats
   // Tailwind's layered utilities — so the Tailwind sizing lives on a wrapper MapLibre never touches,
