@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
+import Link from 'next/link';
 import { pointOnFeature } from '@turf/turf';
 import ZoneMap from './ZoneMap';
 import ZonePanel from './ZonePanel';
@@ -65,6 +66,28 @@ function matches(c: ZoneCondition | undefined, f: Filters): boolean {
   return true;
 }
 
+// Weekday names for the two period tabs, read as external state rather than computed during
+// render: the server renders in its own time zone and would disagree with the viewer's near
+// midnight, which React reports as a hydration mismatch. The server snapshot is Today / Tomorrow,
+// which is never wrong. Cached because useSyncExternalStore requires a stable snapshot reference,
+// and the pair only changes at midnight anyway.
+const SERVER_DAYS: [string, string] = ['Today', 'Tomorrow'];
+let clientDays: [string, string] | null = null;
+
+function weekdayPair(): [string, string] {
+  if (!clientDays) {
+    const name = (daysAhead: number) => {
+      const d = new Date();
+      d.setDate(d.getDate() + daysAhead);
+      return d.toLocaleDateString(undefined, { weekday: 'long' });
+    };
+    clientDays = [name(0), name(1)];
+  }
+  return clientDays;
+}
+const noSubscribe = () => () => {};
+const serverDays = () => SERVER_DAYS;
+
 export default function ShoreApp() {
   const [geo, setGeo] = useState<GeoJSON.FeatureCollection | null>(null);
   const [conditions, setConditions] = useState<ZoneCondition[]>([]);
@@ -76,19 +99,7 @@ export default function ShoreApp() {
   const [focus, setFocus] = useState<{ zoneId: string; n: number } | null>(null);
   const [satellite, setSatellite] = useState(false);
   const [showMore, setShowMore] = useState(false);
-  // Weekday names for the two period tabs. Filled in after mount on purpose: the server renders
-  // in its own time zone and would disagree with the viewer's near midnight, which React reports
-  // as a hydration mismatch. Until then the tabs read Today / Tomorrow, which is never wrong.
-  const [dayNames, setDayNames] = useState<[string, string]>(['Today', 'Tomorrow']);
-
-  useEffect(() => {
-    const name = (daysAhead: number) => {
-      const d = new Date();
-      d.setDate(d.getDate() + daysAhead);
-      return d.toLocaleDateString(undefined, { weekday: 'long' });
-    };
-    setDayNames([name(0), name(1)]);
-  }, []);
+  const dayNames = useSyncExternalStore(noSubscribe, weekdayPair, serverDays);
 
   const focusZone = (zoneId: string) => {
     setSelected(zoneId);
@@ -238,6 +249,15 @@ export default function ShoreApp() {
 
         {error && <p className="mt-3 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-800">Couldn&apos;t load conditions: {error}</p>}
         {!error && !geo && <p className="mt-3 text-sm text-slate-500">Loading forecasts…</p>}
+
+        {/* In the card rather than the legend: the legend is hidden below the sm breakpoint, and
+            the page explaining where these numbers come from should never be the part that drops. */}
+        <p className="mt-4 border-t border-slate-100 pt-3 text-[11px] leading-snug text-slate-500">
+          Every value here is read from official NWS forecast text.{' '}
+          <Link href="/sources" className="font-semibold text-[var(--brand-blue-deep)] underline underline-offset-2">
+            Sources &amp; methodology
+          </Link>
+        </p>
       </section>
 
       <section className="pointer-events-auto mt-auto hidden shrink-0 rounded-xl border border-slate-200 bg-white/95 px-3 py-2.5 shadow-md backdrop-blur sm:block" aria-label="Legend">
