@@ -28,8 +28,11 @@ export default function ZonePanel({ zone, onClose }: { zone: ZoneCondition; onCl
       <header className="sticky top-0 z-10 border-b border-slate-100 bg-white/95 px-5 pt-4 pb-3 backdrop-blur">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <p className="text-[11px] font-semibold tracking-[0.12em] text-slate-500 uppercase">
-              {zone.zoneId} · {zone.periodLabel.toLowerCase()}
+            <p className="text-[11px] font-semibold tracking-[0.12em] uppercase">
+              <span className="text-slate-500">{zone.zoneId}</span>
+              {' · '}
+              <span className="text-slate-900">{zone.periodLabel.toLowerCase()}</span>
+              <span className="text-slate-400"> as issued</span>
             </p>
             <h2 className="mt-0.5 text-xl leading-tight font-semibold text-balance text-slate-900">{zone.zoneName}</h2>
           </div>

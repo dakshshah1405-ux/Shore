@@ -85,6 +85,14 @@ export default function ShoreApp() {
     };
   }, [geo, byZone, filters]);
 
+  // The period names actually in use, so the toggle never implies a day the data doesn't claim.
+  const periodLabels = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const c of byZone.values()) counts.set(c.periodLabel, (counts.get(c.periodLabel) ?? 0) + 1);
+    return [...counts.entries()].sort((a, b) => b[1] - a[1])
+      .map(([label, n]) => `${label.toLowerCase()} (${n})`);
+  }, [byZone]);
+
   const filtering = JSON.stringify(filters) !== JSON.stringify(NO_FILTERS);
   const zone = selected ? byZone.get(selected) : undefined;
   const counts = RISK_ORDER.map((r) => [r, [...byZone.values()].filter((c) => c.risk === r).length] as const);
@@ -99,14 +107,20 @@ export default function ShoreApp() {
           <span className="text-[11px] font-medium text-slate-500">NWS surf zone forecasts</span>
         </div>
 
+        {/* "Current" and "Next", not "Today" and "Tomorrow": offices issue at different times, so
+            an evening product's first period is already tomorrow. Each zone shows its own label. */}
         <div className="mt-3 grid grid-cols-2 rounded-lg bg-slate-100 p-1 text-sm font-semibold" role="tablist">
-          {(['today', 'tomorrow'] as Period[]).map((p) => (
+          {([['today', 'Current'], ['tomorrow', 'Next']] as [Period, string][]).map(([p, label]) => (
             <button key={p} role="tab" aria-selected={period === p} onClick={() => setPeriod(p)}
-                    className={`rounded-md py-1.5 capitalize ${period === p ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}>
-              {p}
+                    className={`rounded-md py-1.5 ${period === p ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}>
+              {label}
             </button>
           ))}
         </div>
+        <p className="mt-1.5 text-[11px] leading-snug text-slate-500">
+          Forecast periods as issued. Offices issue at different times, so each zone shows its own period name
+          {periodLabels.length > 0 && <> — right now: {periodLabels.join(', ')}</>}.
+        </p>
 
         <fieldset className="mt-4 space-y-3">
           <legend className="text-[11px] font-semibold tracking-[0.12em] text-slate-500 uppercase">Highlight zones</legend>
