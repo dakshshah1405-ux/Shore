@@ -5,7 +5,7 @@ teletype-era infrastructure. Almost nobody reads it. Shore does.**
 
 Built at SteelHacks XIII, 19–20 September 2026. Sources & Methodology ships inside the app, at `/sources`.
 
-**Live demo:** `TODO — paste the Vercel URL here before submitting`
+**Live demo:** <https://shore-dakshshah1405-7053s-projects.vercel.app>
 
 ---
 
