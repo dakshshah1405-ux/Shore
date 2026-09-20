@@ -1,10 +1,9 @@
 // Applies db/schema.sql to DATABASE_URL. Idempotent. Run: npx tsx scripts/migrate.ts
 
+import './load-env';
 import fs from 'node:fs';
 import path from 'node:path';
 import { Pool } from '@neondatabase/serverless';
-
-process.loadEnvFile?.('.env.local');
 
 async function main() {
   if (!process.env.DATABASE_URL || process.env.DATABASE_URL.includes('ep-xxxx')) {

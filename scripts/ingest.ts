@@ -1,8 +1,7 @@
 // Fetches the latest SRF from every East Coast office and stores it. Safe to re-run:
 // products already in the database are skipped.  Run: npx tsx scripts/ingest.ts
 
-process.loadEnvFile?.('.env.local');
-
+import './load-env';
 import { EAST_COAST_WFOS, latestProduct, sleep } from '../lib/nws';
 import { ingestSrf } from '../lib/ingest/srf';
 import { ingestAlerts } from '../lib/ingest/alerts';

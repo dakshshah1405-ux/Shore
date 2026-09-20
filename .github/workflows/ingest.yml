@@ -1,0 +1,46 @@
+# Keeps the deployed map current. Without this, Shore shows whatever was last ingested by hand —
+# and an official warning issued overnight would never appear.
+#
+# Every run refreshes active NWS alerts and fetches each office's latest Surf Zone Forecast.
+# Forecasts already stored are skipped, so a typical run does little work and few Nemotron calls.
+
+name: Ingest NWS data
+
+on:
+  schedule:
+    # Every 15 minutes. GitHub queues cron under load, so treat this as "about every 15 minutes".
+    - cron: '*/15 * * * *'
+  workflow_dispatch:   # lets you run it on demand from the Actions tab
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false   # never interrupt a run that is mid-write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ingest forecasts and alerts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          NWS_USER_AGENT: ${{ secrets.NWS_USER_AGENT }}
+        run: npx tsx scripts/ingest.ts 2>&1 | tee ingest.log
+
+      - name: Summarise the run
+        if: always()
+        run: |
+          echo '### Ingest run' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          tail -n 20 ingest.log >> "$GITHUB_STEP_SUMMARY" || echo 'no output' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
