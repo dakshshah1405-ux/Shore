@@ -149,6 +149,41 @@ Each baseline fails in its own way, and both failures are real rather than const
 Unlike the adjudicator in §6, here the model beats **both** deterministic baselines on their own
 ground. Sample size is 20; treat it as a clean signal, not a precise number.
 
+## 10. Coherence audit — catching contradictions no rule can express
+
+The fourth role: before anyone relies on a zone's result, check whether the assessment, the rule
+that produced it, the official headline and the extracted fields contradict each other. The audit
+only raises a flag — it never computes risk and never changes a value. It runs **offline**
+(`scripts/audit-coherence.ts`), never in the request path, so the website still never calls Nemotron.
+
+**Cases:** 10 real zones (any flag is a false alarm) and 12 injected inconsistencies of four kinds.
+Run: `npx tsx scripts/eval-audit.ts --clean 10`.
+
+| Config | Inconsistencies caught | False flags on clean data |
+|---|---|---|
+| no audit | 0 / 12 (0%) | 0 / 10 |
+| recompute baseline (deterministic) | 6 / 12 (50%) | 0 / 10 |
+| headline keyword baseline | 3 / 12 (25%) | 0 / 10 |
+| nemotron | 10 / 12 (83%) | 0 / 10 |
+| **deterministic + nemotron** (what we ship) | **12 / 12 (100%)** | **0 / 10** |
+
+The classes separate cleanly, which is the useful part:
+
+- **Recomputing the risk** catches a label or rule that doesn't follow from the data — exactly, and
+  for free. It cannot see a headline that contradicts a field.
+- **The keyword matcher** catches simple headline conflicts and nothing else.
+- **Only Nemotron** caught the semantic contradiction: weather reading *"Numerous thunderstorms,
+  some severe"* while `thunderstormPotential` is `None`. No rule we could write expresses that.
+- **Nemotron missed 2 of 3** "rule cites an absent value" cases that recomputation catches exactly.
+  Hence the union: the deterministic check decides what it can, the model covers the rest.
+
+**Zero false flags on real data** matters more than the catch rate — an auditor that cries wolf gets
+switched off.
+
+*Honest caveat:* "caught" means the zone was flagged, not that the stated reason matched the
+injected flaw. In one `risk_mismatch` case Nemotron flagged the zone but explained it by a different
+inconsistency in the same data.
+
 ## 3. It declines to invent absent fields — when asked the right way
 
 The prose line states surf but no rip current risk. With "use an empty string for anything the text

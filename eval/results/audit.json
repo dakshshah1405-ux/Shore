@@ -1,0 +1,463 @@
+{
+  "generatedAt": "2026-09-20T00:02:32.025Z",
+  "stats": {
+    "recompute baseline": {
+      "caught": 6,
+      "falseFlags": 0
+    },
+    "headline keyword baseline": {
+      "caught": 3,
+      "falseFlags": 0
+    },
+    "nemotron": {
+      "caught": 10,
+      "falseFlags": 0
+    },
+    "deterministic + nemotron": {
+      "caught": 12,
+      "falseFlags": 0
+    }
+  },
+  "rows": [
+    {
+      "zoneId": "DEZ004",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ069",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ124",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ125",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ138",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ141",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ154",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ159",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ164",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "FLZ168",
+      "set": "clean",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": true,
+        "issue": null
+      }
+    },
+    {
+      "zoneId": "DEZ004",
+      "set": "risk_mismatch",
+      "recompute baseline": {
+        "coherent": false,
+        "issue": "risk is \"lower\" but the data gives \"elevated\""
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Assessment says 'lower assessment contradicts extracted ripCurrentRisk: Moderate"
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "risk is \"lower\" but the data gives \"elevated\""
+      }
+    },
+    {
+      "zoneId": "FLZ069",
+      "set": "risk_mismatch",
+      "recompute baseline": {
+        "coherent": false,
+        "issue": "risk is \"lower\" but the data gives \"high\""
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Thunderstorm potential is High but weather description only says 'likely' without confirmation of occurrence."
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "risk is \"lower\" but the data gives \"high\""
+      }
+    },
+    {
+      "zoneId": "FLZ124",
+      "set": "risk_mismatch",
+      "recompute baseline": {
+        "coherent": false,
+        "issue": "risk is \"lower\" but the data gives \"elevated\""
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Assessment says 'lower' but official headline and ripCurrentRisk both state 'Moderate' risk."
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "risk is \"lower\" but the data gives \"elevated\""
+      }
+    },
+    {
+      "zoneId": "DEZ004",
+      "set": "rule_cites_absent",
+      "recompute baseline": {
+        "coherent": false,
+        "issue": "rule is \"Moderate thunderstorm potential\" but the data gives \"Moderate rip current risk\""
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "rule is \"Moderate thunderstorm potential\" but the data gives \"Moderate rip current risk\""
+      }
+    },
+    {
+      "zoneId": "FLZ069",
+      "set": "rule_cites_absent",
+      "recompute baseline": {
+        "coherent": false,
+        "issue": "risk is \"high\" but the data gives \"lower\""
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Assessment 'high' contradicts rule 'Moderate thunderstorm potential' — no justification for high risk given moderate potential."
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "risk is \"high\" but the data gives \"lower\""
+      }
+    },
+    {
+      "zoneId": "FLZ124",
+      "set": "rule_cites_absent",
+      "recompute baseline": {
+        "coherent": false,
+        "issue": "rule is \"Moderate thunderstorm potential\" but the data gives \"Moderate rip current risk\""
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": true,
+        "issue": null
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "rule is \"Moderate thunderstorm potential\" but the data gives \"Moderate rip current risk\""
+      }
+    },
+    {
+      "zoneId": "DEZ004",
+      "set": "headline_conflict",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": false,
+        "issue": "headline says high but the field says rank 2"
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Headline says HIGH rip current risk but extracted value is Moderate."
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "Headline says HIGH rip current risk but extracted value is Moderate."
+      }
+    },
+    {
+      "zoneId": "FLZ069",
+      "set": "headline_conflict",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": false,
+        "issue": "headline says high but the field says rank 1"
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Headline states HIGH rip current risk but extracted ripCurrentRisk is Low"
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "Headline states HIGH rip current risk but extracted ripCurrentRisk is Low"
+      }
+    },
+    {
+      "zoneId": "FLZ124",
+      "set": "headline_conflict",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": false,
+        "issue": "headline says high but the field says rank 2"
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Official headline states 'HIGH' rip current risk, but extracted value is 'Moderate'."
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "Official headline states 'HIGH' rip current risk, but extracted value is 'Moderate'."
+      }
+    },
+    {
+      "zoneId": "DEZ004",
+      "set": "field_contradiction",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Weather describes severe thunderstorms but thunderstormPotential is None"
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "Weather describes severe thunderstorms but thunderstormPotential is None"
+      }
+    },
+    {
+      "zoneId": "FLZ124",
+      "set": "field_contradiction",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Weather describes numerous thunderstorms but thunderstormPotential is None, which contradicts."
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "Weather describes numerous thunderstorms but thunderstormPotential is None, which contradicts."
+      }
+    },
+    {
+      "zoneId": "FLZ125",
+      "set": "field_contradiction",
+      "recompute baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "headline keyword baseline": {
+        "coherent": true,
+        "issue": null
+      },
+      "nemotron": {
+        "coherent": false,
+        "issue": "Weather describes numerous thunderstorms but thunderstormPotential is None, which contradicts."
+      },
+      "deterministic + nemotron": {
+        "coherent": false,
+        "issue": "Weather describes numerous thunderstorms but thunderstormPotential is None, which contradicts."
+      }
+    }
+  ]
+}
