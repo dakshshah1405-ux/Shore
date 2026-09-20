@@ -83,7 +83,36 @@ export function parseTideHeight(v: string): NumericRange | null {
   return m ? { min: +m[1], max: +m[1], unit: 'ft', approximate: false } : null;
 }
 
+// "East winds 10 to 15 mph" → 15. "Light and variable winds, becoming east around 5 mph" → 5.
+// Takes the highest speed stated, matching the worst-of convention used elsewhere. Wordings with
+// no number at all ("Light and variable winds") yield null rather than an assumed calm.
+export function parseWind(v: string): NumericRange | null {
+  // "10 to 15 mph" states the unit only once, after the upper bound.
+  const speeds = [...v.matchAll(/(\d+)(?:\s*to\s*(\d+))?\s*mph/gi)]
+    .flatMap((m) => (m[2] ? [+m[1], +m[2]] : [+m[1]]));
+  if (!speeds.length) return null;
+  return { min: Math.min(...speeds), max: Math.max(...speeds), unit: 'mph', approximate: /around|about/i.test(v) };
+}
+
+// "Up to 100." → 100 °F
+export function parseHeatIndex(v: string): NumericRange | null {
+  const m = v.match(/(\d+)/);
+  return m ? { min: +m[1], max: +m[1], unit: 'F', approximate: /up to|around/i.test(v) } : null;
+}
+
+// UV is reported on its own scale, including "Very High", which hazardRank doesn't cover.
+const UV_RANK: Record<string, number> = { low: 1, moderate: 2, high: 3, 'very high': 4, extreme: 5 };
+
+export function uvRank(value: string | null): number | null {
+  if (!value) return null;
+  return UV_RANK[value.trim().toLowerCase()] ?? null;
+}
+
+export const UV_LEVELS = ['Moderate', 'High', 'Very High'] as const;
+
 export function numericFor(field: FieldName, value: string): NumericRange | null {
+  if (field === 'winds') return parseWind(value);
+  if (field === 'maxHeatIndex') return parseHeatIndex(value);
   if (field === 'surfHeight') return parseSurf(value);
   if (field === 'waterTemperature') return parseWaterTemp(value);
   if (field === 'tide') return parseTideHeight(value);

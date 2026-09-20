@@ -31,7 +31,7 @@ export type FieldName =
 export interface NumericRange {
   min: number;
   max: number;
-  unit: 'ft' | 'F';
+  unit: 'ft' | 'F' | 'mph';
   approximate: boolean;
 }
 

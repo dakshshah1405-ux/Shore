@@ -7,6 +7,7 @@ import ZonePanel from './ZonePanel';
 import ZoneSearch from './ZoneSearch';
 import { RISK, RISK_ORDER } from '@/lib/present';
 import { maxNumeric, worstRank } from '@/lib/risk';
+import { uvRank } from '@/lib/normalize';
 import type { Period, ZoneCondition } from '@/lib/types';
 
 interface Filters {
@@ -14,8 +15,16 @@ interface Filters {
   thunder: boolean;
   maxSurf: number | null;   // show zones with surf at or below this
   minWater: number | null;  // show zones with water at or above this
+  maxWind: number | null;   // show zones with wind at or below this
+  minUv: number | null;     // UV rank threshold: 2 Moderate, 3 High, 4 Very High
+  minHeat: number | null;   // heat index at or above this
+  alertsOnly: boolean;
+  longshoreOnly: boolean;
 }
-const NO_FILTERS: Filters = { rip: 'all', thunder: false, maxSurf: null, minWater: null };
+const NO_FILTERS: Filters = {
+  rip: 'all', thunder: false, maxSurf: null, minWater: null,
+  maxWind: null, minUv: null, minHeat: null, alertsOnly: false, longshoreOnly: false,
+};
 
 // A zone matches only if it has the data to prove it. Missing data never satisfies a
 // filter — "surf under 2 ft" must not highlight a zone whose surf is unknown.
@@ -39,6 +48,20 @@ function matches(c: ZoneCondition | undefined, f: Filters): boolean {
     const mins = (o.waterTemperature ?? []).map((w) => w.numeric?.min).filter((v): v is number => typeof v === 'number');
     if (!mins.length || Math.min(...mins) < f.minWater) return false;
   }
+  if (f.maxWind !== null) {
+    const w = maxNumeric(o.winds);
+    if (w === null || w > f.maxWind) return false;
+  }
+  if (f.minUv !== null) {
+    const ranks = (o.uvIndex ?? []).map((u) => uvRank(u.value)).filter((r): r is number => r !== null);
+    if (!ranks.length || Math.max(...ranks) < f.minUv) return false;
+  }
+  if (f.minHeat !== null) {
+    const h = maxNumeric(o.maxHeatIndex);
+    if (h === null || h < f.minHeat) return false;
+  }
+  if (f.alertsOnly && c.alerts.length === 0) return false;
+  if (f.longshoreOnly && !(o.longshoreCurrent ?? []).length) return false;
   return true;
 }
 
@@ -51,6 +74,8 @@ export default function ShoreApp() {
   const [selected, setSelected] = useState<string | null>(null);
   // The counter re-triggers the fly-to when the same zone is chosen twice.
   const [focus, setFocus] = useState<{ zoneId: string; n: number } | null>(null);
+  const [satellite, setSatellite] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   const focusZone = (zoneId: string) => {
     setSelected(zoneId);
@@ -107,12 +132,23 @@ export default function ShoreApp() {
 
   return (
     <main className="relative h-dvh w-full overflow-hidden bg-[#EEF3F5]">
-      <ZoneMap zones={zones} labels={labels} selected={selected} onSelect={setSelected} focus={focus} />
+      <ZoneMap zones={zones} labels={labels} selected={selected} onSelect={setSelected} focus={focus} satellite={satellite} />
 
-      <section className="absolute top-3 left-3 z-10 w-[min(360px,calc(100vw-24px))] rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur">
-        <div className="flex items-baseline justify-between">
+      {/* One left column so the controls and the legend can never overlap: the legend sits at the
+          bottom when there's room, and the column scrolls when the filters are expanded on a short
+          screen. pointer-events-none keeps the empty strip clickable on the map underneath. */}
+      <div className="pointer-events-none absolute inset-y-3 left-3 z-10 flex w-[min(360px,calc(100vw-24px))] flex-col gap-3 overflow-y-auto">
+      <section className="pointer-events-auto shrink-0 rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur">
+        <div className="flex items-baseline justify-between gap-2">
           <h1 className="text-2xl font-bold tracking-tight text-slate-900">Shore</h1>
-          <span className="text-[11px] font-medium text-slate-500">NWS surf zone forecasts</span>
+          <div className="flex rounded-md bg-slate-100 p-0.5 text-[11px] font-semibold" role="group" aria-label="Base map">
+            {([[false, 'Map'], [true, 'Satellite']] as [boolean, string][]).map(([on, label]) => (
+              <button key={label} onClick={() => setSatellite(on)} aria-pressed={satellite === on}
+                      className={`rounded px-2 py-1 ${satellite === on ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}>
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
 
         <ZoneSearch geo={geo} onSelect={focusZone} />
@@ -132,7 +168,7 @@ export default function ShoreApp() {
           {periodLabels.length > 0 && <> — right now: {periodLabels.join(', ')}</>}.
         </p>
 
-        <fieldset className="mt-4 space-y-3">
+        <fieldset className="mt-4 space-y-3 border-t border-slate-100 pt-3">
           <legend className="text-[11px] font-semibold tracking-[0.12em] text-slate-500 uppercase">Highlight zones</legend>
           <div className="flex flex-wrap gap-1.5">
             {([['all', 'Any rip risk'], ['moderate', 'Rip: Moderate+'], ['high', 'Rip: High']] as const).map(([v, label]) => (
@@ -144,6 +180,33 @@ export default function ShoreApp() {
                   onChange={(v) => setFilters({ ...filters, maxSurf: v })} />
           <Slider label="Warm water" unit="°F" prefix="≥" min={55} max={85} value={filters.minWater}
                   onChange={(v) => setFilters({ ...filters, minWater: v })} />
+
+          <button onClick={() => setShowMore(!showMore)} aria-expanded={showMore}
+                  className="text-xs font-semibold text-sky-700 underline underline-offset-2">
+            {showMore ? 'Fewer filters' : 'More filters'}
+          </button>
+
+          {showMore && (
+            <div className="space-y-3 border-t border-slate-100 pt-3">
+              <Slider label="Light wind" unit="mph" prefix="≤" min={5} max={35} value={filters.maxWind}
+                      onChange={(v) => setFilters({ ...filters, maxWind: v })} />
+              <Slider label="Heat index" unit="°F" prefix="≥" min={85} max={110} value={filters.minHeat}
+                      onChange={(v) => setFilters({ ...filters, minHeat: v })} />
+              <div className="flex flex-wrap gap-1.5">
+                {([[2, 'UV: Moderate+'], [3, 'UV: High+'], [4, 'UV: Very High']] as [number, string][]).map(([rank, label]) => (
+                  <Chip key={rank} on={filters.minUv === rank}
+                        onClick={() => setFilters({ ...filters, minUv: filters.minUv === rank ? null : rank })}>{label}</Chip>
+                ))}
+                <Chip on={filters.alertsOnly} onClick={() => setFilters({ ...filters, alertsOnly: !filters.alertsOnly })}>
+                  ⚠ Under an NWS alert
+                </Chip>
+                <Chip on={filters.longshoreOnly} onClick={() => setFilters({ ...filters, longshoreOnly: !filters.longshoreOnly })}>
+                  ↔ Longshore current
+                </Chip>
+              </div>
+            </div>
+          )}
+
           {filtering && (
             <p className="flex items-center justify-between text-xs text-slate-600">
               <span><b className="text-slate-900">{matchCount}</b> of {zones?.features.length ?? 0} zones match · zones without data never match</span>
@@ -156,7 +219,7 @@ export default function ShoreApp() {
         {!error && !geo && <p className="mt-3 text-sm text-slate-500">Loading forecasts…</p>}
       </section>
 
-      <section className="absolute bottom-3 left-3 z-10 hidden rounded-xl border border-slate-200 bg-white/95 px-3 py-2.5 shadow-md backdrop-blur sm:block" aria-label="Legend">
+      <section className="pointer-events-auto mt-auto hidden shrink-0 rounded-xl border border-slate-200 bg-white/95 px-3 py-2.5 shadow-md backdrop-blur sm:block" aria-label="Legend">
         <p className="text-[11px] font-semibold tracking-[0.12em] text-slate-500 uppercase">Assessment</p>
         <ul className="mt-1.5 space-y-1">
           {counts.map(([r, n]) => (
@@ -169,6 +232,7 @@ export default function ShoreApp() {
         </ul>
         <p className="mt-2 max-w-[220px] text-[11px] leading-snug text-slate-500">Informational only. Follow lifeguards and posted signs.</p>
       </section>
+      </div>
 
       {zone && <ZonePanel zone={zone} onClose={() => setSelected(null)} />}
     </main>

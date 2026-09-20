@@ -10,7 +10,7 @@ const iso = (v: unknown) => (v == null ? null : new Date(v as string).toISOStrin
 interface Row {
   zone_id: string; zone_name: string | null; beaches: string[]; headlines: string[]; doc_issued: string;
   period: Period | 'outlook' | null; period_label: string | null; field: FieldName | null; value: string | null;
-  numeric_min: number | null; numeric_max: number | null; numeric_unit: 'ft' | 'F' | null; approximate: boolean | null;
+  numeric_min: number | null; numeric_max: number | null; numeric_unit: 'ft' | 'F' | 'mph' | null; approximate: boolean | null;
   sub_area: string | null; source_id: string; source_url: string; raw_span: string | null;
   char_start: number | null; char_end: number | null; issued_at: string; retrieved_at: string;
   extractor: Observation['extractor']; confidence: Observation['confidence']; model: string | null;
