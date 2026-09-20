@@ -27,6 +27,7 @@ export const FIELD_LABEL: Record<FieldName, string> = {
   waterspoutRisk: 'Waterspouts',
   remarks: 'Remarks',
   longshoreCurrent: 'Longshore current',
+  tide: 'Tide',
   sunrise: 'Sunrise',
   sunset: 'Sunset',
 };
@@ -34,7 +35,7 @@ export const FIELD_LABEL: Record<FieldName, string> = {
 // Always shown, with "Data unavailable" when missing — the safety-relevant core.
 export const PRIMARY_FIELDS: FieldName[] = ['ripCurrentRisk', 'surfHeight', 'thunderstormPotential', 'waterTemperature', 'winds'];
 // Shown only when the forecast includes them.
-export const SECONDARY_FIELDS: FieldName[] = ['longshoreCurrent', 'uvIndex', 'maxHeatIndex', 'waterspoutRisk', 'weather', 'highTemperature', 'remarks'];
+export const SECONDARY_FIELDS: FieldName[] = ['tide', 'longshoreCurrent', 'uvIndex', 'maxHeatIndex', 'waterspoutRisk', 'weather', 'highTemperature', 'remarks'];
 
 // How a value was read, in words a beachgoer can follow.
 export const EXTRACTOR_LABEL: Record<string, string> = {

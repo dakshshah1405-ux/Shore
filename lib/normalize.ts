@@ -3,7 +3,6 @@ import type { FieldName, NumericRange } from './types';
 // Canonical field names for SRF labels. Labels arrive with or without the
 // "*" / "**" footnote markers depending on the office, so those are stripped first.
 // Offices also name the same field differently (CAR "Surf", OKX "Surf Temperature").
-// "Tides" is deliberately unmapped: tides are out of scope.
 const LABELS: Record<string, FieldName> = {
   'rip current risk': 'ripCurrentRisk',
   'surf height': 'surfHeight',
@@ -14,6 +13,7 @@ const LABELS: Record<string, FieldName> = {
   'surf temperature': 'waterTemperature',
   'max heat index': 'maxHeatIndex',
   'remarks': 'remarks',
+  'tides': 'tide',
   'weather': 'weather',
   'high temperature': 'highTemperature',
   'winds': 'winds',
@@ -77,8 +77,15 @@ export function parseWaterTemp(v: string): NumericRange | null {
   return null;
 }
 
+// "High 3.4 feet (MLLW) 02:20 PM EDT" → 3.4 ft. Some offices give the time only, with no height.
+export function parseTideHeight(v: string): NumericRange | null {
+  const m = v.match(/(\d+(?:\.\d+)?)\s*feet/i);
+  return m ? { min: +m[1], max: +m[1], unit: 'ft', approximate: false } : null;
+}
+
 export function numericFor(field: FieldName, value: string): NumericRange | null {
   if (field === 'surfHeight') return parseSurf(value);
   if (field === 'waterTemperature') return parseWaterTemp(value);
+  if (field === 'tide') return parseTideHeight(value);
   return null;
 }

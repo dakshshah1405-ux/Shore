@@ -81,6 +81,26 @@ function parseSubArea(t: string): { name: string; value: string } | null {
   return m ? { name: m[1].trim(), value: m[2] } : null;
 }
 
+// A tide block lists one or more events per station, the second often on a continuation line:
+//    Duck Pier................Low 1.3 feet (MLLW) 08:46 AM EDT.
+//                             High 3.4 feet (MLLW) 03:28 PM EDT.
+// Each event becomes its own observation, with offsets located inside the original span so every
+// one keeps exact provenance. Handles both "High 3.4 feet (MLLW) 2:20 PM EDT" and "Low at 8:43 AM EDT".
+const RE_TIDE_EVENT =
+  /\b(High|Low)\b\s+(?:\d+(?:\.\d+)?\s+feet\s+\([A-Z]+\)\s+|at\s+)\d{1,2}:\d{2}\s*[AP]M(?:\s+[A-Z]{3,4})?/g;
+
+function expandTideEvents(f: SrfField): SrfField[] {
+  const matches = [...f.rawSpan.matchAll(RE_TIDE_EVENT)];
+  if (matches.length < 2) return [f];
+  return matches.map((m) => ({
+    ...f,
+    value: cleanValue(m[0]),
+    rawSpan: m[0],
+    charStart: f.charStart + m.index!,
+    charEnd: f.charStart + m.index! + m[0].length,
+  }));
+}
+
 function splitBeaches(s: string): string[] {
   return s
     .replace(/^Including the beaches of\s*/i, '')
@@ -201,6 +221,8 @@ export function parseSrf(text: string): SrfSegment[] {
       }
     }
     if (period) period.charEnd = Math.max(period.charEnd, period.fields.at(-1)?.charEnd ?? 0);
+    for (const p of seg.periods)
+      p.fields = p.fields.flatMap((f) => (f.field === 'tide' ? expandTideEvents(f) : [f]));
     seg.charEnd = lines[Math.max(i - 1, 0)].end;   // i stops at "&&" or the segment end
     segments.push(seg);
   }

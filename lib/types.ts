@@ -22,6 +22,7 @@ export type FieldName =
   | 'maxHeatIndex'
   | 'remarks'          // free text; ILM uses it for longshore-current warnings
   | 'longshoreCurrent' // extracted by Nemotron from free text; never from a fixed field
+  | 'tide'             // one observation per tide event, sub-area holds the station name
   | 'sunrise'
   | 'sunset';
 
