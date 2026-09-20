@@ -76,6 +76,19 @@ export default function ShoreApp() {
   const [focus, setFocus] = useState<{ zoneId: string; n: number } | null>(null);
   const [satellite, setSatellite] = useState(false);
   const [showMore, setShowMore] = useState(false);
+  // Weekday names for the two period tabs. Filled in after mount on purpose: the server renders
+  // in its own time zone and would disagree with the viewer's near midnight, which React reports
+  // as a hydration mismatch. Until then the tabs read Today / Tomorrow, which is never wrong.
+  const [dayNames, setDayNames] = useState<[string, string]>(['Today', 'Tomorrow']);
+
+  useEffect(() => {
+    const name = (daysAhead: number) => {
+      const d = new Date();
+      d.setDate(d.getDate() + daysAhead);
+      return d.toLocaleDateString(undefined, { weekday: 'long' });
+    };
+    setDayNames([name(0), name(1)]);
+  }, []);
 
   const focusZone = (zoneId: string) => {
     setSelected(zoneId);
@@ -160,10 +173,11 @@ export default function ShoreApp() {
 
         <ZoneSearch geo={geo} onSelect={focusZone} />
 
-        {/* "Current" and "Next", not "Today" and "Tomorrow": offices issue at different times, so
-            an evening product's first period is already tomorrow. Each zone shows its own label. */}
+        {/* These tabs name the viewer's own day, not the forecast's. Offices issue at different
+            times, so an evening product's first period may already name the next day. The line
+            below always shows each zone's own period name, which is the authoritative one. */}
         <div className="mt-3 grid grid-cols-2 rounded-lg bg-[var(--brand-sand-soft)] p-1 text-sm font-semibold" role="tablist">
-          {([['today', 'Current'], ['tomorrow', 'Next']] as [Period, string][]).map(([p, label]) => (
+          {([['today', dayNames[0]], ['tomorrow', dayNames[1]]] as [Period, string][]).map(([p, label]) => (
             <button key={p} role="tab" aria-selected={period === p} onClick={() => setPeriod(p)}
                     className={`rounded-md py-1.5 ${period === p ? 'bg-white text-[var(--brand-blue-ink)] shadow-sm' : 'text-slate-500'}`}>
               {label}
