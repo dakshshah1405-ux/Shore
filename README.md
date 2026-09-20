@@ -38,6 +38,8 @@ a map where every single number can be clicked to reveal the exact source line i
 
 - **Extracts** rip current risk, surf height, thunderstorm potential, water temperature, wind, UV,
   tides and free-text remarks from every East Coast Surf Zone Forecast.
+- **Reads three unlike formats through one pipeline** — labelled fixed-width text, structured JSON,
+  and an unlabelled numeric table whose values mean nothing without their column position.
 - **Keeps provenance on every value** — source URL, the literal text span, character offsets, issue
   time, which extractor read it, and a confidence level.
 - **Assesses** each zone with a deterministic worst-of rule ladder, and records which rung fired.
@@ -52,7 +54,7 @@ a map where every single number can be clicked to reveal the exact source line i
 
 | Their criterion | How Shore answers it |
 |---|---|
-| Support for different sources without rebuilding everything | Two adapters of deliberately opposite shape — fixed-width ASCII (SRF) and structured JSON (CAP alerts) — behind one shared router, reconciler, provenance model and store. |
+| Support for different sources without rebuilding everything | **Three sources in three deliberately unlike formats** — fixed-width labelled ASCII (NWS Surf Zone Forecast), structured JSON (NWS CAP alerts), and an unlabelled positional numeric table (NDBC buoy observations) — behind one shared `Observation` contract, provenance model and store. Adding a source is one file; nothing downstream changes. Run `npx tsx scripts/try-ndbc.ts` to watch the newest one read a live feed end to end. |
 | A model that can find useful signals in incoming documents | Nemotron extracts from the same text independently of the parser, including prose remarks no regular expression can reach. |
 | Insights that link back to where they came from | Every stored value carries `sourceUrl`, `rawSpan`, `charStart`/`charEnd`. Clicking any value in the UI reveals the exact source line and links to the NWS product. `scripts/parse-samples.ts` asserts **0 provenance span errors**. |
 | A clean way to actually see and use the output | A map of all 73 zones, instant client-side filters, a detail panel, and an in-app Sources & Methodology page at `/sources`. |
@@ -233,13 +235,15 @@ product could do.
 ## Architecture
 
 ```
-NWS SRF (fixed-width ASCII) ─┐
-NWS CAP alerts (JSON) ───────┴─► ROUTER ─► deterministic parser ─┐
-                                 (header check                    ├─► RECONCILE ─► ADJUDICATE
-                                  + Nemotron)  Nemotron extractor ┘   (parser wins)  (pre-check
-                                                                                      + Nemotron)
-                                                                             │
-                                          Observation[] + full provenance ◄──┘
+NWS SRF        (labelled fixed-width ASCII) ─┐
+NWS CAP alerts (structured JSON) ────────────┼─► ROUTER ─► deterministic parser ─┐
+NDBC buoys     (unlabelled numeric table) ───┘   (header check                   ├─► RECONCILE
+                                                  + Nemotron)  Nemotron extractor┘  (parser wins)
+                                                                             │            │
+                                                                             │       ADJUDICATE
+                                                                             │    (pre-check +
+                                                                             │       Nemotron)
+                                          Observation[] + full provenance ◄──┴────────────┘
                                                        │
                                             risk ladder (deterministic)
                                                        │
@@ -248,10 +252,16 @@ NWS CAP alerts (JSON) ───────┴─► ROUTER ─► deterministic
                                         coherence audit (offline, flags only)
 ```
 
+Three formats with nothing in common — labelled text, nested JSON, and bare numbers whose meaning
+comes only from column position — converge on one `Observation` type carrying source URL, exact
+text span and character offsets. Everything after that point is shared.
+
 | Path | What |
 |---|---|
 | `lib/types.ts` | The shared contract |
 | `lib/adapters/srf.ts` | Deterministic SRF parser with byte-exact provenance |
+| `lib/adapters/cap.ts` | NWS active-alert adapter |
+| `lib/adapters/ndbc.ts` | NDBC buoy adapter — positional numeric table, `MM` sentinel |
 | `lib/extract/router.ts` | Header check + Nemotron classification |
 | `lib/extract/srf-llm.ts` | Nemotron extraction with quote verification |
 | `lib/extract/reconcile.ts` | Agreement, confidence, disagreement logging |
@@ -285,7 +295,8 @@ npm run dev                    # http://localhost:3000
 | `npx tsx scripts/eval-router.ts` | Router eval (table 1) |
 | `npx tsx scripts/eval-audit.ts --clean 10` | Coherence audit eval (table 2) |
 | `npx tsx scripts/eval-adjudicator.ts --per-flaw 4` | Adjudication eval (table 3) |
-| `npx tsx --test lib/normalize.test.ts lib/search.test.ts lib/extract/router.test.ts lib/extract/adjudicate.test.ts` | 34 unit tests — router, adjudicator guards, normalisation, search |
+| `npx tsx scripts/try-ndbc.ts` | Adapter #3 against the live buoy network, printing each value's character offsets |
+| `npx tsx --test lib/normalize.test.ts lib/search.test.ts lib/extract/router.test.ts lib/extract/adjudicate.test.ts lib/adapters/ndbc.test.ts` | 42 unit tests — router, adjudicator guards, normalisation, search, buoy adapter |
 | `npx tsc --noEmit` | Typecheck |
 
 Ingestion runs unattended every 15 minutes via `.github/workflows/ingest.yml`. Documents already
@@ -295,9 +306,15 @@ stored are skipped, so a typical run does almost no work and makes few model cal
 
 ## Data sources and licensing
 
-All data comes from [api.weather.gov](https://api.weather.gov): Surf Zone Forecast products, active
-CAP alerts, and forecast zone geometry. U.S. federal works, public domain under 17 U.S.C. §105. No
-credentials or licences are required; NWS asks only for a `User-Agent` carrying contact information.
+| Source | Publisher | Format |
+|---|---|---|
+| [Surf Zone Forecast products](https://api.weather.gov/products/types/SRF) | NWS | Labelled fixed-width ASCII |
+| [Active alerts](https://api.weather.gov/alerts/active) | NWS | Structured JSON (CAP) |
+| [Buoy observations](https://www.ndbc.noaa.gov/data/realtime2/41025.txt) | NOAA NDBC | Unlabelled positional numeric table |
+| [Forecast zone geometry](https://api.weather.gov/zones/forecast) | NWS | GeoJSON |
+
+All U.S. federal works, public domain under 17 U.S.C. §105. No credentials or licences are required;
+NWS asks only for a `User-Agent` carrying contact information.
 
 Base map: [CARTO Positron](https://carto.com/basemaps/) over OpenStreetMap. Satellite layer:
 [USGS/USDA orthoimagery](https://basemap.nationalmap.gov/) — periodic aerial survey, not live.

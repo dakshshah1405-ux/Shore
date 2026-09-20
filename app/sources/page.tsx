@@ -26,6 +26,13 @@ const SOURCES = [
     note: 'Headlines are shown verbatim. An official product always outranks anything Shore computes.',
   },
   {
+    name: 'Buoy observations (NDBC)',
+    shape: 'Unlabelled positional numeric table',
+    what: 'Wave height, water temperature and wind speed measured at moored offshore stations',
+    url: 'https://www.ndbc.noaa.gov/data/realtime2/41025.txt',
+    note: 'Nothing but column position says what a number means, and MM means missing. These are offshore readings: a buoy is not a beach, so every value is stamped with its station and none of it feeds the risk assessment.',
+  },
+  {
     name: 'Forecast zone geometry',
     shape: 'GeoJSON',
     what: 'The polygon drawn for each of the 73 surf zones',
@@ -71,9 +78,13 @@ export default function SourcesPage() {
 
         <Section title="Where every number comes from">
           <p className={P}>
-            All three sources are U.S. federal data from <Ext href="https://api.weather.gov">api.weather.gov</Ext>.
-            Coverage is the 12 East Coast forecast offices — GYX, CAR, BOX, OKX, PHI, AKQ, MHX, ILM, CHS, JAX, MLB and
-            MFL — across 73 surf zones.
+            Every source is U.S. federal data, from the{' '}
+            <Ext href="https://api.weather.gov">National Weather Service</Ext> and the{' '}
+            <Ext href="https://www.ndbc.noaa.gov/">National Data Buoy Center</Ext>. Forecast coverage is the 12 East
+            Coast offices — GYX, CAR, BOX, OKX, PHI, AKQ, MHX, ILM, CHS, JAX, MLB and MFL — across 73 surf zones.
+            The three extraction sources are deliberately unlike each other: labelled fixed-width text, nested JSON,
+            and bare numbers that mean nothing without their column position. They share one pipeline, one value type
+            and one provenance model, so adding a source is one file and nothing downstream changes.
           </p>
           <div className="mt-4 space-y-3">
             {SOURCES.map((s) => (
